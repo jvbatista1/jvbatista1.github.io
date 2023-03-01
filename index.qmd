@@ -1,11 +1,57 @@
 ---
-title: "victorbatista"
+title: "Victor Batista"
+image: headshot.jfif
+about: 
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/joaovictorbatista/
+    - text: GitHub
+      href: https://github.com/jvbatista1
+    - text: Email
+      href: victorbatista@alu.ufc.br
 ---
 
-This is a Quarto website.
+# Olá!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Eu sou o Victor, muito prazer. Espero partilhar informações sobre mim que possam ajudar a nos conhecer melhor.
 
-```{r}
-1 + 1
-```
+\-\--
+
+## Educação
+
+**Mestrando em Economia** (presente) \| Programa de pós-graduação em economia da Universidade Federal do Ceará (CAEN/UFC) \| Fortaleza, CE, Brasil
+
+**Bacharel em Ciências Econômicas** (2022) \| Universidade Federal do Ceará (UFC) \| Fortaleza, CE, Brasil
+
+**Técnico em Telecomunicações** (2015) \| Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) \| Fortaleza, CE, Brasil
+
+\-\--
+
+## Experiência profissional
+
+### **Assistente de pesquisa**
+
+Programa de Pós-Graduação em Economia da Universidade Federal do Ceará · Tempo integral
+
+jun de 2021 - dez de 2022
+
+Trabalhando na pesquisa "Entendendo os impactos da COVID-19 na violência doméstica e familiar contra a Mulher no Brasil", chefiada pelo prof. José Raimundo Carvalho (CAEN-UFC) e patrocinada por The Sexual Violence Research Initiative (SVRI). Serviços de gestão de cronograma, orçamento, relações internacionais e demais demandas pertinentes à pesquisa desenvolvida.Trabalhando na pesquisa "Entendendo os impactos da COVID-19 na violência doméstica e familiar contra a Mulher no Brasil", chefiada pelo prof. José Raimundo Carvalho (CAEN-UFC) e patrocinada por The Sexual Violence Research Initiative (SVRI). Serviços de gestão de cronograma, orçamento, relações internacionais e demais demandas pertinentes à pesquisa desenvolvida.
+
+**Competências:** Modelagem estatística · Metodologias de pesquisas qualitativas e quantitativas · Visualização de dados · Python · R (linguagem de programação)
+
+### **Consultor técnico**
+
+Grupo Completta Telecom
+
+fev de 2017 - jun de 2021 · 4 anos 5 meses
+
+Elaboração de projetos georreferenciados para instalação de estruturas de telecomunicações\
+Processos de outorga e licenciamento de vários tipos de serviços de telecomunicações\
+Consulta e acompanhamento da legislação sobre o tema\
+Atendimento ao cliente e suporte em obrigações mensais para com a Anatel\
+Pesquisa e implementação de soluções de acordo com a necessidade dos clientesElaboração de projetos georreferenciados para instalação de estruturas de telecomunicações Processos de outorga e licenciamento de vários tipos de serviços de telecomunicações Consulta e acompanhamento da legislação sobre o tema Atendimento ao cliente e suporte em obrigações mensais para com a Anatel Pesquisa e implementação de soluções de acordo com a necessidade dos clientes
+
+**Competências:** Atendimento ao cliente · Gestão de projetos · AutoCAD · Microsoft Office
