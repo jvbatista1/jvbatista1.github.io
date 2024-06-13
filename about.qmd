@@ -1,9 +1,7 @@
 ---
-title: "About"
+title: "Materiais"
 ---
 
-About this site
+Teste
 
-```{r}
-1 + 1
-```
+-   [Presentation](https://github.com/jvbatista1/paneldata_exercises)
