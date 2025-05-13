@@ -9,13 +9,20 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - icon: github 
+        href: https://github.com/jvbatista1
+        target: _blank
+  page-footer:
+    left: Copyright 2025, Victor Batista
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/jvbatista1.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
     theme: 
-      light: sandstone
+      light:
+        - sandstone
+        - styles.scss
       dark: solar
-    css: styles.css
     toc: false
     page-layout: full
 
