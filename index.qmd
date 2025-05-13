@@ -1,34 +1,39 @@
 ---
 title: "Victor Batista"
-image: headshot.jfif
+image: media\headshot.jfif
 about: 
   template: trestles
-  image-shape: rounded
+  image-shape: round
   image-width: 15em
   links:
-    - text: LinkedIn
+    - icon: linkedin
+      text: LinkedIn
       href: https://www.linkedin.com/in/joaovictorbatista/
-    - text: GitHub
+    - icon: github
+      text: GitHub
       href: https://github.com/jvbatista1
-    - text: Email
-      href: victorbatista@alu.ufc.br
+    - icon: envelope
+      text: Email
+      href: mailto::victorbatista@alu.ufc.br
 ---
+
+:::{#hero-heading} 
 
 # Olá!
 
 Eu sou o Victor, muito prazer. Espero partilhar informações sobre mim que possam ajudar a nos conhecer melhor.
 
-\-\--
+---
 
 ## Educação
 
-**Mestrando em Economia** (presente) \| Programa de pós-graduação em economia da Universidade Federal do Ceará (CAEN/UFC) \| Fortaleza, CE, Brasil
+**Mestre em Economia** (2025) | Programa de pós-graduação em economia da Universidade Federal do Ceará (CAEN/UFC) | Fortaleza, CE, Brasil
 
-**Bacharel em Ciências Econômicas** (2022) \| Universidade Federal do Ceará (UFC) \| Fortaleza, CE, Brasil
+**Bacharel em Ciências Econômicas** (2022) | Universidade Federal do Ceará (UFC) | Fortaleza, CE, Brasil
 
-**Técnico em Telecomunicações** (2015) \| Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) \| Fortaleza, CE, Brasil
+**Técnico em Telecomunicações** (2015) | Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) | Fortaleza, CE, Brasil
 
-\-\--
+---
 
 ## Experiência profissional
 
@@ -55,3 +60,5 @@ Atendimento ao cliente e suporte em obrigações mensais para com a Anatel\
 Pesquisa e implementação de soluções de acordo com a necessidade dos clientesElaboração de projetos georreferenciados para instalação de estruturas de telecomunicações Processos de outorga e licenciamento de vários tipos de serviços de telecomunicações Consulta e acompanhamento da legislação sobre o tema Atendimento ao cliente e suporte em obrigações mensais para com a Anatel Pesquisa e implementação de soluções de acordo com a necessidade dos clientes
 
 **Competências:** Atendimento ao cliente · Gestão de projetos · AutoCAD · Microsoft Office
+
+:::
