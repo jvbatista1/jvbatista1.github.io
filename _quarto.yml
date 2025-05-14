@@ -3,16 +3,20 @@ project:
   output-dir: docs
 
 website:
-  #title: "Victor Batista"
+  title: "Victor Batista"
+  site-url: https://www.jvbatista1.github.io
+  description: "Um blog pessoal"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      #- href: index.qmd
+      #  text: Home
       - about.qmd
       - posts.qmd
       - icon: github 
         href: https://github.com/jvbatista1
         target: _blank
+      - icon: rss
+        href: index.xml
   page-footer:
     left: Copyright 2025, Victor Batista
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/jvbatista1.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
