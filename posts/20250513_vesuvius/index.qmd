@@ -1,0 +1,82 @@
+---
+title: "Sobre dados e mapas"
+description: "Como utilizar as atividades disponíveis pela comunidade para exercitar a análise de dados"
+author:
+  - name: Victor Batista
+    url: https://jvbatista1.github.io/
+    langid: pt
+date: 13-05-2025
+categories: [Tidytuesday] # self-defined categories
+citation: 
+  url: https://jvbatista1.github.io/posts/20250513_vesuvius/ 
+image: vesuvius.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+Percebi que nos últimos tempos tenho acessado uma parte interessante da internet: muitos membros da comunidade de analistas e engenheiros de dados não somente produzem muito conteúdo interessante mas também fazem de tudo para registrar e compartilhar a informação sobre suas áreas de atuação. É verdade que desde a graduação tenho consumido muito desses conteúdos como forma de resolver demandas, mas na nova fase da vida, com o fim do mestrado, meu interesse tem mudado um pouco.
+
+Agora, eu sinto que posso dar um passo e participar da comunidade também compartilhando coisas que eu sei. De fato, tenho muito que aprender, principalmente quando me comparo com profissionais tão legais e experientes, mas esse blog também vai ajudar nesse ponto. Expondo minhas ideias e meus trabalhos até aqui posso ir superando dois desafios:
+
+-   Me dou a oportunidade da comunidade contribuir com sugestões para melhorar no que me proponho
+-   Faço um registro do meu caminho nessa carreira de analista para o futuro
+
+Uma das atividades que mais admiro é o [Tidytuesday](<https://github.com/rfordatascience/tidytuesday>){target="\_blank"}, composto por desafios semanais onde é fornecida uma base e quem participa deve elaborar uma visualização e postar nas redes. Essa semana, os dados fornecidos são sobre as erupções do Monte Vesúvio na década passada. Vamos ver o que consegui fazer.
+
+```{r}
+#| message: false
+#| warning: false
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(ggmap)
+```
+
+É possível baixar diretamente os dados pelo pacote do desafio
+
+```{r}
+data <-  tidytuesdayR::tt_load("2025-05-13")
+vesuvius <- data$vesuvius
+```
+
+É possível fazer uma exploração básica com o pacote [modelsummary](https://modelsummary.com){target="\_blank"}. 
+
+```{r}
+modelsummary::datasummary_skim(vesuvius)
+```
+
+A proposta não é necessariamente criar modelos causais ou preditivos, mas escolhi retirar as observações de 2011 e 2012 para melhorar a visualização dos mapas.
+
+```{r}
+vesuvius |> 
+  count(year)
+
+vesuvius <- vesuvius |> 
+  filter(year>2012)
+```
+
+Queria testar uma visualização 3d para verificar a profundidade do epicentro das erupções. O pacote que eu gosto para esse tipo de visualização é o [plotly](https://plotly.com/r/){target="\_blank"}. Infelizmente não tenho muita intimidade com ele, o que fez esse gráfico ser bonito, mas não muito informativo.
+
+```{r}
+fig <- plot_ly(vesuvius, x = ~latitude, y = ~longitude, z = ~depth_km,
+               marker = list(color = ~year, colorscale = c('#FFE1A1', '#683531'), showscale = TRUE))
+fig <- fig %>% add_markers()
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Latitude'),
+                     yaxis = list(title = 'Longitude'),
+                     zaxis = list(title = 'Depth (km)')))
+
+fig
+```
+
+A versão final e, portanto, a escolhida para representar minha primeira participação no Tidytuesday é o gráfico abaixo, que usei o ggmap para mesclar um mapa real junto com o scatterplot da latitude e longitude, mostrando a variação da profundidade dos impactos por ano.
+
+```{r}
+vesuvius_map <- c(left = 14.3, bottom = 40.75, right = 14.5, top = 40.87)
+get_stadiamap(vesuvius_map, zoom = 12, maptype = "stamen_terrain") |> 
+  ggmap()+
+  geom_point(aes(longitude, latitude, color=depth_km), data=(filter(vesuvius, year>2012)), size = .5, alpha = .5)+
+  facet_wrap(~year)+
+  labs(x = "longitude", y = "latitude", title = "Depth of eruptions by Vesuvius")
+
+```
+
+Mesmo não levando a conclusões mirabolantes (porque eu estava esperando que em 10 anos a profundidade das erupções mudasse?) gostei de aplicar essas ferramentas que usei durante minha graduação num problema prático. Tudo isso foi relativamente rápido de fazer e espero continuar contribuindo.
