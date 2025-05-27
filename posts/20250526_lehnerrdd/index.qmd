@@ -1,0 +1,174 @@
+---
+title: "Notas sobre RDD"
+description: "Um resumo das notas de Lehner (2024) a partir da minha experiência na dissertação de mestrado"
+author:
+  - name: Victor Batista
+    url: https://jvbatista1.github.io/
+    langid: pt
+date: 05/26/2025
+categories: [Resumos] # self-defined categories
+citation: 
+  url: https://jvbatista1.github.io/posts/20250526_lehnerrdd/ 
+image: nogales.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+bibliography: references.bib
+---
+
+Enquanto minha dissertação de mestrado não é publicada do reposiótrio da universidade, quero compartilhar alguns pensamentos sobre a metodologia que eu apliquei para análisar meu fenômeno de interesse. Para verificar diferenças nos indicadores de violência de ambos os lados da Faixa de Fronteira brasileira, realizei um design de regressão descontínua (RDD em inglês) e recentemente @lehner_note_2024 publicou uma nota em seu site pessoal onde discorre um pouco sobre ferramentas no R para trabalhar com esse modelo em aplicações espaciais.
+
+Basicamente o RDD é aplicado quando temos um tratamento aplicado para as unidades apresentadas acima (ou abaixo) de um valor em uma variável contínua.
+
+# Origens e definição
+
+O RDD é uma metodologia de análise causal amplamente utilizada em contextos não experimentais, nos quais a alocação de um tratamento ou intervenção depende de um ponto de corte claramente definido em uma variável contínua. @thistlethwaite_regression-discontinuity_1960 introduziram essa metodologia na avaliação do impacto de prêmios de mérito escolar no futuro acadêmico dos estudantes (aspirações de carreira, engajamento em cursos de pós-graduação, etc.). Esse estudo explorou o fato de que os prêmios eram atribuídos com base em uma determinada nota: estudantes cuja pontuação $X$ atingisse ou excedesse um valor de corte $c$ eram agraciados, enquanto aqueles com pontuação inferior não eram contemplados. Esse mecanismo gera uma *descontinuidade* no tratamento como função da nota. Seja a recepção do tratamento representada por $D \in {0,1}$, temos então $D=1$ se $X\geq c$ e $D=0$ se $X<c$.
+
+Analisando esse problema, não há razão para que a função que relaciona o futuro acadêmico ($Y$) e as notas ($X$) seja descontínua em qualquer ponto. Se uma descontinuidade for observada, a conclusão natural é que ela decorre da atribuição da intervenção no ponto de corte $c$. Assumindo uma relação linear entre $Y$ e $X$, uma forma simples de estimar o efeito do tratamento pode ser expressa pela @eq-thistlethwaite. A intuição gráfica dessa relação está ilustrada na @fig-thistlethwaite.
+
+$$
+    Y = \alpha + D\tau + X\beta + \varepsilon
+$$ {#eq-thistlethwaite}
+
+![Exemplo de descontinuidade. Fonte: @lee_regression_2010](thistlethwaite.png){#fig-thistlethwaite fig-align="center"}
+
+# Aplicando em dados espaciais
+
+Apesar de amplamente utilizado para identificar efeitos causais em contextos observacionais, a aplicação do RDD em dados espaciais enfrenta desafios metodológicos significativos, especialmente na análise de fronteiras. Estudos como os de @keele_geographic_2015, @kaza_spatial_2018 e @jardim_local_2024 destacam as dificuldades inerentes à aplicação do RDD em contextos geográficos e propõem adaptações para aprimorar sua eficácia.
+
+Um dos primeiros trabalhos a explorar variações geográficas no RD foi @black_better_1999, que estimou a disposição a pagar por melhores escolas a partir da localização das residências dentro dos limites de determinados bairros.
+
+Entretanto, a aplicação geográfica do RD apresenta desafios inerentes à natureza dos dados. Os autores enfatizam que a validade da inferência depende da forma como as unidades são distribuídas ao longo das fronteiras geográficas. Além disso, destacam que a sobreposição de múltiplas fronteiras institucionais pode dificultar a inferência causal, pois diferentes tratamentos podem estar operando simultaneamente.
+
+O estudo de @zimmert_direct_2023, que investiga se os pagamentos diretos no setor agrícola afetam o emprego familiar nas fazendas suíças, com foco na participação da mão de obra feminina. O estudo examina como a descontinuidade espacial nas zonas agrícolas da Suíça impacta a alocação de trabalho nas fazendas.A estimação é realizada por Two-Stage Least Squares (TSLS), utilizando como variável instrumental a designação geográfica das zonas agrícolas.
+
+Neste trabalho, pode ser verificado a abordagem tradicional para RD espaciais, que a aproxima dos modelos clássicos de RD: a variável de corte é a menor distância do ponto de interesse (no caso, as fazendas) para o polígono. A @fig-zimmert mostra um exemplo ilustrativo de como a variável é calculada
+
+![Exemplo de descontinuidade. Fonte: @zimmert_direct_2023](zimmert.png){#fig-zimmert fig-align="center"}
+
+@lehner argumenta que, apesar de essa ser a forma mais intiuitiva e largamente adotada de conduzir um RDD, a aplicação nas fronteiras do mundo real requer atenção. Por exemplo, cidades podem estar muito próximas da fronteira (low score), mas muito distantes entre si, o que prejudica a comparabilidade. Para assegurar o ajuste da comparação, é proposto primeiro dividir a fronteira em vários segmentos menores, $\mathcal B = \cup\{\mathcal B_s \}^{S}_{s=1}$. Assim, para cada ponto $\mathbf{x}_i$ é computada a distância euclidiana para o segmento mais próximo $\text{argmin } d(\mathbf{x}_i, \mathcal{B}_s)$, resultando numa variável categórica que permite calcular efeitos fixos.
+
+# Lehner e o pacote `spatialRDD`
+
+Para exemplificar o procedimento anterior, vou utilizar o tutorial disponibilizado na [vignette](https://cran.r-project.org/web/packages/SpatialRDD/vignettes/spatialrdd_vignette.html){target="_blank"} do pacote e replicar nos dados que trabalhei de segurança pública na fronteira brasileira.
+
+```{r}
+#| include: false
+dropbox <- "c:/Users/victor/dropbox/DISSERTACAO"
+library(SpatialRDD)
+library(tidyverse)
+library(sf)
+library(modelsummary)
+library(geobr)
+library(nngeo)
+library(palettetown)
+library(stargazer)
+library(tmap)
+library(rdrobust)
+library(Matrix)
+
+```
+
+Primeiro vamos importar os dados geográficos das sedes dos municípios em torno da faixa de fronteira e classificá-los em tratamento e controle. Como eu já tinha feito o preprocessamento das bases no meu trabalho, vou só importar os arquivos.
+
+```{r}
+#| message: false
+espaciais <- read_rds(file.path(dropbox, "dados_espaciais.rds"))
+
+fronteira_terrestre <- read_rds(file.path(dropbox, "fronteira_terrestre.rds"))
+
+cut_off <- read_rds(file.path(dropbox, "fronteira_interior.rds"))
+ 
+full <- st_union(espaciais)
+
+full <- st_remove_holes(full)
+
+treated <- st_union(filter(espaciais, groups == "treatment"))
+treated <- st_sf(treated)
+treated <- st_remove_holes(treated)
+
+points <- read_municipal_seat(year=2010, showProgress = T) %>%
+  st_transform("WGS84") |> 
+  rename("id_municipio" = "code_muni",
+         "nome" = "name_muni",
+         "id_uf" = "code_state",
+         'sigla_uf' = "abbrev_state",
+         "nome_regiao" = "name_region",
+         "id_regiao" = "code_region",
+         "ano" = "year") |> 
+  mutate(id_municipio = as.character(id_municipio))
+
+t <- select(espaciais, id_municipio, groups)
+st_geometry(t) <- NULL
+
+points <- points |> 
+  right_join(t, by="id_municipio")
+
+rm(t)
+```
+
+Utilizando o `geom_sf()` pra construir a visualização. E sim, sou um grande partidário de utilizar paletas de cores de Pokémon com o [Palettetown](https://github.com/timcdlucas/palettetown){target="_blank"}.
+
+```{r}
+ggplot()+
+  geom_sf(data = full, fill = "lightgray")+
+  geom_sf(data =  treated, , fill = "gray")+
+  geom_sf(data = cut_off, color = "red")+
+  geom_sf(data = points, mapping = aes(colour = groups), size = 0.1) +
+  scale_color_poke(pokemon = 'charizard', spread = 2, name = "Grupo", labels = c("Controle", "Tratamento"))+
+  theme_minimal()
+```
+
+Aqui eu adiciono minha variável de interesse, que é a taxa municipal de homicídios em 2019. Além disso, crio uma variável da distância eucilidiana para o cutoff, conforme descrito na seção anterior.
+
+```{r}
+#| message: false
+violencia <- read_rds(file.path(dropbox, "municipal.rds")) |>
+  filter(!is.na(id_municipio)) |> 
+  select(id_municipio, valor_2019)
+
+points <- points |> 
+  left_join(violencia)
+
+points$dist2cutoff <- as.numeric(sf::st_distance(points, cut_off))
+points$distrunning <- points$dist2cutoff
+# give the non-treated one's a negative score
+points$distrunning[points$groups == "control"] <- -1 * points$distrunning[points$groups == "control"]
+```
+
+Aqui é o resultado dos estimadores OLS utilizando somente a variável dummy do tratamento e utilizando um RDD simples utilizando somente a *distância unidimensional*
+
+```{r}
+list(lm(valor_2019 ~ groups, data = points)) |> 
+  stargazer::stargazer(type = "text")
+
+summary(rdrobust(points$valor_2019, points$distrunning, c = 0))
+
+```
+
+Agora, criamos a segmentação para adicionar efeitos fixos na análise. É comum escolher diversas segmentações para testar o ajuste da regressão, caso alguma das categorias fique subrepresentada, com poucas (ou nenhuma) observação em um dos lados do cutoff.
+
+```{r}
+cut_off_test <- sf::st_cast(st_as_sf(cut_off), "MULTIPOINT")
+
+points$segment5 <- border_segment(points, cut_off_test, 5)
+points$segment10 <- border_segment(points, cut_off_test, 10)
+points$segment15 <- border_segment(points, cut_off_test, 15)
+tm_shape(points) + tm_dots("segment5", size = 0.1) + tm_shape(cut_off) + tm_lines()
+tm_shape(points) + tm_dots("segment10", size = 0.1) + tm_shape(cut_off) + tm_lines()
+tm_shape(points) + tm_dots("segment15", size = 0.1) + tm_shape(cut_off) + tm_lines()
+
+```
+
+Essees são os resultados da estimação com efeitos fixos utilizando as segmentações.
+
+```{r}
+library(lfe)
+#> Loading required package: Matrix
+list(lfe::felm(valor_2019 ~ groups | factor(segment5) | 0 | 0, data = points[points$dist2cutoff < 3000, ]),
+  lfe::felm(valor_2019 ~ groups | factor(segment10) | 0 | 0, data = points[points$dist2cutoff < 3000, ]),
+  lfe::felm(valor_2019 ~ groups | factor(segment15) | 0 | 0, data = points[points$dist2cutoff < 3000, ])) %>% 
+  modelsummary::modelsummary(type = "text", stars = T)
+```
+
+# Conclusão
+
+O preprint de Alexander Lehner mostra algumas outras ferramentas para aplicão de RDD espacial, em particular Geographic Regression Discontinuity (GRD) (@keele_geographic_2015), que tem uma variação bem sutil na segmentação dos pontos em relação ao cutoff. Mas o que gostaria de destacar desse trabalho fabuloso é como adicionar efeitos fixos ajuda a realizar a identificação correta do efeito do tratamento através da comparação correta entre as unidades analisadas. Na minha dissertação fiz isso de um modo um pouco diferente, espero poder compartilhar com mais detalhes no futuro, mas por hora fico feliz de revisitar esses dados sob uma perspectiva nova.
