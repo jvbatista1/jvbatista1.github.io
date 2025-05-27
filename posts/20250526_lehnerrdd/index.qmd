@@ -14,7 +14,7 @@ draft: false # setting this to `true` will prevent your post from appearing on y
 bibliography: references.bib
 ---
 
-Enquanto minha dissertação de mestrado não é publicada do reposiótrio da universidade, quero compartilhar alguns pensamentos sobre a metodologia que eu apliquei para análisar meu fenômeno de interesse. Para verificar diferenças nos indicadores de violência de ambos os lados da Faixa de Fronteira brasileira, realizei um design de regressão descontínua (RDD em inglês) e recentemente @lehner_note_2024 publicou uma nota em seu site pessoal onde discorre um pouco sobre ferramentas no R para trabalhar com esse modelo em aplicações espaciais.
+Enquanto minha dissertação de mestrado não é publicada do repositório da universidade, quero compartilhar alguns pensamentos sobre a metodologia que eu apliquei para analisar meu fenômeno de interesse. Para verificar diferenças nos indicadores de violência de ambos os lados da Faixa de Fronteira brasileira, realizei um design de regressão descontínua (RDD em inglês) e recentemente @lehner_note_2024 publicou uma nota em seu site pessoal onde discorre um pouco sobre ferramentas no R para trabalhar com esse modelo em aplicações espaciais.
 
 Basicamente o RDD é aplicado quando temos um tratamento aplicado para as unidades apresentadas acima (ou abaixo) de um valor em uma variável contínua.
 
@@ -71,6 +71,7 @@ Primeiro vamos importar os dados geográficos das sedes dos municípios em torno
 
 ```{r}
 #| message: false
+#| warning: false
 espaciais <- read_rds(file.path(dropbox, "dados_espaciais.rds"))
 
 fronteira_terrestre <- read_rds(file.path(dropbox, "fronteira_terrestre.rds"))
