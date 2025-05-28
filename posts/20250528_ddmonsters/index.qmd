@@ -1,0 +1,81 @@
+---
+title: "Dungeons & Dragons"
+description: "Quais tipos de monstro possuem as melhores habilidades?"
+author:
+  - name: Victor Batista
+    url: https://jvbatista1.github.io/
+    langid: pt
+date: 05/28/2025
+categories: [Tidytuesday] # self-defined categories
+citation: 
+  url: https://jvbatista1.github.io/posts/20250528_ddmonsters/ 
+image: table.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+No desafio do [Tidytuesday](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-05-27/readme.md){target="_blank"} foi apresentada uma base com os monstros de Dungeons and Dragons e seus atributos (stats). Uma das questões propostas é verificar quais tipos de monstros possuem os melhores scores.
+
+A solução que achei adequada para verificar rapidamente tanto os scores quanto o tipo de monstro foi criar um mapa de calor. Utilizando Seaborn e Matplotlib, cheguei ao resultado abaixo. O primeiro passo foi baixar a base e selecionar as variáveis de interesse:
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+monsters = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-05-27/monsters.csv')
+
+attributes = ['str', 'dex', 'con', 'int', 'wis', 'cha']
+df = monsters[['type'] + attributes]
+
+print(df.isnull().sum())
+
+# df = df.dropna(subset=['type'] + attributes)
+
+summary = df.groupby('type')[attributes].mean().reset_index()
+freq = df['type'].value_counts().sort_index()
+
+print(summary)
+```
+
+Minhas escolhas de customização do gráfico (com ajuda do chat GPT, claro) foram:
+- Utilizar o `rcParams` pra configurar as fontes utilizadas
+- Dividir o gráfico em duas partes `(ax1, ax2)` para inserir um gráfico auxiliar, mostrando a frequencia dos monstros em cada tipo
+- Para um gráfico isolado, acho interessante utilizar uma outra cor de fundo que não seja branca
+
+```{python}
+sns.set_theme(style="whitegrid")
+plt.rcParams.update({'font.size': 10, 'font.family': 'sans-serif', 'font.sans-serif': 'Tahoma'})
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 8),
+                               gridspec_kw={'width_ratios': [4, 1]}, sharey=True)
+fig.patch.set_facecolor('#fff8dc')  
+# Heatmap
+sns.heatmap(summary.set_index('type'),
+            annot=True, fmt=".1f",
+            cmap='bwr',
+            cbar=False,
+            annot_kws={"size":8, "color":"black"},
+            ax=ax1)
+
+ax1.set_title('Average Ability Scores', fontsize=30, fontweight='bold', pad=15)
+ax1.set_ylabel('Monster Type', fontsize=12)
+ax1.set_xlabel('Ability Score', fontsize=12)
+
+# Barra de frequência
+ax2.barh(freq.index, freq.values,
+         color='#888888',
+         edgecolor='black',
+         alpha=0.8)
+
+ax2.set_title('Frequency', fontsize=16, fontweight='bold', pad=15)
+ax2.set_xlabel('Count', fontsize=12)
+
+plt.tight_layout()
+plt.show()
+```
+
+Essa é minha primeira experiência utilizando Python para um projeto pessoal. Tive um pouco de trabalho para configurar os chunks, uma vez que estou escrevendo este blog em Quarto, mas no fim deu tudo certo. As configurações do Seaborn são muito intuitivas para customização, embora eu tenha precisado de ajuda para lembrar todas elas direitinho.
+
+Meu objetivo, no futuro, é encontrar uma identidade visual para esses projetos que realizo como exercício. Existem projetos na comunidade que acho incríveis, como o [MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) (que inclusive é a grande inpiração desse blog) e [Latinometrics](https://latinometrics.com). São sites muito bonitos e agradáveis de acompanhar, tanto pelas suas escolhas estéticas quanto pela alta qualidade das análises.
+
+Se eu conseguir chegar, pelo menos, perto do que eles fazem, já ficarei muito feliz!

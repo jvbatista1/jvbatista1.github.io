@@ -5,7 +5,7 @@ author:
   - name: Victor Batista
     url: https://jvbatista1.github.io/
     langid: pt
-date: 13-05-2025
+date: 05/13/2025
 categories: [Tidytuesday] # self-defined categories
 citation: 
   url: https://jvbatista1.github.io/posts/20250513_vesuvius/ 
