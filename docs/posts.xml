@@ -9,14 +9,775 @@
 <link>https://www.jvbatista1.github.io/posts.html</link>
 <atom:link href="https://www.jvbatista1.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Um blog pessoal</description>
-<generator>quarto-1.7.31</generator>
-<lastBuildDate>Wed, 28 May 2025 03:00:00 GMT</lastBuildDate>
+<generator>quarto-1.6.32</generator>
+<lastBuildDate>Wed, 18 Jun 2025 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>APIs Guru</title>
+  <dc:creator>Victor Batista</dc:creator>
+  <link>https://www.jvbatista1.github.io/posts/20250618_apisguru/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>No <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-06-17/readme.md" target="_blank">Tidytuesday</a> dessa semana investigamos algumas tabelas da <a href="https://apis.guru/about/" target="_blank">APIs Guru</a>, que é uma iniciativa OpenSource de criar uma Wikipedia machine-readable de API disponíveis publicamente, gratuitamente ou não. O resposável pela organização dessa semana <a href="https://github.com/jonthegeek">Jon Harmon</a> tem criado um <a href="https://dslc-io.github.io/club-wapir/">livro</a> sobre APIs no R e uma <a href="https://beekeeper.api2r.org">série de pacotes</a> para trabalhar com essas ferramentas.</p>
+<p>Hoje farei a análise em Python.</p>
+<section id="baixando-os-dados-e-exploração-inicial" class="level2">
+<h2 class="anchored" data-anchor-id="baixando-os-dados-e-exploração-inicial">Baixando os dados e exploração inicial</h2>
+<div id="37a36040" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> seaborn <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> sns</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-4"></span>
+<span id="cb1-5">api_info <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-17/api_info.csv'</span>)</span>
+<span id="cb1-6">api_categories <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-17/api_categories.csv'</span>)</span>
+<span id="cb1-7">api_logos <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-17/api_logos.csv'</span>)</span>
+<span id="cb1-8">api_origins <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-17/api_origins.csv'</span>)</span>
+<span id="cb1-9">apisguru_apis <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-17/apisguru_apis.csv'</span>)</span></code></pre></div>
+</div>
+<p>Dando uma olhada nas tabelas disponibililzadas, quero me concentrar em especial na tabela <code>api_info</code>, pois ela tem a variável <code>provider_name</code>, o que me permite checar quais são os principais fornecedores de APIs.</p>
+<div id="ea0edf8e" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">api_logos</span>
+<span id="cb2-2">api_categories</span>
+<span id="cb2-3">api_origins</span>
+<span id="cb2-4">apisguru_apis</span>
+<span id="cb2-5">api_info</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">contact_name</th>
+<th data-quarto-table-cell-role="th">contact_url</th>
+<th data-quarto-table-cell-role="th">description</th>
+<th data-quarto-table-cell-role="th">title</th>
+<th data-quarto-table-cell-role="th">provider_name</th>
+<th data-quarto-table-cell-role="th">service_name</th>
+<th data-quarto-table-cell-role="th">license_name</th>
+<th data-quarto-table-cell-role="th">license_url</th>
+<th data-quarto-table-cell-role="th">terms_of_service</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1forge.com</td>
+<td>1Forge</td>
+<td>http://1forge.com</td>
+<td>Stock and Forex Data and Realtime Quotes</td>
+<td>1Forge Finance APIs</td>
+<td>1forge.com</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>1password.com:events</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1Password Events API Specification.</td>
+<td>Events API</td>
+<td>1password.com</td>
+<td>events</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>1password.local:connect</td>
+<td>1Password Integrations</td>
+<td>https://support.1password.com/</td>
+<td>REST API interface for 1Password Connect.</td>
+<td>1Password Connect</td>
+<td>1password.local</td>
+<td>connect</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>6-dot-authentiqio.appspot.com</td>
+<td>Authentiq team</td>
+<td>http://authentiq.io/support</td>
+<td>Strong authentication, without the passwords.</td>
+<td>Authentiq API</td>
+<td>6-dot-authentiqio.appspot.com</td>
+<td>NaN</td>
+<td>Apache 2.0</td>
+<td>http://www.apache.org/licenses/LICENSE-2.0.html</td>
+<td>http://authentiq.com/terms/</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>ably.io:platform</td>
+<td>Ably Support</td>
+<td>https://www.ably.io/contact</td>
+<td>The [REST API specification](https://www.ably....</td>
+<td>Platform API</td>
+<td>ably.io</td>
+<td>platform</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2524</td>
+<td>zeno.fm</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Aggregators API</td>
+<td>Aggregators API Service</td>
+<td>zeno.fm</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2525</td>
+<td>zenoti.com</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Our API documentation has been moved to https:...</td>
+<td>Zenoti API</td>
+<td>zenoti.com</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2526</td>
+<td>zoom.us</td>
+<td>Zoom Developers</td>
+<td>https://developer.zoom.us/</td>
+<td>The Zoom API allows developers to access infor...</td>
+<td>Zoom API</td>
+<td>zoom.us</td>
+<td>NaN</td>
+<td>MIT for OAS 2.0</td>
+<td>https://opensource.org/licenses/MIT</td>
+<td>https://zoom.us/docs/en-us/zoom_api_license_an...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2527</td>
+<td>zoomconnect.com</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>The world's greatest SMS API</td>
+<td>www.zoomconnect.com</td>
+<td>zoomconnect.com</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2528</td>
+<td>zuora.com</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>\n\n# Introduction\n\nWelcome to the reference...</td>
+<td>API Reference: Billing</td>
+<td>zuora.com</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+<p>2529 rows × 10 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="quantos-apis-os-provedores-fornecem" class="level2">
+<h2 class="anchored" data-anchor-id="quantos-apis-os-provedores-fornecem">Quantos APIs os provedores fornecem?</h2>
+<div id="3d929eb3" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">api_info[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'provider_name'</span>].value_counts().reset_index().head(n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">provider_name</th>
+<th data-quarto-table-cell-role="th">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>azure.com</td>
+<td>653</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>googleapis.com</td>
+<td>281</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>amazonaws.com</td>
+<td>271</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>apisetu.gov.in</td>
+<td>181</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>twilio.com</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>sportsdata.io</td>
+<td>35</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>vtex.local</td>
+<td>34</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>amadeus.com</td>
+<td>32</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>adyen.com</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>ebay.com</td>
+<td>23</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>nexmo.com</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>interzoid.com</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>github.com</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>microsoft.com</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>apideck.com</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>mastercard.com</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>hubapi.com</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>fungenerators.com</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>parliament.uk</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>nytimes.com</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">20</td>
+<td>gov.bc.ca</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">21</td>
+<td>ote-godaddy.com</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">22</td>
+<td>epa.gov</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">23</td>
+<td>codat.io</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">24</td>
+<td>xero.com</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>deutschebahn.com</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">26</td>
+<td>letmc.com</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">27</td>
+<td>rapidapi.com</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">28</td>
+<td>whapi.com</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">29</td>
+<td>amentum.space</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">30</td>
+<td>ndhm.gov.in</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">31</td>
+<td>npr.org</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">32</td>
+<td>import.io</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">33</td>
+<td>openbanking.org.uk</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">34</td>
+<td>vonage.com</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">35</td>
+<td>wmata.com</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>haloapi.com</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">37</td>
+<td>mercedes-benz.com</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">38</td>
+<td>va.gov</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">39</td>
+<td>walmart.com</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">40</td>
+<td>docker.com</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">41</td>
+<td>funtranslations.com</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">42</td>
+<td>onsched.com</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">43</td>
+<td>tomtom.com</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">44</td>
+<td>presalytics.io</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">45</td>
+<td>mailboxvalidator.com</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">46</td>
+<td>seldon.local</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">47</td>
+<td>hsbc.com</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">48</td>
+<td>ticketmaster.com</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">49</td>
+<td>apache.org</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Em outra oportunidade, como parte do meu interesse por OpenSource, quero verificar como o tipo de licença interagem com o perifl da API disponibilizada.</p>
+<div id="4b8ce302" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">contagem <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> api_info[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'provider_name'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'license_name'</span>]].value_counts().reset_index()</span>
+<span id="cb4-2"></span>
+<span id="cb4-3">contagem</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">provider_name</th>
+<th data-quarto-table-cell-role="th">license_name</th>
+<th data-quarto-table-cell-role="th">count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>googleapis.com</td>
+<td>Creative Commons Attribution 3.0</td>
+<td>281</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>amazonaws.com</td>
+<td>Apache 2.0 License</td>
+<td>271</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>twilio.com</td>
+<td>Apache 2.0</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>ebay.com</td>
+<td>eBay API License Agreement</td>
+<td>23</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>interzoid.com</td>
+<td>Interzoid license</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">178</td>
+<td>whapi.com</td>
+<td>William Hill Online</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">179</td>
+<td>wowza.com</td>
+<td>Terms of Use</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">180</td>
+<td>xtrf.eu</td>
+<td>Apache 2.0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">181</td>
+<td>yodlee.com</td>
+<td>Yodlee Developer License</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">182</td>
+<td>zoom.us</td>
+<td>MIT for OAS 2.0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<p>183 rows × 3 columns</p>
+</div>
+</div>
+</div>
+<p>E aqui termino com uma visualização simples dos 10 principais provedores de API</p>
+<div id="dfd3e17e" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">top_providers <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> api_info[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'provider_name'</span>].value_counts().head(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span>
+<span id="cb5-2"></span>
+<span id="cb5-3">plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>)).patch.set_facecolor(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'#fff8dc'</span>)</span>
+<span id="cb5-4">ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sns.barplot(x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>top_providers.index, y<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>top_providers.values, palette<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'viridis'</span>)</span>
+<span id="cb5-5">plt.title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Top 10 Provedores - Número de Observações'</span>, fontsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, fontweight<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'bold'</span>)</span>
+<span id="cb5-6">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Provedor'</span>, fontsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb5-7">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Número de Observações'</span>, fontsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb5-8">plt.xticks(rotation<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">45</span>, ha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'right'</span>)</span>
+<span id="cb5-9">plt.tight_layout()</span>
+<span id="cb5-10"></span>
+<span id="cb5-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Adiciona os valores no topo das barras</span></span>
+<span id="cb5-12"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i, bar <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(ax.patches):</span>
+<span id="cb5-13">    plt.text(bar.get_x() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> bar.get_width()<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, bar.get_height() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, </span>
+<span id="cb5-14">             <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>(top_providers.values[i]), ha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'center'</span>, va<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'bottom'</span>)</span>
+<span id="cb5-15"></span>
+<span id="cb5-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Adiciona grade para facilitar a leitura</span></span>
+<span id="cb5-17">plt.grid(axis<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'y'</span>, alpha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.3</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\Victor\AppData\Local\Temp\ipykernel_6672\3101477823.py:4: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  ax = sns.barplot(x=top_providers.index, y=top_providers.values, palette='viridis')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://www.jvbatista1.github.io/posts/20250618_apisguru/index_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Trabalhar com Python tem sido interessante como alguém que saiu da vida acadêmica e por isso está bastante acostumado com R. Hoje eu perdi um bom tempo em reaprender como fazer contagens por categoria (usando tanto <code>value_counts()</code> como <code>group_by()</code>). Isso não por falta de conhecimento dessas funções, mas por confusão com as funções do R que fazem a mesma coisa mais com configurações diferentes.</p>
+<p>De toda forma, essa é mais um resulado bem legal que gostaria de compartilhar.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2025,
+  author = {Batista, Victor},
+  title = {APIs {Guru}},
+  date = {2025-06-18},
+  url = {https://jvbatista1.github.io/posts/20250618_apisguru/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2025" class="csl-entry quarto-appendix-citeas">
+Batista, Victor. 2025. <span>“APIs Guru.”</span> June 18, 2025. <a href="https://jvbatista1.github.io/posts/20250618_apisguru/">https://jvbatista1.github.io/posts/20250618_apisguru/</a>.
+</div></div></section></div> ]]></description>
+  <category>Tidytuesday</category>
+  <guid>https://www.jvbatista1.github.io/posts/20250618_apisguru/</guid>
+  <pubDate>Wed, 18 Jun 2025 03:00:00 GMT</pubDate>
+  <media:content url="https://www.jvbatista1.github.io/posts/20250618_apisguru/apis_guru.svg" medium="image" type="image/svg+xml"/>
+</item>
 <item>
   <title>Dungeons &amp; Dragons</title>
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/posts/20250528_ddmonsters/</link>
   <description><![CDATA[ 
-
 
 
 
@@ -340,7 +1101,6 @@ Batista, Victor. 2025. <span>“Dungeons &amp; Dragons.”</span> May 28,
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/posts/20250526_lehnerrdd/</link>
   <description><![CDATA[ 
-
 
 
 
@@ -1357,7 +2117,6 @@ Batista, Victor. 2025. <span>“Notas Sobre RDD.”</span> May 26, 2025. <a href
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/posts/20250513_vesuvius/</link>
   <description><![CDATA[ 
-
 
 
 
