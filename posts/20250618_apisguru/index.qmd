@@ -11,6 +11,7 @@ citation:
   url: https://jvbatista1.github.io/posts/20250618_apisguru/ 
 image: apis_guru.svg
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
 ---
 
 No [Tidytuesday](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-06-17/readme.md){target="_blank"} dessa semana investigamos algumas tabelas da [APIs Guru](https://apis.guru/about/){target="_blank"}, que é uma iniciativa OpenSource de criar uma Wikipedia machine-readable de API disponíveis publicamente, gratuitamente ou não. O resposável pela organização dessa semana [Jon Harmon](https://github.com/jonthegeek) tem criado um [livro](https://dslc-io.github.io/club-wapir/) sobre APIs no R e uma [série de pacotes](https://beekeeper.api2r.org) para trabalhar com essas ferramentas.
