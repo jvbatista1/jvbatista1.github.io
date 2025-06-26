@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Victor Batista">
+<meta name="dcterms.date" content="2025-06-22">
+
+<title>Notas de estudo para certificação ANCORD – Victor Batista</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6561bbde787c299e21493071c8edc6ff.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f957b7cd06cb27ae1464077c0c15d936.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="quarto:status" content="draft">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Victor Batista</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Materiais</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">My Blog</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jvbatista1" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Notas de estudo para certificação ANCORD</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Notas</div>
+                <div class="quarto-category">ANCORD</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://jvbatista1.github.io/">Victor Batista</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 22, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+
+
+
+
+
+<section id="assessor-de-investimentos" class="level1">
+<h1>Assessor de investimentos</h1>
+<section id="atividade-de-ai" class="level2">
+<h2 class="anchored" data-anchor-id="atividade-de-ai">Atividade de AI</h2>
+<ul>
+<li>Brasil, Bolsa, Balcão</li>
+<li>Intermediário</li>
+<li>BTG, Banco, Corretora, XP, Santander, Bradesco, Itaú</li>
+</ul>
+<p>Assessores de investimentos são contratados pelas intermediárias (preposto) para fazer o aumento da capacidade de produtos. Instrução CVM 178/23</p>
+<p>Assessor de Investimentos PF: Agência bancária, escritório Assessor de Investimentos PJ: Gerentes, agente. SA ou LTDA</p>
+<section id="produtos-distribuídos-pelos-ai" class="level3">
+<h3 class="anchored" data-anchor-id="produtos-distribuídos-pelos-ai">Produtos distribuídos pelos AI</h3>
+<ul>
+<li>Ações</li>
+<li>Derivativos</li>
+<li>Fundos</li>
+<li>CDB, RDB, LCi, LCA, LF, LC,</li>
+<li>CRI, CRA</li>
+<li>COE</li>
+</ul>
+</section>
+<section id="atividade-do-ai" class="level3">
+<h3 class="anchored" data-anchor-id="atividade-do-ai">Atividade do AI</h3>
+<p>PRP: Prospectar, recepção e prestação de informações</p>
+</section>
+<section id="constituição-do-ai" class="level3">
+<h3 class="anchored" data-anchor-id="constituição-do-ai">Constituição do AI</h3>
+<p>Mudanças recentes é regida pela CVM 178/23</p>
+<p>Hoje: Pode ser ltda, sa, ai pode ser pf, pj</p>
+<p>AIPJ antes tinha exclusividade, hoje não mais. Sociedade não precisa mais ser só AI</p>
+<p>AIPF também não tem mais exclusividade caso ele esteja vinculado diretamente ao intermediário.</p>
+<p>AIPF também pode estar vinculado a um escritório (AIPJ)</p>
+<p>AIPJ é possível ter atividades complementares desde que não tenha atividades conflitantes, tais quais:</p>
+<ul>
+<li>Administração de carteira de val mob</li>
+<li>Consultoria de VM</li>
+<li>Análise de VM</li>
+</ul>
+</section>
+<section id="diretor-responsável" class="level3">
+<h3 class="anchored" data-anchor-id="diretor-responsável">Diretor responsável</h3>
+<p>Sócio ADM do escritório que presta informações à CVM</p>
+<ul>
+<li>presta informações</li>
+<li>responde órgãos reguiladores e entidade credenciadora</li>
+<li>responsável por políticas dos intermediários</li>
+<li>prevenção do exercício das atividades</li>
+<li>preservação de dados e infos dos clientes</li>
+</ul>
+</section>
+</section>
+<section id="exigências-de-cadastramento-de-ai" class="level2">
+<h2 class="anchored" data-anchor-id="exigências-de-cadastramento-de-ai">Exigências de cadastramento de AI</h2>
+<ul>
+<li>ter concluído o ensino médio</li>
+<li>ter sido aprovado nos exames de qualificação técnica</li>
+<li>ter aderido ao código de conduta profissional</li>
+<li>não estar inabilitado ou suspenso para o exercídio de cargo em IF e demais entidades autorizadaas pelo CVM, BACEN SUSEP ou PREVIC (tomar cuidado com todo o sistema)</li>
+<li>não haver sido condenado criminalmente</li>
+<li>não estar impedido de administrar seus bens em razão de decisão judicial</li>
+</ul>
+<p>Qualificação técnica, ética e questão de impedimentos legais</p>
+<ul>
+<li>CNPJ (ltda, sa, …)</li>
+<li>tenha sede no país</li>
+<li>tenha atividade de assessor de investimento</li>
+<li>indique um diretor responsável (sócio administrador)</li>
+</ul>
+</section>
+<section id="veadções-ai-pessoa-natual-pessoa-física" class="level2">
+<h2 class="anchored" data-anchor-id="veadções-ai-pessoa-natual-pessoa-física">Veadções AI pessoa natual (pessoa física)</h2>
+<ul>
+<li>Atuar como AIPF e como sócio, empregado ou contratado de AIPJ</li>
+<li>Atuar como sócio, empregado ou contratado de mais de uma AIPJ</li>
+</ul>
+</section>
+<section id="suspensão-e-cancelamento-ai" class="level2">
+<h2 class="anchored" data-anchor-id="suspensão-e-cancelamento-ai">Suspensão e cancelamento AI</h2>
+<p>Seção iii e iv da cvm 178/23 - pedida pelo próprio AI mediante comprovação de que não esteja mais em atividade - até 36 meses. mais do que isso é cancelamento</p>
+</section>
+<section id="cancelamento-10-dias-úteis-para-recorrer" class="level2">
+<h2 class="anchored" data-anchor-id="cancelamento-10-dias-úteis-para-recorrer">cancelamento (10 dias úteis para recorrer)</h2>
+<ul>
+<li>pedido pelo próprio ai</li>
+<li>vícios ou falhas no processo de cancelamento</li>
+<li>perda de condição necessária</li>
+<li>apliccação de penalidade pela ANCORD</li>
+<li>descumprimento das condições estabelecidas no PEC</li>
+<li>penalidade pela CVM</li>
+<li>suspensão superior a 36 meses</li>
+</ul>
+<p>Não atualização dos dados multa de 100 reais diário</p>
+</section>
+<section id="materiais-de-divulgação-ai" class="level2">
+<h2 class="anchored" data-anchor-id="materiais-de-divulgação-ai">Materiais de divulgação AI</h2>
+<p>O AI deve fazer referência a todos os intermediários, como contratantes, identificando o ai como contratado e apresentar dados de contato da ouvidoria dessas instituições.</p>
+<p>Se vinculado a mais de um intermediário, abster-se de fazer referencias a produtos e infos que possam provocar dúvidas d equal intermediário se refere. O cliente não pode ficar com dúvida sobre qual intermediário se refere o produto.</p>
+<p>AIPJ deve informar na internet a relação dos ai que sejam sócios, empregados ou contratados. Transparência.</p>
+</section>
+<section id="é-vedado" class="level2">
+<h2 class="anchored" data-anchor-id="é-vedado">é vedado</h2>
+<p>adoção de logotipos desacompanhados de identificação do intermediário com no mínimo igual destaque vale para apostilas, cursos e palestras</p>
+</section>
+<section id="práticas-vedadas-ai" class="level2">
+<h2 class="anchored" data-anchor-id="práticas-vedadas-ai">Práticas vedadas AI</h2>
+<p>Receber de clientes ou em nome deles. Entregar numerário, títulos, vm ou outros ativos. REssalva para recebimento de remuneração por serviços complementares e não conflitantes. Ser procurador ou representante de clientes para intermediários. Contratar com clientes ou realizar, mesmo que grátis, serviços de administraçaõ de carteira, contultoria ou análise de vm Atuar como preposto de intermediário para o qual não tenha contrato delegar a terceiros a exec de serviços que constituam obj de contrato. usar senhas ou assinaturas eletrônicas dos clientes para transmissão de ordens Confeccionar extratos contendo informações sobre operações realizadas ou posições em aberto. Não pode fazer, só encaminhar.</p>
+</section>
+</section>
+<section id="lavagem-de-dinheiro" class="level1">
+<h1>Lavagem de Dinheiro</h1>
+<p>Dinheiro sujo. Orígem ilícita. Dar orígem aparantemente lícita (hotel, posto) Não confunda lavagem com sonegação. Políticos utilizando empreiteiras:</p>
+<ul>
+<li>Doação de campanha</li>
+<li>Carros, imóveis</li>
+<li>Consultorias, palestras</li>
+<li>Paraísos fiscais</li>
+<li>Empresas de fachada</li>
+</ul>
+<p>Pena: prisão de 3 a 10 anos + multa (20 milhões). Aumenta em 2/3 se fizer parte de orcim, reduz em 2/3 se tiver delação</p>
+<p>Suspensão de 10 anos pra exercício de cargo de aipj</p>
+<p>Etapas de LD (COI)</p>
+<ul>
+<li>Colocação</li>
+<li>Ocultação</li>
+<li>Integração</li>
+</ul>
+<p>COAF é o órgão máximo de investigação</p>
+<ul>
+<li>Movimentações em espécie acima de 50 mil</li>
+<li>Movimentações suspeitas de qualquer valor</li>
+</ul>
+<p>É necessário registrar o portador acima de 2 mil Presidente + 11 diretores KYC Know your costumer</p>
+<section id="investidor" class="level2">
+<h2 class="anchored" data-anchor-id="investidor">Investidor</h2>
+<p>Possível veto a determinados relacionamentos Conhecimento da origem e do patrimônio do cliente Compatibilidade de transações financeiras Origem e destino dos recursos Identificação de indícios de lavagem de dinheiro manter por 10 anos</p>
+<p>Obriação de cadastro e KYC</p>
+<ul>
+<li>Serviços de aplicação e recursos de terveitros (bancos)</li>
+<li>Compra e venda de moeda estrangeira</li>
+<li>Custódia e destreibuição de vm</li>
+<li>Bolsa de valores</li>
+<li>Seguradoras, corretoras, administradoras de cartão</li>
+<li>Sociedades de arrendamento mercantil</li>
+<li>Venda de imóveis e bens de luxo de alto valor</li>
+<li>Venda de jóias e metais preciosos</li>
+<li>Consultoria financeira</li>
+</ul>
+<p>Avaliação interna de risco Objetivo: verificar internamente se a IF está sendo usada para crime de LD Elencar e classificar em baixo médio e alto risco</p>
+<p>Nomear um diretor para prevenção de LD</p>
+</section>
+<section id="pessoa-politicamente-exposta" class="level2">
+<h2 class="anchored" data-anchor-id="pessoa-politicamente-exposta">Pessoa politicamente exposta</h2>
+<ul>
+<li>Mandatos eletivos</li>
+<li>Ministros da união, presidentes e diretores da adm pública -membros do stf, st e trf -procuradores gerais -membros dos tribunais de contas -secretários estaduais -presidente ou tesoureiros de partidos -chefes de estados -políticos -ocupantes de cargos gov -oficiais generais -executivos de escalões superiores de empresas públicas -dirigentes de partidos</li>
+</ul>
+<p>Nos últimos 5 anos</p>
+</section>
+</section>
+<section id="economia" class="level1">
+<h1>Economia</h1>
+<section id="selic-di-e-copom" class="level2">
+<h2 class="anchored" data-anchor-id="selic-di-e-copom">Selic, DI e Copom</h2>
+<p>Compom - comitê de política monetária Definir a taxa SELIC meta: taxa básica de juros Divulgar o relatório de inflação a cada trimestre</p>
+<p>Reuniões ordinárias 8 vezes por ano a cada 45 dias Duração de dois dias</p>
+<p>Selic over: taxa média efetiva definida pelo próprio mercado (juros compostos, 252 dias)</p>
+<p>CDI: taxa média efetiva sem lastro em título público – e sim em certificados</p>
+</section>
+<section id="produto-interno-bruto" class="level2">
+<h2 class="anchored" data-anchor-id="produto-interno-bruto">Produto Interno Bruto</h2>
+<p>Soma de todos os bens e serviços finais produzidos em um país.</p>
+<p>Fórmula do PIB sob ótimca do consumo: Y=C+I+G+(X-M)</p>
+</section>
+<section id="índices-de-inflação" class="level2">
+<h2 class="anchored" data-anchor-id="índices-de-inflação">Índices de inflação</h2>
+<p>Aumento médio generalizado dos preços Obj do bacen: asssegurar a estabilidade dos preços</p>
+<p>IPCA Índice de preços ao consumidor amplo Calculado e divulgado pelo IBGE Índice oficial de inflação no BR Famílias com renda mensal de 1 a 40 sm</p>
+<p>IGP-M Índice Geral do preços ao mercado FGV, mensal IPA (atacado) (60%), IPC (30%), INCC (10%)</p>
+<p>Dólar - atacado</p>
+</section>
+<section id="taxa-de-câmbio" class="level2">
+<h2 class="anchored" data-anchor-id="taxa-de-câmbio">Taxa de câmbio</h2>
+<p>Taxa PTAX - taxa oficial de câmbio importação prefere dolar depreciado, exportador o contrário. BACEN faz política cambial</p>
+<ul>
+<li>Fixa</li>
+<li>Flutuante</li>
+<li>Suja</li>
+</ul>
+</section>
+<section id="taxa-referencial" class="level2">
+<h2 class="anchored" data-anchor-id="taxa-referencial">Taxa referencial</h2>
+<p>Referência para atualização monetária Índice de correção monetária, calculado e divulgado pelo BACEN, incide sobre popança, FGTS e crédito imobiliário <span class="math display">\[
+TR = \frac{TBF}{R}
+\]</span> Divide a méias das LTNs (TBF) pelo redutor (R) Mensal</p>
+</section>
+<section id="política-monetária" class="level2">
+<h2 class="anchored" data-anchor-id="política-monetária">Política monetária</h2>
+<p>Expansionista (+consumo) ou contracionista (-consumo)</p>
+<p>Depósito compulsório 70% (BACEN). O banco só vai poder emprestar 30 reais Depósito compulsório 40% (BACEN). O banco só vai poder emprestar 60 reais</p>
+<p>Redesconto bancário: empréstimo do BACEN</p>
+<p>Open market: compra de títulos públicos em reserva dos bancos compra: expansionista venda: contracionista</p>
+</section>
+<section id="política-fiscal" class="level2">
+<h2 class="anchored" data-anchor-id="política-fiscal">Política fiscal</h2>
+<p>Superávit primário vs défict primário Consolidado: União, estados, municípios e empresas estatais Expansionismo: mais consumo</p>
+</section>
+<section id="conceitos-básicos-de-finanças" class="level2">
+<h2 class="anchored" data-anchor-id="conceitos-básicos-de-finanças">Conceitos básicos de finanças</h2>
+<p>Taxa real = taxa nominal - inflação Fórmula de Fisher</p>
+<p>Juros simples (taxa proporcional) vs juros compostos (taxa equivalente)</p>
+</section>
+</section>
+<section id="sistema-financeiro-nacional" class="level1">
+<h1>Sistema financeiro nacional</h1>
+<p>Transferência de grana</p>
+<section id="conselho-monetário-nacional---cmn" class="level2">
+<h2 class="anchored" data-anchor-id="conselho-monetário-nacional---cmn">Conselho monetário nacional - CMN</h2>
+<p>Composto pelo Bacen e Cvm Ministro da Fazenda, Ministro do Planejamento e Orçamento e Presidente do Bacen 100% normativo Orientar a aplicação dos recursos das ins financeiras Zelar pela liquidez e solvencia Coordenar Disciplinar Fixar diretrizes</p>
+</section>
+<section id="bacen" class="level2">
+<h2 class="anchored" data-anchor-id="bacen">Bacen</h2>
+<p>Executor. Regular a oferta de dinheiro. Assegurar a estabilidade de preços no país. Controlar a inflação 2021 garantia de autonomia do Banco Central</p>
+<p>Autarquia vinculada de Natureza Especial Faz cumprir as determinações do CMN Até nove membros na diretoria Mandatos alternados com o presidente</p>
+<p>Formular e executar Emitir papel moeda Receber compulsórios Exercer controle de crédito Administrar sistema de pagamentos Fiscalizar Executar serviços de meio circulante Zelar, fomentar pleno emprego e estabilidade</p>
+<p>Também é normativo</p>
+</section>
+<section id="comissão-de-valores-mobiliários-cvm" class="level2">
+<h2 class="anchored" data-anchor-id="comissão-de-valores-mobiliários-cvm">Comissão de valores mobiliários CVM</h2>
+<p>Bacen dos valores mobilários</p>
+<ul>
+<li>Ações</li>
+<li>Debêntures e notas promissórias</li>
+<li>cotas de fundos</li>
+<li>derivativos</li>
+</ul>
+<p>Autarquia vinculada ao MF Zelador do mercado de capitais</p>
+<p>Estimular a formação de poupança e aplicação em vm Protege os investidores Regular o mercado Condenar efetivamente os responsáveis por infrações Assegurar o acesso público às informações</p>
+</section>
+<section id="conselho-nacional-de-seguros-privados-cnsp" class="level2">
+<h2 class="anchored" data-anchor-id="conselho-nacional-de-seguros-privados-cnsp">Conselho nacional de seguros privados – CNSP</h2>
+<p>Igual ao CMN, mas para seguros privados Normativo, o executor é a SUSEP</p>
+<p>Seguro, resseguro, previdência aberta e capitalização</p>
+</section>
+<section id="conselho-nacional-de-previdência-complementar-cnpc" class="level2">
+<h2 class="anchored" data-anchor-id="conselho-nacional-de-previdência-complementar-cnpc">Conselho Nacional de Previdência Complementar – CNPC</h2>
+<p>Igual ao CNSP, mas para previdência fechada Normativo, o executor é a PREVIC</p>
+</section>
+<section id="tesouro-nacional" class="level2">
+<h2 class="anchored" data-anchor-id="tesouro-nacional">Tesouro nacional</h2>
+<p>Responsável pelos títulos públicos federais LTN, LFT Tirou a emissão de títulos do bacen</p>
+<p>Gerir as contas públicas Zelar pelo eq fiscal Vinculado ao MF Administra a dívida pública federal Emissor dos títulos Tesouro Direto</p>
+</section>
+<section id="b3" class="level2">
+<h2 class="anchored" data-anchor-id="b3">B3</h2>
+<p>Uma bolsa de valores é um local onde se negociam títulos Corretagem (corretora ou distribuidora); Emolumentos</p>
+<p>Não negociam títulos públicos</p>
+<p>Liquidação compensação de ativos de RV Registro de operações de títulos de renda É uma sa privada Única bolsa de valores BR</p>
+<p>Rebalanceamento da carteira a cada 4 meses</p>
+<p>BSM é a CVM da B3. Autorregulação. Administra o MRP e tem orçamento próprio.</p>
+</section>
+<section id="sistema-de-pagamentos-brasileiro" class="level2">
+<h2 class="anchored" data-anchor-id="sistema-de-pagamentos-brasileiro">Sistema de pagamentos brasileiro</h2>
+<p>Processamento e liquidação de opraçõe com transferendia ce dundos, ativos financeiros, modeda e valores modiliários</p>
+<ul>
+<li>Compensação de cheque</li>
+<li>Tranferencia de fundos</li>
+<li>Liquidação de ordens eletronicas</li>
+<li>Liquidação de bolsas e futuros</li>
+</ul>
+</section>
+<section id="fgc-e-fgcoop" class="level2">
+<h2 class="anchored" data-anchor-id="fgc-e-fgcoop">FGC e FGCoop</h2>
+<p>Fundo garantidor de crédito. Garantir o risco. É um seguro. O teto é 250mil por cpf e por instituição</p>
+<p>Associação civil privada</p>
+<ul>
+<li>Depósitos</li>
+<li>LC</li>
+<li>LH</li>
+<li>LCI</li>
+<li>LCA</li>
+</ul>
+<p>Debenture não tem, LF, titulos públicos não tem, cotas de fundo tbm Na conta conjunta só tem garantia para um cpf</p>
+<p>Limite greal de 1mm por período de 4 anos</p>
+</section>
+</section>
+<section id="insituições-e-intermediadores-financeiros" class="level1">
+<h1>Insituições e intermediadores financeiros</h1>
+<section id="bancos-comerciais" class="level2">
+<h2 class="anchored" data-anchor-id="bancos-comerciais">Bancos comerciais</h2>
+<p>Intermediário entre superavitários e deficitários Operações passivas: depósito a vista, depósito a prazo (dívidas com o usuário) Depósito a vista = conta corrente deposito a prazo = certificado de depósito bancário (cbd) Cria moeda</p>
+<p>Deve ser SA Expressão Banco deve estar no nome</p>
+</section>
+<section id="banco-de-investimentos" class="level2">
+<h2 class="anchored" data-anchor-id="banco-de-investimentos">Banco de investimentos</h2>
+<p>Depósito a prazo Operações ativas: empréstimo de médio e longo prazo Deve ser SA privada Principais operações: adm de fundos, coordenam IPO/Underwriting Repasses de recursos oficiais de cráidto empréstimo de capital fixo e de giro</p>
+</section>
+<section id="bancos-múltiplos" class="level2">
+<h2 class="anchored" data-anchor-id="bancos-múltiplos">Bancos múltiplos</h2>
+<p>Várias carteiras (2 ou mais) - Investimentos (obrigatória ou comercial) - Comercial (depósito a vista) (obrigatória ou investimentos) - Crédtio imobiliário - Arrendamento mercantil (leasing) - SCFI (financeiras) - Bancos de desenvolvimento (público)</p>
+<p>Surgiram com a intenção de racionalizar o sistema bancário Deve ser uma sociedade anônima (ações) Expressão banco deve estar no nome Pode publicar um único balanço consolidando todas as carteiras</p>
+<p>Não pode captar através de debentures</p>
+</section>
+<section id="caixa-econômica-federal" class="level2">
+<h2 class="anchored" data-anchor-id="caixa-econômica-federal">Caixa Econômica Federal</h2>
+<p>Fomentar o mercado imobiliário Programas sociais</p>
+<ul>
+<li>FGTS, PIS e Seguro desemprego</li>
+<li>Jogos lotéricos</li>
+<li>Programas sociais</li>
+<li>Empresa 100% pública</li>
+<li>Sede em Brasília - Vinculado ao MF</li>
+</ul>
+</section>
+<section id="bndes" class="level2">
+<h2 class="anchored" data-anchor-id="bndes">BNDES</h2>
+<p>Financiamento de Longo prazo Investimentos em todos os setores da economia Tem o finame, responsável pelo financiamento de compra e venda de máquinas (crédito industrial) Tem o BNDESPar, comprar ações de empresas</p>
+<ul>
+<li>Financiamento de Investimentos</li>
+<li>Subscrição de valores mobiliários</li>
+<li>Prestação de garantias</li>
+<li>Recursos para projetos sociais, culturais e tecnológicos</li>
+<li>Empresa pública</li>
+<li>Não é um banco de desenvolvimento</li>
+<li>Possui atuação anticíclica</li>
+<li>Vinculado ao MF</li>
+</ul>
+</section>
+<section id="cooperativas-de-crédito" class="level2">
+<h2 class="anchored" data-anchor-id="cooperativas-de-crédito">Cooperativas de crédito</h2>
+<p>Muito similar a um banco comercial. Também pode captar por depósito à vista As duas pontas precisam ser um cooperado</p>
+<ul>
+<li>Instituição financeira formdada por assossiacod</li>
+<li>Cooperados são conos e usuários</li>
+<li>participam da gestão</li>
+<li>não visa lucros</li>
+<li>lucro é repartido entre cooperados (sobras)</li>
+<li>supervisão do bacen</li>
+<li>FGCoop (250 mil)</li>
+<li>Constituídas com no mínimo 20 pessoas</li>
+</ul>
+</section>
+<section id="crédito-imobiliário" class="level2">
+<h2 class="anchored" data-anchor-id="crédito-imobiliário">Crédito imobiliário</h2>
+<p>Sistema Financeiro da Habitação - intervenção do governo federal - limite máximo de valor de imóvel - funding: poupança, fgts, programas do governo</p>
+<p>Sistema financeiro imobiliário - taxas de mercado - recursos livres - sem restrições de financiamento</p>
+</section>
+<section id="financeiras" class="level2">
+<h2 class="anchored" data-anchor-id="financeiras">Financeiras</h2>
+<p>Op Passivas: Letra de câmbio (LC), RDB Op. Passivas: CDC, crediário, capital de giro</p>
+<p>empréstimo (sem destinação específica) vs financiamento(com destinação)</p>
+<ul>
+<li>Deve ser sa</li>
+<li>não pode ter cc</li>
+<li>deve conter a expressão “crédito, financiamento e investimento” no nome</li>
+</ul>
+</section>
+<section id="corretoras-e-distribuidores-de-vm" class="level2">
+<h2 class="anchored" data-anchor-id="corretoras-e-distribuidores-de-vm">Corretoras e distribuidores de VM</h2>
+<p>Realizam as mesmas operações Homebroker ou mesa de operações</p>
+<ul>
+<li>Intermediaçõa de operaço~es</li>
+<li>administração de clubes e fundos</li>
+<li>operações de compra e venda de metais preciosos, câmbio e conta margem</li>
+<li>distribuiçõa de titulos</li>
+<li>supervisão conjunta do bacen e cvm</li>
+</ul>
+</section>
+<section id="corretoras-de-câmbio" class="level2">
+<h2 class="anchored" data-anchor-id="corretoras-de-câmbio">Corretoras de câmbio</h2>
+<ul>
+<li>intermediam operçaões com moeda estrangeira</li>
+<li>envio e recebimento de valores do exterior (até 100 mil dólares)</li>
+<li>operações vinculadas de exportação e importação (até 100 mil dólares)</li>
+</ul>
+</section>
+<section id="bolsas-internacionais" class="level2">
+<h2 class="anchored" data-anchor-id="bolsas-internacionais">Bolsas internacionais</h2>
+<ul>
+<li>S&amp;P 500 ações dos eua
+<ul>
+<li>cobre 80% do valor de mercado das ações em NY</li>
+</ul></li>
+<li>DJIA
+<ul>
+<li>30 maiores empresas cotadas nos eua</li>
+</ul></li>
+<li>Nasdaq
+<ul>
+<li>nasdaq composite: todas as ações negociadas</li>
+<li>nasdaq 100: 100 maiores empresas de tecnologia</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="administração-de-risco" class="level1">
+<h1>Administração de risco</h1>
+<section id="risco-de-mercado-crédito-e-liquidez" class="level2">
+<h2 class="anchored" data-anchor-id="risco-de-mercado-crédito-e-liquidez">Risco de mercado, crédito e liquidez</h2>
+<p>Probabilidade de ter um resultado diferente do esperado inicialmente Não pode ser totalmente eliminado, mas deve ser minimizado Crédito, legal, liquidez, sobreano, operacional, mercado e cambial</p>
+<section id="risco-de-mercado" class="level3">
+<h3 class="anchored" data-anchor-id="risco-de-mercado">Risco de mercado</h3>
+<p>Oscilação preço por condições naturais de mercado</p>
+</section>
+<section id="risco-de-crédito" class="level3">
+<h3 class="anchored" data-anchor-id="risco-de-crédito">Risco de crédito</h3>
+<p>Perigo de levar calote. Ações não tem risco de crédito.</p>
+</section>
+<section id="risco-de-liquidez" class="level3">
+<h3 class="anchored" data-anchor-id="risco-de-liquidez">Risco de liquidez</h3>
+<p>Poucos compradores, preço cai.</p>
+</section>
+</section>
+<section id="risco-operacional" class="level2">
+<h2 class="anchored" data-anchor-id="risco-operacional">Risco operacional</h2>
+<ul>
+<li>Erros humanos</li>
+<li>Falhas de sistemas</li>
+<li>Fraudes</li>
+</ul>
+</section>
+<section id="diversificação" class="level2">
+<h2 class="anchored" data-anchor-id="diversificação">Diversificação</h2>
+<p>Risco não sistemático vs risco sistemático</p>
+<div class="columns">
+<div class="column">
+<p>Risco não sistemático Especifico do ativo Diversificado ::: {.column} risco sistemático Sistema economico não diversificavel</p>
+</div><section id="var-stop-loss-back-test-e-stress-test" class="level2">
+<h2 class="anchored" data-anchor-id="var-stop-loss-back-test-e-stress-test">VAR, Stop Loss, Back test e stress test</h2>
+<p>VAR Perda potencial máxima de um investimento para um período de tempo (ao dia) validado pelo backtest Stress test, casos extremos stop loss utilizado para limitar as perdas</p>
+</section><section id="duration" class="level2">
+<h2 class="anchored" data-anchor-id="duration">Duration</h2>
+<p>Prazo de um título Maior prazo, maior incerteza, maior risco, maior retorno</p>
+<p>Título sem cupom, duration = 10 anos Título com cupom, duration = menor que 10 anos</p>
+</section><section id="limite-de-oscilação-e-túneis-de-negociação" class="level2">
+<h2 class="anchored" data-anchor-id="limite-de-oscilação-e-túneis-de-negociação">Limite de oscilação e túneis de negociação</h2>
+
+
+</section>
+</div>
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2025,
+  author = {Batista, Victor},
+  title = {Notas de Estudo Para Certificação {ANCORD}},
+  date = {2025-06-22},
+  url = {https://jvbatista1.github.io/posts/20250618_apisguru/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2025" class="csl-entry quarto-appendix-citeas" role="listitem">
+Batista, Victor. 2025. <span>“Notas de Estudo Para Certificação
+ANCORD.”</span> June 22, 2025. <a href="https://jvbatista1.github.io/posts/20250618_apisguru/">https://jvbatista1.github.io/posts/20250618_apisguru/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.jvbatista1\.github\.io");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2025, Victor Batista</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This website is built with {{&lt; fa heart title="a heart" &gt;}}, <a href="https://github.com/samanthacsik/jvbatista1.github.io" target="_blank">{{&lt; fa brands github title="GitHub octocat logo" &gt;}}</a>, <a href="https://www.r-project.org/about.html" target="_blank">{{&lt; fa brands r-project title="R Project" &gt;}}</a> and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
