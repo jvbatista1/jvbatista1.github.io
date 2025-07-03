@@ -68,5 +68,320 @@
     "title": "Dungeons & Dragons",
     "section": "",
     "text": "No desafio do Tidytuesday foi apresentada uma base com os monstros de Dungeons and Dragons e seus atributos (stats). Uma das questões propostas é verificar quais tipos de monstros possuem os melhores scores.\nA solução que achei adequada para verificar rapidamente tanto os scores quanto o tipo de monstro foi criar um mapa de calor. Utilizando Seaborn e Matplotlib, cheguei ao resultado abaixo. O primeiro passo foi baixar a base e selecionar as variáveis de interesse:\n\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nmonsters = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-05-27/monsters.csv')\n\nattributes = ['str', 'dex', 'con', 'int', 'wis', 'cha']\ndf = monsters[['type'] + attributes]\n\nprint(df.isnull().sum())\n\n# df = df.dropna(subset=['type'] + attributes)\n\nsummary = df.groupby('type')[attributes].mean().reset_index()\nfreq = df['type'].value_counts().sort_index()\n\nprint(summary)\n\ntype    0\nstr     0\ndex     0\ncon     0\nint     0\nwis     0\ncha     0\ndtype: int64\n                    type        str        dex        con        int  \\\n0             Aberration  16.333333  11.000000  14.555556   7.333333   \n1                  Beast  12.726190  12.976190  12.714286   2.202381   \n2              Celestial  17.923077  16.846154  16.923077  14.615385   \n3              Construct  17.000000  11.000000  16.000000   3.700000   \n4                 Dragon  21.622222  11.377778  20.044444  13.688889   \n5              Elemental  13.529412  13.529412  15.411765   9.294118   \n6                    Fey  12.733333  14.266667  12.400000  10.800000   \n7                  Fiend  16.275862  14.586207  16.448276  12.448276   \n8                  Giant  22.400000  10.600000  18.800000   8.100000   \n9               Humanoid  13.038462  13.346154  12.923077  11.384615   \n10           Monstrosity  16.891892  13.027027  16.135135   5.864865   \n11                  Ooze  14.250000   5.000000  16.500000   1.250000   \n12                 Plant  11.166667   5.333333  13.833333   6.500000   \n13  Swarm of Tiny Beasts   7.333333  14.500000  10.833333   2.000000   \n14  Swarm of Tiny Undead  14.000000  14.000000  11.000000   5.000000   \n15                Undead  12.333333  13.888889  14.277778   9.166667   \n\n          wis        cha  \n0   12.333333   7.111111  \n1   10.988095   5.083333  \n2   17.923077  16.692308  \n3    8.300000   2.800000  \n4   12.977778  17.400000  \n5   11.588235  10.705882  \n6   11.200000  11.200000  \n7   13.310345  14.482759  \n8   11.600000   9.700000  \n9   12.230769  12.269231  \n10  11.810811   8.594595  \n11   6.000000   1.250000  \n12   8.666667   5.333333  \n13   9.666667   3.166667  \n14  10.000000   4.000000  \n15  11.055556  10.555556  \n\n\nMinhas escolhas de customização do gráfico (com ajuda do chat GPT, claro) foram: - Utilizar o rcParams pra configurar as fontes utilizadas - Dividir o gráfico em duas partes (ax1, ax2) para inserir um gráfico auxiliar, mostrando a frequencia dos monstros em cada tipo - Para um gráfico isolado, acho interessante utilizar uma outra cor de fundo que não seja branca\n\nsns.set_theme(style=\"whitegrid\")\nplt.rcParams.update({'font.size': 10, 'font.family': 'sans-serif', 'font.sans-serif': 'Tahoma'})\n\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 8),\n                               gridspec_kw={'width_ratios': [4, 1]}, sharey=True)\nfig.patch.set_facecolor('#fff8dc')  \n# Heatmap\nsns.heatmap(summary.set_index('type'),\n            annot=True, fmt=\".1f\",\n            cmap='bwr',\n            cbar=False,\n            annot_kws={\"size\":8, \"color\":\"black\"},\n            ax=ax1)\n\nax1.set_title('Average Ability Scores', fontsize=30, fontweight='bold', pad=15)\nax1.set_ylabel('Monster Type', fontsize=12)\nax1.set_xlabel('Ability Score', fontsize=12)\n\n# Barra de frequência\nax2.barh(freq.index, freq.values,\n         color='#888888',\n         edgecolor='black',\n         alpha=0.8)\n\nax2.set_title('Frequency', fontsize=16, fontweight='bold', pad=15)\nax2.set_xlabel('Count', fontsize=12)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nEssa é minha primeira experiência utilizando Python para um projeto pessoal. Tive um pouco de trabalho para configurar os chunks, uma vez que estou escrevendo este blog em Quarto, mas no fim deu tudo certo. As configurações do Seaborn são muito intuitivas para customização, embora eu tenha precisado de ajuda para lembrar todas elas direitinho.\nMeu objetivo, no futuro, é encontrar uma identidade visual para esses projetos que realizo como exercício. Existem projetos na comunidade que acho incríveis, como o MEDS (que inclusive é a grande inpiração desse blog) e Latinometrics. São sites muito bonitos e agradáveis de acompanhar, tanto pelas suas escolhas estéticas quanto pela alta qualidade das análises.\nSe eu conseguir chegar, pelo menos, perto do que eles fazem, já ficarei muito feliz!\n\n\n\nCitationBibTeX citation:@online{batista2025,\n  author = {Batista, Victor},\n  title = {Dungeons \\& {Dragons}},\n  date = {2025-05-28},\n  url = {https://jvbatista1.github.io/posts/20250528_ddmonsters/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBatista, Victor. 2025. “Dungeons & Dragons.” May 28,\n2025. https://jvbatista1.github.io/posts/20250528_ddmonsters/."
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html",
+    "href": "posts/notas_de_aula/index.html",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "Brasil, Bolsa, Balcão\nIntermediário\nBTG, Banco, Corretora, XP, Santander, Bradesco, Itaú\n\nAssessores de investimentos são contratados pelas intermediárias (preposto) para fazer o aumento da capacidade de produtos. Instrução CVM 178/23\nAssessor de Investimentos PF: Agência bancária, escritório Assessor de Investimentos PJ: Gerentes, agente. SA ou LTDA\n\n\n\nAções\nDerivativos\nFundos\nCDB, RDB, LCi, LCA, LF, LC,\nCRI, CRA\nCOE\n\n\n\n\nPRP: Prospectar, recepção e prestação de informações\n\n\n\nMudanças recentes é regida pela CVM 178/23\nHoje: Pode ser ltda, sa, ai pode ser pf, pj\nAIPJ antes tinha exclusividade, hoje não mais. Sociedade não precisa mais ser só AI\nAIPF também não tem mais exclusividade caso ele esteja vinculado diretamente ao intermediário.\nAIPF também pode estar vinculado a um escritório (AIPJ)\nAIPJ é possível ter atividades complementares desde que não tenha atividades conflitantes, tais quais:\n\nAdministração de carteira de val mob\nConsultoria de VM\nAnálise de VM\n\n\n\n\nSócio ADM do escritório que presta informações à CVM\n\npresta informações\nresponde órgãos reguiladores e entidade credenciadora\nresponsável por políticas dos intermediários\nprevenção do exercício das atividades\npreservação de dados e infos dos clientes\n\n\n\n\n\n\nter concluído o ensino médio\nter sido aprovado nos exames de qualificação técnica\nter aderido ao código de conduta profissional\nnão estar inabilitado ou suspenso para o exercídio de cargo em IF e demais entidades autorizadaas pelo CVM, BACEN SUSEP ou PREVIC (tomar cuidado com todo o sistema)\nnão haver sido condenado criminalmente\nnão estar impedido de administrar seus bens em razão de decisão judicial\n\nQualificação técnica, ética e questão de impedimentos legais\n\nCNPJ (ltda, sa, …)\ntenha sede no país\ntenha atividade de assessor de investimento\nindique um diretor responsável (sócio administrador)\n\n\n\n\n\nAtuar como AIPF e como sócio, empregado ou contratado de AIPJ\nAtuar como sócio, empregado ou contratado de mais de uma AIPJ\n\n\n\n\nSeção iii e iv da cvm 178/23 - pedida pelo próprio AI mediante comprovação de que não esteja mais em atividade - até 36 meses. mais do que isso é cancelamento\n\n\n\n\npedido pelo próprio ai\nvícios ou falhas no processo de cancelamento\nperda de condição necessária\napliccação de penalidade pela ANCORD\ndescumprimento das condições estabelecidas no PEC\npenalidade pela CVM\nsuspensão superior a 36 meses\n\nNão atualização dos dados multa de 100 reais diário\n\n\n\nO AI deve fazer referência a todos os intermediários, como contratantes, identificando o ai como contratado e apresentar dados de contato da ouvidoria dessas instituições.\nSe vinculado a mais de um intermediário, abster-se de fazer referencias a produtos e infos que possam provocar dúvidas d equal intermediário se refere. O cliente não pode ficar com dúvida sobre qual intermediário se refere o produto.\nAIPJ deve informar na internet a relação dos ai que sejam sócios, empregados ou contratados. Transparência.\n\n\n\nadoção de logotipos desacompanhados de identificação do intermediário com no mínimo igual destaque vale para apostilas, cursos e palestras\n\n\n\nReceber de clientes ou em nome deles. Entregar numerário, títulos, vm ou outros ativos. REssalva para recebimento de remuneração por serviços complementares e não conflitantes. Ser procurador ou representante de clientes para intermediários. Contratar com clientes ou realizar, mesmo que grátis, serviços de administraçaõ de carteira, contultoria ou análise de vm Atuar como preposto de intermediário para o qual não tenha contrato delegar a terceiros a exec de serviços que constituam obj de contrato. usar senhas ou assinaturas eletrônicas dos clientes para transmissão de ordens Confeccionar extratos contendo informações sobre operações realizadas ou posições em aberto. Não pode fazer, só encaminhar."
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#atividade-de-ai",
+    "href": "posts/notas_de_aula/index.html#atividade-de-ai",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "Brasil, Bolsa, Balcão\nIntermediário\nBTG, Banco, Corretora, XP, Santander, Bradesco, Itaú\n\nAssessores de investimentos são contratados pelas intermediárias (preposto) para fazer o aumento da capacidade de produtos. Instrução CVM 178/23\nAssessor de Investimentos PF: Agência bancária, escritório Assessor de Investimentos PJ: Gerentes, agente. SA ou LTDA\n\n\n\nAções\nDerivativos\nFundos\nCDB, RDB, LCi, LCA, LF, LC,\nCRI, CRA\nCOE\n\n\n\n\nPRP: Prospectar, recepção e prestação de informações\n\n\n\nMudanças recentes é regida pela CVM 178/23\nHoje: Pode ser ltda, sa, ai pode ser pf, pj\nAIPJ antes tinha exclusividade, hoje não mais. Sociedade não precisa mais ser só AI\nAIPF também não tem mais exclusividade caso ele esteja vinculado diretamente ao intermediário.\nAIPF também pode estar vinculado a um escritório (AIPJ)\nAIPJ é possível ter atividades complementares desde que não tenha atividades conflitantes, tais quais:\n\nAdministração de carteira de val mob\nConsultoria de VM\nAnálise de VM\n\n\n\n\nSócio ADM do escritório que presta informações à CVM\n\npresta informações\nresponde órgãos reguiladores e entidade credenciadora\nresponsável por políticas dos intermediários\nprevenção do exercício das atividades\npreservação de dados e infos dos clientes"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#exigências-de-cadastramento-de-ai",
+    "href": "posts/notas_de_aula/index.html#exigências-de-cadastramento-de-ai",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "ter concluído o ensino médio\nter sido aprovado nos exames de qualificação técnica\nter aderido ao código de conduta profissional\nnão estar inabilitado ou suspenso para o exercídio de cargo em IF e demais entidades autorizadaas pelo CVM, BACEN SUSEP ou PREVIC (tomar cuidado com todo o sistema)\nnão haver sido condenado criminalmente\nnão estar impedido de administrar seus bens em razão de decisão judicial\n\nQualificação técnica, ética e questão de impedimentos legais\n\nCNPJ (ltda, sa, …)\ntenha sede no país\ntenha atividade de assessor de investimento\nindique um diretor responsável (sócio administrador)"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#veadções-ai-pessoa-natual-pessoa-física",
+    "href": "posts/notas_de_aula/index.html#veadções-ai-pessoa-natual-pessoa-física",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "Atuar como AIPF e como sócio, empregado ou contratado de AIPJ\nAtuar como sócio, empregado ou contratado de mais de uma AIPJ"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#suspensão-e-cancelamento-ai",
+    "href": "posts/notas_de_aula/index.html#suspensão-e-cancelamento-ai",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "Seção iii e iv da cvm 178/23 - pedida pelo próprio AI mediante comprovação de que não esteja mais em atividade - até 36 meses. mais do que isso é cancelamento"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#cancelamento-10-dias-úteis-para-recorrer",
+    "href": "posts/notas_de_aula/index.html#cancelamento-10-dias-úteis-para-recorrer",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "pedido pelo próprio ai\nvícios ou falhas no processo de cancelamento\nperda de condição necessária\napliccação de penalidade pela ANCORD\ndescumprimento das condições estabelecidas no PEC\npenalidade pela CVM\nsuspensão superior a 36 meses\n\nNão atualização dos dados multa de 100 reais diário"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#materiais-de-divulgação-ai",
+    "href": "posts/notas_de_aula/index.html#materiais-de-divulgação-ai",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "O AI deve fazer referência a todos os intermediários, como contratantes, identificando o ai como contratado e apresentar dados de contato da ouvidoria dessas instituições.\nSe vinculado a mais de um intermediário, abster-se de fazer referencias a produtos e infos que possam provocar dúvidas d equal intermediário se refere. O cliente não pode ficar com dúvida sobre qual intermediário se refere o produto.\nAIPJ deve informar na internet a relação dos ai que sejam sócios, empregados ou contratados. Transparência."
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#é-vedado",
+    "href": "posts/notas_de_aula/index.html#é-vedado",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "adoção de logotipos desacompanhados de identificação do intermediário com no mínimo igual destaque vale para apostilas, cursos e palestras"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#práticas-vedadas-ai",
+    "href": "posts/notas_de_aula/index.html#práticas-vedadas-ai",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "",
+    "text": "Receber de clientes ou em nome deles. Entregar numerário, títulos, vm ou outros ativos. REssalva para recebimento de remuneração por serviços complementares e não conflitantes. Ser procurador ou representante de clientes para intermediários. Contratar com clientes ou realizar, mesmo que grátis, serviços de administraçaõ de carteira, contultoria ou análise de vm Atuar como preposto de intermediário para o qual não tenha contrato delegar a terceiros a exec de serviços que constituam obj de contrato. usar senhas ou assinaturas eletrônicas dos clientes para transmissão de ordens Confeccionar extratos contendo informações sobre operações realizadas ou posições em aberto. Não pode fazer, só encaminhar."
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#investidor",
+    "href": "posts/notas_de_aula/index.html#investidor",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Investidor",
+    "text": "Investidor\nPossível veto a determinados relacionamentos Conhecimento da origem e do patrimônio do cliente Compatibilidade de transações financeiras Origem e destino dos recursos Identificação de indícios de lavagem de dinheiro manter por 10 anos\nObriação de cadastro e KYC\n\nServiços de aplicação e recursos de terveitros (bancos)\nCompra e venda de moeda estrangeira\nCustódia e destreibuição de vm\nBolsa de valores\nSeguradoras, corretoras, administradoras de cartão\nSociedades de arrendamento mercantil\nVenda de imóveis e bens de luxo de alto valor\nVenda de jóias e metais preciosos\nConsultoria financeira\n\nAvaliação interna de risco Objetivo: verificar internamente se a IF está sendo usada para crime de LD Elencar e classificar em baixo médio e alto risco\nNomear um diretor para prevenção de LD"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#pessoa-politicamente-exposta",
+    "href": "posts/notas_de_aula/index.html#pessoa-politicamente-exposta",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Pessoa politicamente exposta",
+    "text": "Pessoa politicamente exposta\n\nMandatos eletivos\nMinistros da união, presidentes e diretores da adm pública -membros do stf, st e trf -procuradores gerais -membros dos tribunais de contas -secretários estaduais -presidente ou tesoureiros de partidos -chefes de estados -políticos -ocupantes de cargos gov -oficiais generais -executivos de escalões superiores de empresas públicas -dirigentes de partidos\n\nNos últimos 5 anos"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#selic-di-e-copom",
+    "href": "posts/notas_de_aula/index.html#selic-di-e-copom",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Selic, DI e Copom",
+    "text": "Selic, DI e Copom\nCompom - comitê de política monetária Definir a taxa SELIC meta: taxa básica de juros Divulgar o relatório de inflação a cada trimestre\nReuniões ordinárias 8 vezes por ano a cada 45 dias Duração de dois dias\nSelic over: taxa média efetiva definida pelo próprio mercado (juros compostos, 252 dias)\nCDI: taxa média efetiva sem lastro em título público – e sim em certificados"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#produto-interno-bruto",
+    "href": "posts/notas_de_aula/index.html#produto-interno-bruto",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Produto Interno Bruto",
+    "text": "Produto Interno Bruto\nSoma de todos os bens e serviços finais produzidos em um país.\nFórmula do PIB sob ótimca do consumo: Y=C+I+G+(X-M)"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#índices-de-inflação",
+    "href": "posts/notas_de_aula/index.html#índices-de-inflação",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Índices de inflação",
+    "text": "Índices de inflação\nAumento médio generalizado dos preços Obj do bacen: asssegurar a estabilidade dos preços\nIPCA Índice de preços ao consumidor amplo Calculado e divulgado pelo IBGE Índice oficial de inflação no BR Famílias com renda mensal de 1 a 40 sm\nIGP-M Índice Geral do preços ao mercado FGV, mensal IPA (atacado) (60%), IPC (30%), INCC (10%)\nDólar - atacado"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#taxa-de-câmbio",
+    "href": "posts/notas_de_aula/index.html#taxa-de-câmbio",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Taxa de câmbio",
+    "text": "Taxa de câmbio\nTaxa PTAX - taxa oficial de câmbio importação prefere dolar depreciado, exportador o contrário. BACEN faz política cambial\n\nFixa\nFlutuante\nSuja"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#taxa-referencial",
+    "href": "posts/notas_de_aula/index.html#taxa-referencial",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Taxa referencial",
+    "text": "Taxa referencial\nReferência para atualização monetária Índice de correção monetária, calculado e divulgado pelo BACEN, incide sobre popança, FGTS e crédito imobiliário \\[\nTR = \\frac{TBF}{R}\n\\] Divide a méias das LTNs (TBF) pelo redutor (R) Mensal"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#política-monetária",
+    "href": "posts/notas_de_aula/index.html#política-monetária",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Política monetária",
+    "text": "Política monetária\nExpansionista (+consumo) ou contracionista (-consumo)\nDepósito compulsório 70% (BACEN). O banco só vai poder emprestar 30 reais Depósito compulsório 40% (BACEN). O banco só vai poder emprestar 60 reais\nRedesconto bancário: empréstimo do BACEN\nOpen market: compra de títulos públicos em reserva dos bancos compra: expansionista venda: contracionista"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#política-fiscal",
+    "href": "posts/notas_de_aula/index.html#política-fiscal",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Política fiscal",
+    "text": "Política fiscal\nSuperávit primário vs défict primário Consolidado: União, estados, municípios e empresas estatais Expansionismo: mais consumo"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#conceitos-básicos-de-finanças",
+    "href": "posts/notas_de_aula/index.html#conceitos-básicos-de-finanças",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Conceitos básicos de finanças",
+    "text": "Conceitos básicos de finanças\nTaxa real = taxa nominal - inflação Fórmula de Fisher\nJuros simples (taxa proporcional) vs juros compostos (taxa equivalente)"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#conselho-monetário-nacional---cmn",
+    "href": "posts/notas_de_aula/index.html#conselho-monetário-nacional---cmn",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Conselho monetário nacional - CMN",
+    "text": "Conselho monetário nacional - CMN\nComposto pelo Bacen e Cvm Ministro da Fazenda, Ministro do Planejamento e Orçamento e Presidente do Bacen 100% normativo Orientar a aplicação dos recursos das ins financeiras Zelar pela liquidez e solvencia Coordenar Disciplinar Fixar diretrizes"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#bacen",
+    "href": "posts/notas_de_aula/index.html#bacen",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Bacen",
+    "text": "Bacen\nExecutor. Regular a oferta de dinheiro. Assegurar a estabilidade de preços no país. Controlar a inflação 2021 garantia de autonomia do Banco Central\nAutarquia vinculada de Natureza Especial Faz cumprir as determinações do CMN Até nove membros na diretoria Mandatos alternados com o presidente\nFormular e executar Emitir papel moeda Receber compulsórios Exercer controle de crédito Administrar sistema de pagamentos Fiscalizar Executar serviços de meio circulante Zelar, fomentar pleno emprego e estabilidade\nTambém é normativo"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#comissão-de-valores-mobiliários-cvm",
+    "href": "posts/notas_de_aula/index.html#comissão-de-valores-mobiliários-cvm",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Comissão de valores mobiliários CVM",
+    "text": "Comissão de valores mobiliários CVM\nBacen dos valores mobilários\n\nAções\nDebêntures e notas promissórias\ncotas de fundos\nderivativos\n\nAutarquia vinculada ao MF Zelador do mercado de capitais\nEstimular a formação de poupança e aplicação em vm Protege os investidores Regular o mercado Condenar efetivamente os responsáveis por infrações Assegurar o acesso público às informações"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#conselho-nacional-de-seguros-privados-cnsp",
+    "href": "posts/notas_de_aula/index.html#conselho-nacional-de-seguros-privados-cnsp",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Conselho nacional de seguros privados – CNSP",
+    "text": "Conselho nacional de seguros privados – CNSP\nIgual ao CMN, mas para seguros privados Normativo, o executor é a SUSEP\nSeguro, resseguro, previdência aberta e capitalização"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#conselho-nacional-de-previdência-complementar-cnpc",
+    "href": "posts/notas_de_aula/index.html#conselho-nacional-de-previdência-complementar-cnpc",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Conselho Nacional de Previdência Complementar – CNPC",
+    "text": "Conselho Nacional de Previdência Complementar – CNPC\nIgual ao CNSP, mas para previdência fechada Normativo, o executor é a PREVIC"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#tesouro-nacional",
+    "href": "posts/notas_de_aula/index.html#tesouro-nacional",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Tesouro nacional",
+    "text": "Tesouro nacional\nResponsável pelos títulos públicos federais LTN, LFT Tirou a emissão de títulos do bacen\nGerir as contas públicas Zelar pelo eq fiscal Vinculado ao MF Administra a dívida pública federal Emissor dos títulos Tesouro Direto"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#b3",
+    "href": "posts/notas_de_aula/index.html#b3",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "B3",
+    "text": "B3\nUma bolsa de valores é um local onde se negociam títulos Corretagem (corretora ou distribuidora); Emolumentos\nNão negociam títulos públicos\nLiquidação compensação de ativos de RV Registro de operações de títulos de renda É uma sa privada Única bolsa de valores BR\nRebalanceamento da carteira a cada 4 meses\nBSM é a CVM da B3. Autorregulação. Administra o MRP e tem orçamento próprio."
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#sistema-de-pagamentos-brasileiro",
+    "href": "posts/notas_de_aula/index.html#sistema-de-pagamentos-brasileiro",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Sistema de pagamentos brasileiro",
+    "text": "Sistema de pagamentos brasileiro\nProcessamento e liquidação de opraçõe com transferendia ce dundos, ativos financeiros, modeda e valores modiliários\n\nCompensação de cheque\nTranferencia de fundos\nLiquidação de ordens eletronicas\nLiquidação de bolsas e futuros"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#fgc-e-fgcoop",
+    "href": "posts/notas_de_aula/index.html#fgc-e-fgcoop",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "FGC e FGCoop",
+    "text": "FGC e FGCoop\nFundo garantidor de crédito. Garantir o risco. É um seguro. O teto é 250mil por cpf e por instituição\nAssociação civil privada\n\nDepósitos\nLC\nLH\nLCI\nLCA\n\nDebenture não tem, LF, titulos públicos não tem, cotas de fundo tbm Na conta conjunta só tem garantia para um cpf\nLimite greal de 1mm por período de 4 anos"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#bancos-comerciais",
+    "href": "posts/notas_de_aula/index.html#bancos-comerciais",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Bancos comerciais",
+    "text": "Bancos comerciais\nIntermediário entre superavitários e deficitários Operações passivas: depósito a vista, depósito a prazo (dívidas com o usuário) Depósito a vista = conta corrente deposito a prazo = certificado de depósito bancário (cbd) Cria moeda\nDeve ser SA Expressão Banco deve estar no nome"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#banco-de-investimentos",
+    "href": "posts/notas_de_aula/index.html#banco-de-investimentos",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Banco de investimentos",
+    "text": "Banco de investimentos\nDepósito a prazo Operações ativas: empréstimo de médio e longo prazo Deve ser SA privada Principais operações: adm de fundos, coordenam IPO/Underwriting Repasses de recursos oficiais de cráidto empréstimo de capital fixo e de giro"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#bancos-múltiplos",
+    "href": "posts/notas_de_aula/index.html#bancos-múltiplos",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Bancos múltiplos",
+    "text": "Bancos múltiplos\nVárias carteiras (2 ou mais) - Investimentos (obrigatória ou comercial) - Comercial (depósito a vista) (obrigatória ou investimentos) - Crédtio imobiliário - Arrendamento mercantil (leasing) - SCFI (financeiras) - Bancos de desenvolvimento (público)\nSurgiram com a intenção de racionalizar o sistema bancário Deve ser uma sociedade anônima (ações) Expressão banco deve estar no nome Pode publicar um único balanço consolidando todas as carteiras\nNão pode captar através de debentures"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#caixa-econômica-federal",
+    "href": "posts/notas_de_aula/index.html#caixa-econômica-federal",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Caixa Econômica Federal",
+    "text": "Caixa Econômica Federal\nFomentar o mercado imobiliário Programas sociais\n\nFGTS, PIS e Seguro desemprego\nJogos lotéricos\nProgramas sociais\nEmpresa 100% pública\nSede em Brasília - Vinculado ao MF"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#bndes",
+    "href": "posts/notas_de_aula/index.html#bndes",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "BNDES",
+    "text": "BNDES\nFinanciamento de Longo prazo Investimentos em todos os setores da economia Tem o finame, responsável pelo financiamento de compra e venda de máquinas (crédito industrial) Tem o BNDESPar, comprar ações de empresas\n\nFinanciamento de Investimentos\nSubscrição de valores mobiliários\nPrestação de garantias\nRecursos para projetos sociais, culturais e tecnológicos\nEmpresa pública\nNão é um banco de desenvolvimento\nPossui atuação anticíclica\nVinculado ao MF"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#cooperativas-de-crédito",
+    "href": "posts/notas_de_aula/index.html#cooperativas-de-crédito",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Cooperativas de crédito",
+    "text": "Cooperativas de crédito\nMuito similar a um banco comercial. Também pode captar por depósito à vista As duas pontas precisam ser um cooperado\n\nInstituição financeira formdada por assossiacod\nCooperados são conos e usuários\nparticipam da gestão\nnão visa lucros\nlucro é repartido entre cooperados (sobras)\nsupervisão do bacen\nFGCoop (250 mil)\nConstituídas com no mínimo 20 pessoas"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#crédito-imobiliário",
+    "href": "posts/notas_de_aula/index.html#crédito-imobiliário",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Crédito imobiliário",
+    "text": "Crédito imobiliário\nSistema Financeiro da Habitação - intervenção do governo federal - limite máximo de valor de imóvel - funding: poupança, fgts, programas do governo\nSistema financeiro imobiliário - taxas de mercado - recursos livres - sem restrições de financiamento"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#financeiras",
+    "href": "posts/notas_de_aula/index.html#financeiras",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Financeiras",
+    "text": "Financeiras\nOp Passivas: Letra de câmbio (LC), RDB Op. Passivas: CDC, crediário, capital de giro\nempréstimo (sem destinação específica) vs financiamento(com destinação)\n\nDeve ser sa\nnão pode ter cc\ndeve conter a expressão “crédito, financiamento e investimento” no nome"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#corretoras-e-distribuidores-de-vm",
+    "href": "posts/notas_de_aula/index.html#corretoras-e-distribuidores-de-vm",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Corretoras e distribuidores de VM",
+    "text": "Corretoras e distribuidores de VM\nRealizam as mesmas operações Homebroker ou mesa de operações\n\nIntermediaçõa de operaço~es\nadministração de clubes e fundos\noperações de compra e venda de metais preciosos, câmbio e conta margem\ndistribuiçõa de titulos\nsupervisão conjunta do bacen e cvm"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#corretoras-de-câmbio",
+    "href": "posts/notas_de_aula/index.html#corretoras-de-câmbio",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Corretoras de câmbio",
+    "text": "Corretoras de câmbio\n\nintermediam operçaões com moeda estrangeira\nenvio e recebimento de valores do exterior (até 100 mil dólares)\noperações vinculadas de exportação e importação (até 100 mil dólares)"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#bolsas-internacionais",
+    "href": "posts/notas_de_aula/index.html#bolsas-internacionais",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Bolsas internacionais",
+    "text": "Bolsas internacionais\n\nS&P 500 ações dos eua\n\ncobre 80% do valor de mercado das ações em NY\n\nDJIA\n\n30 maiores empresas cotadas nos eua\n\nNasdaq\n\nnasdaq composite: todas as ações negociadas\nnasdaq 100: 100 maiores empresas de tecnologia"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#risco-de-mercado-crédito-e-liquidez",
+    "href": "posts/notas_de_aula/index.html#risco-de-mercado-crédito-e-liquidez",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Risco de mercado, crédito e liquidez",
+    "text": "Risco de mercado, crédito e liquidez\nProbabilidade de ter um resultado diferente do esperado inicialmente Não pode ser totalmente eliminado, mas deve ser minimizado Crédito, legal, liquidez, sobreano, operacional, mercado e cambial\n\nRisco de mercado\nOscilação preço por condições naturais de mercado\n\n\nRisco de crédito\nPerigo de levar calote. Ações não tem risco de crédito.\n\n\nRisco de liquidez\nPoucos compradores, preço cai."
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#risco-operacional",
+    "href": "posts/notas_de_aula/index.html#risco-operacional",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Risco operacional",
+    "text": "Risco operacional\n\nErros humanos\nFalhas de sistemas\nFraudes"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#diversificação",
+    "href": "posts/notas_de_aula/index.html#diversificação",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Diversificação",
+    "text": "Diversificação\nRisco não sistemático vs risco sistemático\n\n\nRisco não sistemático Especifico do ativo Diversificado ::: {.column} risco sistemático Sistema economico não diversificavel\n\nVAR, Stop Loss, Back test e stress test\nVAR Perda potencial máxima de um investimento para um período de tempo (ao dia) validado pelo backtest Stress test, casos extremos stop loss utilizado para limitar as perdas\n\nDuration\nPrazo de um título Maior prazo, maior incerteza, maior risco, maior retorno\nTítulo sem cupom, duration = 10 anos Título com cupom, duration = menor que 10 anos\n\nLimite de oscilação e túneis de negociação"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#var-stop-loss-back-test-e-stress-test",
+    "href": "posts/notas_de_aula/index.html#var-stop-loss-back-test-e-stress-test",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "VAR, Stop Loss, Back test e stress test",
+    "text": "VAR, Stop Loss, Back test e stress test\nVAR Perda potencial máxima de um investimento para um período de tempo (ao dia) validado pelo backtest Stress test, casos extremos stop loss utilizado para limitar as perdas"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#duration",
+    "href": "posts/notas_de_aula/index.html#duration",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Duration",
+    "text": "Duration\nPrazo de um título Maior prazo, maior incerteza, maior risco, maior retorno\nTítulo sem cupom, duration = 10 anos Título com cupom, duration = menor que 10 anos"
+  },
+  {
+    "objectID": "posts/notas_de_aula/index.html#limite-de-oscilação-e-túneis-de-negociação",
+    "href": "posts/notas_de_aula/index.html#limite-de-oscilação-e-túneis-de-negociação",
+    "title": "Notas de estudo para certificação ANCORD",
+    "section": "Limite de oscilação e túneis de negociação",
+    "text": "Limite de oscilação e túneis de negociação"
   }
 ]
