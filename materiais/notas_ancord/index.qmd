@@ -692,3 +692,133 @@ Aftermarket não negocia derivativos
 - Apregoação por Leilão especial: destaque das demais, somente permitida interferência pra compra
 - Apregoação por oferta: demostraçaõ de interesse em comprar/vender ativos inserindo a oferta no sistema
 
+# Outros fundos de investimento
+## Fundo de índice
+ETF: Fundos negociados na B3
+Segue um índice e.g. IBOVESPA
+- Cotas negociadas em bolsa
+- Objetvio de refletir
+- -Mínimo 95% do PL alocado em ativos do indice
+- Lote padrão 1 cota
+
+## FII
+Fundos imobiliários que adquirem ativos do setor imobiliário
+
+- Fundo fechado
+- Dividendos isentos de IR
+- Cotas negociadas em bolsa ou balcão
+- Mínimo 100 cotistas
+- Cotista com no máximo 10% das cotas
+- Ganho de capital = IR 20%
+- Distribuição de 95% de seu lucro
+- Acessibilidade, gestão profissional, fácil negociação
+
+## FIEE
+Empresa emergente
+- Fundo fechado
+- Deve participar do processo decisório
+- devem manter 90% do patrimonio
+
+## FIP
+Ativos: cias abertas, cias fechadas, sociedades ltda
+Compra ativos para participar do processo decisório
+- Fundo fechado
+- 90% em ações D simples e títulos conversíveis em ações ordinárias
+
+## FIDC
+Direito creditório
+Cheques, duplicatas, cc, outros
+
+- Mínimo 50% em DC
+- Não tem valor mínimo de aplicação inicial
+- Cota: senior ou subordinada
+- fundo aberto ou fechado
+
+- Fomento mercantil
+- Financeiro
+- Agro industria comercio
+- Outros
+
+# Securitização de recebíveis
+## Conceito
+Direito de crédito
+Vender os direitos de crédito para uma companhia securitização (SPE)
+
+## CRI e CRA
+Igual a um FIDC, mas ao invés de um fundo, é um ativo próprio
+Certificado de recebíveis de imóveis ou do agro
+
+# Clubes de investimentos em ações
+Mínimo de 67% de ações
+Limite mínimo de 3 e máximo de 50 pessoas
+Máximo de 40% para cada cotista
+
+Gestão: próprios cotistas ou gestão profisional
+
+# Matemática financeira
+## Taxa equivalente: programação na HP
+## Cálculos básicos
+## Análise de investimentos
+- CF0 = investimento inicial
+- CFj = fluxo de caixa periódico
+- Nj = repetir valor
+- NPV = Valor presente líquido
+- IRR = taxa interna de retorno
+
+## Cálculos com títulos de renda fixa
+
+# Derivativos
+## Introdução
+Contratos que se referem a um ativo principal
+1. Mercado a termo
+2. SWAP
+3. Opções
+4. Mercado a futuro
+
+Hedger - Especulador - Arbitrador
+
+## Mercado a termo
+Vai pagar só no futuro por um preço pré-definido
+Cheque pre-datado
+- Compra ou venda de algo em data futura com preço previamente definido
+- 16 a 999 dias corridos
+- Sem padrão e sem prêmio
+- Sem ajuste diário
+- Apenas compradores precisam dar margem de garantia
+
+## Swap
+Taxa pré-fixada (e.g. câmbio)
+- Sem padrão
+- Renda fixa (tabela regressiva ir)
+- Mais comuns: índices, taxas de juros, e moedas
+- ferramenta de troca
+
+## Mercado de opções
+Tem prêmio
+Comprar Call: direito de comprar
+Comprar Put: direito de vender
+
+### Call
+Opção de compra. 
+Titular (aposta na alta) e lançador: Pode ou não exercer
+
+### Put
+Opção de venda.
+Titular (aposta na queda) e lançador: Pode ou não exercer também
+
+Opções européias: somente na data do vencimento. Opções americanas: a qualquer momento até a data do exercício
+
+## Estratégias com opções
+Gráficos
+
+## Mercado futuro
+Comprado: aposta na alta
+Vendido:aposta na baixa
+Ajuste diário em d+1
+Não tem risco de crédito
+
+Hedge:opera vendido
+Padronizados
+
+Preços futuros podem inclusive ser inferiores aos preços a vista
+Garantias devem ser depositadas antes do início das operações no mercado futuro
