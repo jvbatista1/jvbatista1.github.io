@@ -10,7 +10,7 @@ website:
     left:
       #- href: index.qmd
       #  text: Home
-      - about.qmd
+      - materiais.qmd
       - posts.qmd
       - icon: github 
         href: https://github.com/jvbatista1
