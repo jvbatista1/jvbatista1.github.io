@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Victor Batista</title>
+<link>https://www.jvbatista1.github.io/materiais.html</link>
+<atom:link href="https://www.jvbatista1.github.io/materiais.xml" rel="self" type="application/rss+xml"/>
+<description>Um blog pessoal</description>
+<generator>quarto-1.6.32</generator>
+<lastBuildDate>Wed, 23 Jul 2025 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Notas de estudo para certificação ANCORD</title>
+  <dc:creator>Victor Batista</dc:creator>
+  <link>https://www.jvbatista1.github.io/materiais/notas_ancord/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="assessor-de-investimentos" class="level1">
+<h1>Assessor de investimentos</h1>
+<section id="atividade-de-ai" class="level2">
+<h2 class="anchored" data-anchor-id="atividade-de-ai">Atividade de AI</h2>
+<ul>
+<li>Brasil, Bolsa, Balcão</li>
+<li>Intermediário</li>
+<li>BTG, Banco, Corretora, XP, Santander, Bradesco, Itaú</li>
+</ul>
+<p>Assessores de investimentos são contratados pelas intermediárias (preposto) para fazer o aumento da capacidade de produtos. Instrução CVM 178/23</p>
+<ul>
+<li>Assessor de Investimentos PF: Agência bancária, escritório</li>
+<li>Assessor de Investimentos PJ: Gerentes, agente. SA ou LTDA</li>
+</ul>
+<section id="produtos-distribuídos-pelos-ai" class="level3">
+<h3 class="anchored" data-anchor-id="produtos-distribuídos-pelos-ai">Produtos distribuídos pelos AI</h3>
+<ul>
+<li>Ações</li>
+<li>Derivativos</li>
+<li>Fundos</li>
+<li>CDB, RDB, LCI, LCA, LF, LC,</li>
+<li>CRI, CRA</li>
+<li>COE</li>
+</ul>
+</section>
+<section id="atividade-do-ai" class="level3">
+<h3 class="anchored" data-anchor-id="atividade-do-ai">Atividade do AI</h3>
+<p>PRP: Prospectar clientes, recepção de ordens e prestação de informações</p>
+</section>
+<section id="constituição-do-ai" class="level3">
+<h3 class="anchored" data-anchor-id="constituição-do-ai">Constituição do AI</h3>
+<p>Mudanças recentes, regidas pela CVM 178/23. Assessores de investimento podem ser pessoa jurídica (AIPJ) ou física (AIPF)</p>
+<p>Hoje AIPJ podem ser sociedades ltda ou sa</p>
+<p>AIPJ antes tinha exclusividade, hoje não mais.</p>
+<p>Sociedade não precisa mais ser só AI</p>
+<p>AIPF também não tem mais exclusividade caso ele esteja vinculado diretamente ao intermediário.</p>
+<p>AIPF também pode estar vinculado a um escritório (AIPJ)</p>
+<p>AIPJ é possível ter atividades complementares desde que não tenha atividades conflitantes. Atividades conflitantes podem ser:</p>
+<ul>
+<li>Administração de carteira de valores mobiliários (VM)</li>
+<li>Consultoria de VM</li>
+<li>Análise de VM</li>
+</ul>
+</section>
+<section id="diretor-responsável" class="level3">
+<h3 class="anchored" data-anchor-id="diretor-responsável">Diretor responsável</h3>
+<p>Sócio ADM do escritório que presta informações à CVM</p>
+<ul>
+<li>presta informações</li>
+<li>responde órgãos reguiladores e entidade credenciadora</li>
+<li>responsável por políticas dos intermediários</li>
+<li>prevenção do exercício das atividades</li>
+<li>preservação de dados e infos dos clientes</li>
+</ul>
+</section>
+</section>
+<section id="exigências-de-cadastramento-de-ai" class="level2">
+<h2 class="anchored" data-anchor-id="exigências-de-cadastramento-de-ai">Exigências de cadastramento de AI</h2>
+<section id="aipf" class="level3">
+<h3 class="anchored" data-anchor-id="aipf">AIPF</h3>
+<ul>
+<li>ter concluído o ensino médio</li>
+<li>ter sido aprovado nos exames de qualificação técnica</li>
+<li>ter aderido ao código de conduta profissional</li>
+<li>não estar inabilitado ou suspenso para o exercídio de cargo em IF e demais entidades autorizadaas pelo CVM, BACEN SUSEP ou PREVIC (tomar cuidado com todo o sistema)</li>
+<li>não haver sido condenado criminalmente</li>
+<li>não estar impedido de administrar seus bens em razão de decisão judicial</li>
+</ul>
+<p>São comprovações de qualificação técnica, ética e de impedimentos legais</p>
+</section>
+<section id="aipj" class="level3">
+<h3 class="anchored" data-anchor-id="aipj">AIPJ</h3>
+<ul>
+<li>CNPJ (ltda, sa, …)</li>
+<li>tenha sede no país</li>
+<li>tenha atividade de assessor de investimento (não exclusivamente)</li>
+<li>indique um diretor responsável (sócio administrador)</li>
+</ul>
+</section>
+</section>
+<section id="veadções-para-o-aipf" class="level2">
+<h2 class="anchored" data-anchor-id="veadções-para-o-aipf">Veadções para o AIPF</h2>
+<ul>
+<li>Atuar como AIPF e como sócio, empregado ou contratado de AIPJ</li>
+<li>Atuar como sócio, empregado ou contratado de mais de uma AIPJ</li>
+</ul>
+</section>
+<section id="suspensão-do-ai" class="level2">
+<h2 class="anchored" data-anchor-id="suspensão-do-ai">Suspensão do AI</h2>
+<p>Seção iii e iv da cvm 178/23</p>
+<ul>
+<li>pedida pelo próprio AI mediante comprovação de que não esteja mais em atividade</li>
+<li>apta para pedir a partir de 36 meses</li>
+<li>até 36 meses. Mais do que isso é cancelamento</li>
+</ul>
+</section>
+<section id="cancelamento-10-dias-úteis-para-recorrer" class="level2">
+<h2 class="anchored" data-anchor-id="cancelamento-10-dias-úteis-para-recorrer">Cancelamento (10 dias úteis para recorrer)</h2>
+<ul>
+<li>pedido pelo próprio ai</li>
+<li>vícios ou falhas no processo de cancelamento</li>
+<li>perda de condição necessária</li>
+<li>aplicação de penalidade pela ANCORD</li>
+<li>descumprimento das condições estabelecidas no PEC</li>
+<li>penalidade pela CVM</li>
+<li>suspensão superior a 36 meses</li>
+</ul>
+<p>Não atualização dos dados tem multa de 100 reais diária</p>
+</section>
+<section id="materiais-de-divulgação-ai" class="level2">
+<h2 class="anchored" data-anchor-id="materiais-de-divulgação-ai">Materiais de divulgação AI</h2>
+<p>O AI deve fazer referência a todos os intermediários, como contratantes, identificando o AI como **contratado* e apresentar dados de contato da ouvidoria dessas instituições.</p>
+<p>Se vinculado a mais de um intermediário, abster-se de fazer referencias a produtos e informações que possam provocar dúvidas de equal intermediário se refere. O cliente não pode ficar com dúvida sobre qual intermediário se refere o produto.</p>
+<p>AIPJ deve informar na internet a relação dos AI que sejam sócios, empregados ou contratados. Transparência!</p>
+</section>
+<section id="é-vedado" class="level2">
+<h2 class="anchored" data-anchor-id="é-vedado">É vedado</h2>
+<p>Adoção de logotipos desacompanhados de identificação do intermediário com no mínimo igual destaque. Vale para apostilas, cursos e palestras</p>
+</section>
+<section id="práticas-vedadas-ai" class="level2">
+<h2 class="anchored" data-anchor-id="práticas-vedadas-ai">Práticas vedadas AI</h2>
+<ul>
+<li>Receber de clientes ou em nome deles.</li>
+<li>Entregar numerário, títulos, vm ou outros ativos. <strong>Ressalva</strong> para recebimento de remuneração por serviços complementares e não conflitantes.</li>
+<li>Ser procurador ou representante de clientes para intermediários.</li>
+<li>Contratar com clientes ou realizar, mesmo que grátis, serviços de administração de carteira, consultoria ou análise de VM</li>
+<li>Atuar como preposto de intermediário com o qual não tenha contrato</li>
+<li>Delegar a terceiros a execução de serviços que constituam objeto de contrato.</li>
+<li>Usar senhas ou assinaturas eletrônicas dos clientes para transmissão de ordens.</li>
+<li>Confeccionar extratos contendo informações sobre operações realizadas ou posições em aberto. Não pode <strong>elaborar</strong>, só encaminhar.</li>
+</ul>
+</section>
+</section>
+<section id="lavagem-de-dinheiro" class="level1">
+<h1>Lavagem de Dinheiro</h1>
+<p>Dinheiro sujo. Orígem ilícita. A lavagem tem como objetivo dar orígem aparantemente lícita (hotel, posto) Não confunda lavagem com sonegação. Exemplos:</p>
+<ul>
+<li>Políticos utilizando empreiteiras</li>
+<li>Doação de campanha</li>
+<li>Carros, imóveis</li>
+<li>Consultorias, palestras</li>
+<li>Paraísos fiscais</li>
+<li>Empresas de fachada</li>
+</ul>
+<p>Pena: prisão de 3 a 10 anos + multa (20 milhões). Aumenta em 2/3 se fizer parte de organização criminosa, reduz em 2/3 se tiver delação</p>
+<p>Suspensão de 10 anos pra exercício de cargo de AIPJ</p>
+<p>Etapas da lavagem de dinheiro: COI</p>
+<ul>
+<li>C = Colocação</li>
+<li>O = Ocultação</li>
+<li>I = Integração</li>
+</ul>
+<p>COAF é o órgão máximo de investigação</p>
+<ul>
+<li>Movimentações em espécie acima de 50 mil</li>
+<li>Movimentações suspeitas de qualquer valor</li>
+</ul>
+<p>É necessário registrar o portador acima de 2 mil, mas não são movimentações suspeitas.</p>
+<p>Composto por presidente + 11 diretores</p>
+<p>KYC Know your costumer</p>
+<section id="investidor" class="level2">
+<h2 class="anchored" data-anchor-id="investidor">Investidor</h2>
+<p>Possível veto a determinados relacionamentos</p>
+<p>Conhecimento da origem e do patrimônio do cliente</p>
+<p>Compatibilidade de transações financeiras</p>
+<p>Origem e destino dos recursos</p>
+<p>Identificação de indícios de lavagem de dinheiro</p>
+<p>Manter registros por 10 anos</p>
+<p>Entidades que tem obrigação de cadastro e de KYC</p>
+<ul>
+<li>Serviços de aplicação e recursos de terceiros (bancos)</li>
+<li>Compra e venda de moeda estrangeira</li>
+<li>Custódia e distribuição de VM</li>
+<li>Bolsa de valores</li>
+<li>Seguradoras, corretoras, administradoras de cartão</li>
+<li>Sociedades de arrendamento mercantil</li>
+<li>Venda de imóveis e bens de luxo de alto valor</li>
+<li>Venda de jóias e metais preciosos</li>
+<li>Consultoria financeira</li>
+</ul>
+<p>Avaliação interna de risco</p>
+<p>Objetivo: verificar internamente se a instituição financeira está sendo usada para crime de lavagem de dinheiro</p>
+<p>Elencar e classificar em baixo médio e alto risco</p>
+<p>Nomear um diretor para prevenção de LD</p>
+</section>
+<section id="pessoa-politicamente-exposta" class="level2">
+<h2 class="anchored" data-anchor-id="pessoa-politicamente-exposta">Pessoa politicamente exposta</h2>
+<ul>
+<li>mandatos eletivos</li>
+<li>ministros da união, presidentes e diretores da administração pública</li>
+<li>membros do STF, de ST e TRF</li>
+<li>procuradores gerais</li>
+<li>membros dos tribunais de contas</li>
+<li>secretários estaduais</li>
+<li>presidente ou tesoureiros de partidos</li>
+<li>chefes de estados</li>
+<li>políticos</li>
+<li>ocupantes de cargos governamentais</li>
+<li>oficiais generais</li>
+<li>executivos de escalões superiores de empresas públicas</li>
+<li>dirigentes de partidos</li>
+</ul>
+<p>Todos os que ocuparem essas funções nos <strong>últimos 5 anos</strong></p>
+</section>
+</section>
+<section id="economia" class="level1">
+<h1>Economia</h1>
+<section id="selic-di-e-copom" class="level2">
+<h2 class="anchored" data-anchor-id="selic-di-e-copom">Selic, DI e Copom</h2>
+<p>Copom - comitê de política monetária</p>
+<ul>
+<li>Definir a taxa SELIC meta: taxa básica de juros</li>
+<li>Divulgar o relatório de inflação a cada trimestre</li>
+</ul>
+<p>Reuniões ordinárias 8 vezes por ano a cada 45 dias com duração de dois dias</p>
+<p>Selic over: taxa média efetiva definida pelo próprio mercado (juros compostos, 252 dias)</p>
+<p>CDI: taxa média efetiva sem lastro em título público – e sim em certificados</p>
+</section>
+<section id="produto-interno-bruto" class="level2">
+<h2 class="anchored" data-anchor-id="produto-interno-bruto">Produto Interno Bruto</h2>
+<p>Soma de todos os bens e serviços finais produzidos em um país.</p>
+<p>Fórmula do PIB sob ótimca do consumo: Y=C+I+G+(X-M)</p>
+</section>
+<section id="índices-de-inflação" class="level2">
+<h2 class="anchored" data-anchor-id="índices-de-inflação">Índices de inflação</h2>
+<p>Aumento médio generalizado dos preços</p>
+<p>Objetivo do Bacen: asssegurar a estabilidade dos preços</p>
+<p>IPCA</p>
+<ul>
+<li>Índice de preços ao consumidor amplo</li>
+<li>Calculado e divulgado pelo IBGE</li>
+<li>Índice oficial de inflação no BR</li>
+<li>Famílias com renda mensal de 1 a 40 salários mínimos</li>
+</ul>
+<p>IGP-M</p>
+<ul>
+<li>Índice Geral do preços ao mercado</li>
+</ul>
+<p>FGV, mensal</p>
+<p>IPA (atacado) (60%), IPC (30%), INCC (10%)</p>
+<p>Dólar - atacado</p>
+</section>
+<section id="taxa-de-câmbio" class="level2">
+<h2 class="anchored" data-anchor-id="taxa-de-câmbio">Taxa de câmbio</h2>
+<p>Taxa PTAX - taxa oficial de câmbio</p>
+<p>Importação prefere dolar depreciado, exportador o contrário.</p>
+<p>Bacen faz política cambial</p>
+<ul>
+<li>Fixa</li>
+<li>Flutuante</li>
+<li>Suja</li>
+</ul>
+</section>
+<section id="taxa-referencial" class="level2">
+<h2 class="anchored" data-anchor-id="taxa-referencial">Taxa referencial</h2>
+<p>Referência para atualização monetária</p>
+<p>Índice de correção monetária, calculado e divulgado pelo BACEN, incide sobre popança, FGTS e crédito imobiliário <img src="https://latex.codecogs.com/png.latex?%0ATR%20=%20%5Cfrac%7BTBF%7D%7BR%7D%0A"></p>
+<p>Divide a médias das LTNs (TBF) pelo redutor (R). Periodicidade mensal.</p>
+</section>
+<section id="política-monetária" class="level2">
+<h2 class="anchored" data-anchor-id="política-monetária">Política monetária</h2>
+<p>Expansionista (+consumo) ou contracionista (-consumo)</p>
+<p>Depósito compulsório 70% (BACEN). O banco só vai poder emprestar 30 reais</p>
+<p>Depósito compulsório 40% (BACEN). O banco só vai poder emprestar 60 reais</p>
+<p>Redesconto bancário: empréstimo do BACEN</p>
+<p>Open market: compra de títulos públicos em reserva dos bancos</p>
+<ul>
+<li>compra: expansionista</li>
+<li>venda: contracionista</li>
+</ul>
+</section>
+<section id="política-fiscal" class="level2">
+<h2 class="anchored" data-anchor-id="política-fiscal">Política fiscal</h2>
+<p>Superávit primário vs défict primário</p>
+<p>Consolidado: União, estados, municípios e empresas estatais</p>
+<p>Expansionismo: mais consumo</p>
+</section>
+<section id="conceitos-básicos-de-finanças" class="level2">
+<h2 class="anchored" data-anchor-id="conceitos-básicos-de-finanças">Conceitos básicos de finanças</h2>
+<p>Taxa real = taxa nominal - inflação</p>
+<p>Fórmula de Fisher</p>
+<p>Juros simples (taxa proporcional) vs juros compostos (taxa equivalente)</p>
+</section>
+</section>
+<section id="sistema-financeiro-nacional" class="level1">
+<h1>Sistema financeiro nacional</h1>
+<p>Transferência de grana</p>
+<section id="conselho-monetário-nacional---cmn" class="level2">
+<h2 class="anchored" data-anchor-id="conselho-monetário-nacional---cmn">Conselho monetário nacional - CMN</h2>
+<p>Organiza as diretrizes que tem como executores Bacen e CVM</p>
+<p>Ministro da Fazenda, Ministro do Planejamento e Orçamento e Presidente do Bacen</p>
+<p>100% normativo</p>
+<ul>
+<li>Orientar a aplicação dos recursos das ins financeiras</li>
+<li>Zelar pela liquidez e solvencia</li>
+<li>Coordenar</li>
+<li>Disciplinar</li>
+<li>Fixar diretrizes</li>
+</ul>
+</section>
+<section id="bacen" class="level2">
+<h2 class="anchored" data-anchor-id="bacen">Bacen</h2>
+<p>Executor.</p>
+<ul>
+<li>Regular a oferta de dinheiro.</li>
+<li>Assegurar a estabilidade de preços no país.</li>
+<li>Controlar a inflação</li>
+</ul>
+<p>Em 2021 houve a garantia de autonomia do Banco Central</p>
+<p>Autarquia vinculada de Natureza Especial. Faz cumprir as determinações do CMN e possui até nove membros na diretoria. Seus presidentes possuem mandatos alternados com o presidente da república.</p>
+<ul>
+<li>Formular e executar</li>
+<li>Emitir papel moeda</li>
+<li>Receber compulsórios</li>
+<li>Exercer controle de crédito</li>
+<li>Administrar sistema de pagamentos</li>
+<li>Fiscalizar</li>
+<li>Executar serviços de meio circulante</li>
+<li>Zelar, fomentar pleno emprego e estabilidade</li>
+</ul>
+<p>Também é normativo</p>
+</section>
+<section id="comissão-de-valores-mobiliários-cvm" class="level2">
+<h2 class="anchored" data-anchor-id="comissão-de-valores-mobiliários-cvm">Comissão de valores mobiliários CVM</h2>
+<p>Bacen dos valores mobilários</p>
+<ul>
+<li>ações</li>
+<li>debêntures e notas promissórias</li>
+<li>cotas de fundos</li>
+<li>derivativos</li>
+</ul>
+<p>Autarquia vinculada ao MF, é o zelador do mercado de capitais</p>
+<ul>
+<li>Estimular a formação de poupança e aplicação em vm</li>
+<li>Protege os investidores</li>
+<li>Regular o mercado</li>
+<li>Condenar efetivamente os responsáveis por infrações</li>
+<li>Assegurar o acesso público às informações</li>
+</ul>
+</section>
+<section id="conselho-nacional-de-seguros-privados-cnsp" class="level2">
+<h2 class="anchored" data-anchor-id="conselho-nacional-de-seguros-privados-cnsp">Conselho Nacional de Seguros Privados – CNSP</h2>
+<ul>
+<li>Igual ao CMN, mas para seguros privados</li>
+<li>Normativo, o executor é a SUSEP</li>
+</ul>
+<p>Seguro, resseguro, previdência aberta e capitalização</p>
+</section>
+<section id="conselho-nacional-de-previdência-complementar-cnpc" class="level2">
+<h2 class="anchored" data-anchor-id="conselho-nacional-de-previdência-complementar-cnpc">Conselho Nacional de Previdência Complementar – CNPC</h2>
+<ul>
+<li>Igual ao CNSP, mas para previdência fechada</li>
+<li>Normativo, o executor é a PREVIC</li>
+</ul>
+</section>
+<section id="tesouro-nacional" class="level2">
+<h2 class="anchored" data-anchor-id="tesouro-nacional">Tesouro nacional</h2>
+<ul>
+<li><p>Responsável pelos títulos públicos federais</p></li>
+<li><p>LTN, LFT</p></li>
+<li><p>Tirou a emissão de títulos do Bacen</p></li>
+<li><p>Gerir as contas públicas</p></li>
+<li><p>Zelar pelo equilíbrio fiscal</p></li>
+<li><p>Vinculado ao MF</p></li>
+<li><p>Administra a dívida pública federal</p></li>
+<li><p>Emissor dos títulos</p></li>
+<li><p>Tesouro Direto</p></li>
+</ul>
+</section>
+<section id="b3" class="level2">
+<h2 class="anchored" data-anchor-id="b3">B3</h2>
+<p>Uma bolsa de valores é um local onde se negociam títulos</p>
+<p>Corretagem (corretora ou distribuidora); Tem sua receita a partir de emolumentos.</p>
+<p>Não negociam títulos públicos</p>
+<ul>
+<li>liquidação compensação de ativos de RV</li>
+<li>registro de operações de títulos de renda</li>
+<li>é uma sociedade anõnima privada</li>
+<li>única bolsa de valores BR</li>
+</ul>
+<p>Rebalanceamento da carteira a cada 4 meses</p>
+<p>BSM é a CVM da B3. Autorregulação. Administra o MRP e tem orçamento próprio.</p>
+</section>
+<section id="sistema-de-pagamentos-brasileiro" class="level2">
+<h2 class="anchored" data-anchor-id="sistema-de-pagamentos-brasileiro">Sistema de pagamentos brasileiro</h2>
+<p>Processamento e liquidação de opraçõe com transferendia ce dundos, ativos financeiros, modeda e valores modiliários</p>
+<ul>
+<li>Compensação de cheque</li>
+<li>Tranferencia de fundos</li>
+<li>Liquidação de ordens eletronicas</li>
+<li>Liquidação de bolsas e futuros</li>
+</ul>
+</section>
+<section id="fgc-e-fgcoop" class="level2">
+<h2 class="anchored" data-anchor-id="fgc-e-fgcoop">FGC e FGCoop</h2>
+<p>Fundo garantidor de crédito. Garantir o risco. É um seguro. O teto é 250mil por cpf e por instituição. Associação civil privada.</p>
+<p>São cobertos</p>
+<ul>
+<li>Depósitos</li>
+<li>LC</li>
+<li>LH</li>
+<li>LCI</li>
+<li>LCA</li>
+</ul>
+<p>Debenture não FGC, nem LF, nem titulos públicos, nem cotas de fundo.</p>
+<p>Na conta conjunta só tem garantia para um CPF.</p>
+<p>Limite greal de 1 milhão por período de 4 anos.</p>
+</section>
+</section>
+<section id="insituições-e-intermediadores-financeiros" class="level1">
+<h1>Insituições e intermediadores financeiros</h1>
+<section id="bancos-comerciais" class="level2">
+<h2 class="anchored" data-anchor-id="bancos-comerciais">Bancos comerciais</h2>
+<p>Intermediário entre superavitários e deficitários</p>
+<p>Operações passivas: depósito a vista, depósito a prazo (dívidas com o usuário)</p>
+<ul>
+<li>depósito a vista = conta corrente</li>
+<li>deposito a prazo = certificado de depósito bancário (CDB)</li>
+</ul>
+<p>Cria moeda</p>
+<p>Deve ser SA</p>
+<p>Expressão “banco” deve estar no nome</p>
+</section>
+<section id="banco-de-investimentos" class="level2">
+<h2 class="anchored" data-anchor-id="banco-de-investimentos">Banco de investimentos</h2>
+<p>Depósito a prazo</p>
+<p>Operações ativas: empréstimo de médio e longo prazo</p>
+<p>Deve ser SA privada</p>
+<p>Principais operações: adm de fundos, coordenam IPO/Underwriting</p>
+<p>Repasses de recursos oficiais de cráidto</p>
+<p>Empréstimo de capital fixo e de giro</p>
+</section>
+<section id="bancos-múltiplos" class="level2">
+<h2 class="anchored" data-anchor-id="bancos-múltiplos">Bancos múltiplos</h2>
+<p>Várias carteiras (2 ou mais)</p>
+<ul>
+<li>Investimentos (obrigatória ou comercial)</li>
+<li>Comercial (depósito a vista) (obrigatória ou investimentos)</li>
+<li>Crédtio imobiliário</li>
+<li>Arrendamento mercantil (leasing)</li>
+<li>SCFI (financeiras)</li>
+<li>Bancos de desenvolvimento (público)</li>
+</ul>
+<p>Surgiram com a intenção de racionalizar o sistema bancário</p>
+<p>Deve ser uma sociedade anônima (ações)</p>
+<p>Expressão “banco” deve estar no nome</p>
+<p>Pode publicar um único balanço consolidando todas as carteiras</p>
+<p>Não pode captar através de debentures</p>
+</section>
+<section id="caixa-econômica-federal" class="level2">
+<h2 class="anchored" data-anchor-id="caixa-econômica-federal">Caixa Econômica Federal</h2>
+<p>Fomentar o mercado imobiliário e programas sociais</p>
+<ul>
+<li>FGTS, PIS e Seguro desemprego</li>
+<li>Jogos lotéricos</li>
+<li>Programas sociais</li>
+<li>Empresa 100% pública</li>
+<li>Sede em Brasília - Vinculado ao MF</li>
+</ul>
+</section>
+<section id="bndes" class="level2">
+<h2 class="anchored" data-anchor-id="bndes">BNDES</h2>
+<p>Financiamento de Longo prazo</p>
+<p>Investimentos em todos os setores da economia</p>
+<p>Tem o Finame, responsável pelo financiamento de compra e venda de máquinas (crédito industrial)</p>
+<p>Tem o BNDESPar, comprar ações de empresas</p>
+<ul>
+<li>Financiamento de Investimentos</li>
+<li>Subscrição de valores mobiliários</li>
+<li>Prestação de garantias</li>
+<li>Recursos para projetos sociais, culturais e tecnológicos</li>
+<li>Empresa pública</li>
+<li>Não é um banco de desenvolvimento</li>
+<li>Possui atuação anticíclica</li>
+<li>Vinculado ao MF</li>
+</ul>
+</section>
+<section id="cooperativas-de-crédito" class="level2">
+<h2 class="anchored" data-anchor-id="cooperativas-de-crédito">Cooperativas de crédito</h2>
+<p>Muito similar a um banco comercial. Também pode captar por depósito à vista. As duas pontas precisam ser um cooperado</p>
+<ul>
+<li>instituição financeira formdada por associações</li>
+<li>cooperados são donos e usuários</li>
+<li>participam da gestão</li>
+<li>não visa lucros</li>
+<li>lucro é repartido entre cooperados (sobras)</li>
+<li>supervisão do Bacen</li>
+<li>FGCoop (250 mil)</li>
+<li>constituídas com no mínimo 20 pessoas</li>
+</ul>
+</section>
+<section id="crédito-imobiliário" class="level2">
+<h2 class="anchored" data-anchor-id="crédito-imobiliário">Crédito imobiliário</h2>
+<p>Sistema Financeiro da Habitação - intervenção do governo federal - limite máximo de valor de imóvel - funding: poupança, fgts, programas do governo</p>
+<p>Sistema financeiro imobiliário - taxas de mercado - recursos livres - sem restrições de financiamento</p>
+</section>
+<section id="financeiras" class="level2">
+<h2 class="anchored" data-anchor-id="financeiras">Financeiras</h2>
+<ul>
+<li>Op Passivas: Letra de câmbio (LC), RDB</li>
+<li>Op. Passivas: CDC, crediário, capital de giro</li>
+</ul>
+<p><strong>empréstimo</strong> (sem destinação específica) <em>vs</em> <strong>financiamento</strong> (com destinação)</p>
+<ul>
+<li>deve ser sa</li>
+<li>não pode ter conta corrente</li>
+<li>deve conter a expressão “crédito, financiamento e investimento” no nome</li>
+</ul>
+</section>
+<section id="corretoras-e-distribuidores-de-vm" class="level2">
+<h2 class="anchored" data-anchor-id="corretoras-e-distribuidores-de-vm">Corretoras e distribuidores de VM</h2>
+<p>Realizam as mesmas operações. Homebroker ou mesa de operações. Não emitem CDI.</p>
+<ul>
+<li>intermediaçõa de operações</li>
+<li>administração de clubes e fundos de investimentos</li>
+<li>operações de compra e venda de metais preciosos, câmbio e conta margem</li>
+<li>distribuição de titulos</li>
+<li>supervisão conjunta do Bacen e CVM</li>
+</ul>
+</section>
+<section id="corretoras-de-câmbio" class="level2">
+<h2 class="anchored" data-anchor-id="corretoras-de-câmbio">Corretoras de câmbio</h2>
+<ul>
+<li>intermediam operçaões com moeda estrangeira</li>
+<li>envio e recebimento de valores do exterior (até 100 mil dólares)</li>
+<li>operações vinculadas de exportação e importação (até 100 mil dólares)</li>
+</ul>
+</section>
+<section id="bolsas-internacionais" class="level2">
+<h2 class="anchored" data-anchor-id="bolsas-internacionais">Bolsas internacionais</h2>
+<ul>
+<li>S&amp;P 500 ações dos eua
+<ul>
+<li>cobre 80% do valor de mercado das ações em NY</li>
+</ul></li>
+<li>DJIA
+<ul>
+<li>30 maiores empresas cotadas nos eua</li>
+</ul></li>
+<li>Nasdaq
+<ul>
+<li>nasdaq composite: todas as ações negociadas</li>
+<li>nasdaq 100: 100 maiores empresas de tecnologia</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="administração-de-risco" class="level1">
+<h1>Administração de risco</h1>
+<section id="risco-de-mercado-crédito-e-liquidez" class="level2">
+<h2 class="anchored" data-anchor-id="risco-de-mercado-crédito-e-liquidez">Risco de mercado, crédito e liquidez</h2>
+<p>Risco é a probabilidade de ter um resultado diferente do esperado inicialmente. Não pode ser totalmente eliminado, mas deve ser minimizado. Crédito, legal, liquidez, sobreano, operacional, mercado e cambial</p>
+<p>Small caps são empresas com valor de mercado baixo, menor liquidez.</p>
+<section id="risco-de-mercado" class="level3">
+<h3 class="anchored" data-anchor-id="risco-de-mercado">Risco de mercado</h3>
+<p>Oscilação preço por condições naturais de mercado</p>
+</section>
+<section id="risco-de-crédito" class="level3">
+<h3 class="anchored" data-anchor-id="risco-de-crédito">Risco de crédito</h3>
+<p>Perigo de levar calote. Ações não tem risco de crédito.</p>
+</section>
+<section id="risco-de-liquidez" class="level3">
+<h3 class="anchored" data-anchor-id="risco-de-liquidez">Risco de liquidez</h3>
+<p>Poucos compradores, preço cai.</p>
+<p>Risco de reinvestimento: o mercado estar pior quando o fluxo entrar na conta ## Risco operacional - Erros humanos - Falhas de sistemas - Fraudes</p>
+</section>
+</section>
+<section id="diversificação" class="level2">
+<h2 class="anchored" data-anchor-id="diversificação">Diversificação</h2>
+<p>Risco não sistemático vs risco sistemático</p>
+<ul>
+<li>risco não sistemático
+<ul>
+<li>especifico do ativo</li>
+<li>diversificável</li>
+</ul></li>
+<li>risco sistemático
+<ul>
+<li>Sistema economico</li>
+<li>não diversificavel</li>
+</ul></li>
+</ul>
+</section>
+<section id="var-stop-loss-back-test-e-stress-test" class="level2">
+<h2 class="anchored" data-anchor-id="var-stop-loss-back-test-e-stress-test">VAR, Stop Loss, Back test e stress test</h2>
+<ul>
+<li>VAR: Perda potencial máxima de um investimento para um período de tempo (ao dia)</li>
+<li>validado pelo backtest</li>
+<li>stress test, casos extremos</li>
+<li>stop loss utilizado para limitar as perdas</li>
+</ul>
+</section>
+<section id="duration" class="level2">
+<h2 class="anchored" data-anchor-id="duration">Duration</h2>
+<p>Prazo de um título: Maior prazo, maior incerteza, maior risco, maior retorno</p>
+<ul>
+<li>Título sem cupom, duration = 10 anos</li>
+<li>Título com cupom, duration = menor que 10 anos</li>
+</ul>
+</section>
+<section id="limite-de-oscilação-e-túneis-de-negociação" class="level2">
+<h2 class="anchored" data-anchor-id="limite-de-oscilação-e-túneis-de-negociação">Limite de oscilação e túneis de negociação</h2>
+<p>Evitar oscilações exageradas. Túneis são dinâmicos, e limites são fixos.</p>
+</section>
+<section id="sistemas-de-liquidação-e-custódia" class="level2">
+<h2 class="anchored" data-anchor-id="sistemas-de-liquidação-e-custódia">Sistemas de liquidação e custódia</h2>
+<p>Mitigar o risco da liquidação: <strong>Selic</strong> liquida os títulos públicos. <strong>B3</strong> liquida os títulos privados.</p>
+<section id="compensação" class="level3">
+<h3 class="anchored" data-anchor-id="compensação">Compensação</h3>
+<ul>
+<li>contraparte central garantidora</li>
+<li>calculo de posições compradas e vendidas</li>
+<li>controle de risco do mercado</li>
+</ul>
+</section>
+<section id="liquidação" class="level3">
+<h3 class="anchored" data-anchor-id="liquidação">Liquidação</h3>
+<p>Controla e processa a troca de dinheiro por títulos</p>
+</section>
+<section id="central-depositária" class="level3">
+<h3 class="anchored" data-anchor-id="central-depositária">Central depositária</h3>
+<ul>
+<li>Pagamento de proventos e bonificações</li>
+<li>Contabilização e guarda dos ativos</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="mercado-de-capitais" class="level1">
+<h1>Mercado de capitais</h1>
+<section id="mercado-primário-e-secundário" class="level2">
+<h2 class="anchored" data-anchor-id="mercado-primário-e-secundário">Mercado primário e secundário</h2>
+<p>Dívida vs capital próprio. Debêntures e notas promissórias vs ações</p>
+<section id="operação-de-underwriting" class="level3">
+<h3 class="anchored" data-anchor-id="operação-de-underwriting">Operação de underwriting</h3>
+<p>Oferta pública, intermediário entre emissores e compradores. Underwriters: financeiras, emissões de títulos e VM</p>
+<ul>
+<li><p>Garantia firme - risco da IF</p></li>
+<li><p>Melhores esforços - risco do emissor</p></li>
+<li><p>Residual (stand by) - risco compartilhado</p></li>
+<li><p>Mercado primário: dinheiro vai para a empresa. Captação para a empresa.</p></li>
+<li><p>Mercado secundário: dinheiro vai para o sócio. Liquidez para os investidores.</p></li>
+</ul>
+</section>
+</section>
+<section id="tipos-de-ações-e-riscos" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-ações-e-riscos">Tipos de ações e riscos</h2>
+<p>Ações ordinárias (ON)</p>
+<ul>
+<li>Direito a voto</li>
+<li>Controle da CIA</li>
+</ul>
+<p>Preferenciais (PN)</p>
+<ul>
+<li>Sem diretiro a voto</li>
+<li>Preferência para dividendos</li>
+<li>3 ex sem dividendos ganha diretio a votos</li>
+</ul>
+<p>Riscos: mercado, liquidez e crédito</p>
+</section>
+<section id="ganhos-com-ações" class="level2">
+<h2 class="anchored" data-anchor-id="ganhos-com-ações">Ganhos com ações</h2>
+<ul>
+<li><p>Ganho de capital: compra por 10 e vende por 15</p></li>
+<li><p>Distribuição de lucro: dividendos (isento) ou juros por capital próprio (IR de 15%)</p></li>
+<li><p>É obrigado a dividir 25% do lucro em divididos</p></li>
+<li><p>O que for retido fica com juros por capital próprio</p></li>
+<li><p>Bonificação (grátis) e subscrição (direito de compra)</p></li>
+<li><p>Bonus de subscrição (empresa podia vender esse bonus pro mercado) e direito de subscrição (direito do acionista comprar o mesmo percentual das novas ações)</p></li>
+</ul>
+</section>
+<section id="governança-corporativa" class="level2">
+<h2 class="anchored" data-anchor-id="governança-corporativa">Governança corporativa</h2>
+<ul>
+<li>Conjunto de processos, costumes, políticas e regulamentos que ditam a direção da empresa</li>
+<li>Visa atrair mis investidores, garantir tranparencia e proteger acionistas</li>
+<li>Complementar a legislação</li>
+</ul>
+<section id="segmentos-de-listagem" class="level3">
+<h3 class="anchored" data-anchor-id="segmentos-de-listagem">Segmentos de listagem</h3>
+<ul>
+<li><p>free float: livres no mercado todos os níveis precisam pelo menos 20% de free float</p></li>
+<li><p>Nivel 1: AO e AP, em bolsa</p></li>
+<li><p>Nivel 2: AO e AP, em bolsa, 100 Tag Along para AO e AP</p></li>
+<li><p>Novo mercado: Somente AO</p></li>
+</ul>
+<p>Exclusivo para balcão organizado: Bovespa mais e Bovespa mais 2</p>
+</section>
+</section>
+<section id="adr-e-bdr" class="level2">
+<h2 class="anchored" data-anchor-id="adr-e-bdr">ADR e BDR</h2>
+<p>Não são ações. São recibos de depósito lastreados por ações</p>
+<ul>
+<li>A de América</li>
+<li>B de Brasil</li>
+</ul>
+<p>Empresa não americana emite ações. Leva para um banco custodiante. Investidores americanos compram ADR em dólar</p>
+</section>
+<section id="adr-e-bdr-patrocinados-e-não-patrocinaos-e-gdr" class="level2">
+<h2 class="anchored" data-anchor-id="adr-e-bdr-patrocinados-e-não-patrocinaos-e-gdr">ADR e BDR patrocinados e não patrocinaos e GDR</h2>
+<p>Patrocinado:</p>
+<ul>
+<li>Envolvimento direto da empresa emissora</li>
+<li>De acordo com regras brasileiras</li>
+</ul>
+<p>Não patrocinado:</p>
+<ul>
+<li>Sem envolvimento</li>
+<li>De acordo com país de origem</li>
+</ul>
+<section id="níveis-adr" class="level3">
+<h3 class="anchored" data-anchor-id="níveis-adr">Níveis ADR</h3>
+<ul>
+<li>Nível 1: mercado de balcão, não precisa de registro na CVM, não</li>
+<li>Nível 2: listado em bolsa (ou balcão)</li>
+<li>Nível 3: Listado em bolsa (ou balcão), oferta pública e captação de recurso</li>
+<li>144a: mercado de balcão, captação de recurso não tem registro na SEC</li>
+</ul>
+</section>
+<section id="gdr" class="level3">
+<h3 class="anchored" data-anchor-id="gdr">GDR</h3>
+<p>Negociado ao redor do mundo. Negociado na moeda local.</p>
+</section>
+</section>
+<section id="debêntures" class="level2">
+<h2 class="anchored" data-anchor-id="debêntures">Debêntures</h2>
+<p>S.A não financeira. Título de díveida de médio/longo prazo. Debentures simples, conversíveis ou permutáveis. Não tem FGC</p>
+<ul>
+<li>Simples: 100k + juros</li>
+<li>Conversível: 100k + juros ou converto em ações</li>
+<li>Permutável: 100 k + juros ou converte em ações de outra empresa do grupo</li>
+</ul>
+<p>Pode ou não ter garantia real. Tem imposto de renda (progressivo) sobre o rendimento. Deve constar na escritura a informação de um agente fiduciário.</p>
+</section>
+<section id="notas-promissórias---commercial-paper" class="level2">
+<h2 class="anchored" data-anchor-id="notas-promissórias---commercial-paper">Notas promissórias - commercial paper</h2>
+<p>Nota promissória até 360 dias, debeture mais de 360 dias.</p>
+<ul>
+<li>título de dívida de curto prazo</li>
+<li>Tablea regressiva de ir</li>
+<li>não há garantia real</li>
+<li>não há gratana pelo fgc</li>
+<li>juros pré pós ou híbridos</li>
+<li>negociável</li>
+</ul>
+</section>
+<section id="tributação-em-ações" class="level2">
+<h2 class="anchored" data-anchor-id="tributação-em-ações">Tributação em ações</h2>
+<ul>
+<li>Day trade: 1% na fonte, 19% dafne</li>
+<li>Swing trade: 0,005% na fonte, 14,995% dafne</li>
+</ul>
+<p>Retido na fonte: responsabilidade da corretora</p>
+<ul>
+<li>Isenção: pessoa física, não day trade</li>
+<li>Isenção: valor bruto de vendas menor que 20mil (títulos não entram)</li>
+</ul>
+</section>
+<section id="banco-de-títulos-btc" class="level2">
+<h2 class="anchored" data-anchor-id="banco-de-títulos-btc">Banco de títulos BTC</h2>
+<ul>
+<li>Aluguel de ações</li>
+<li>Operação short</li>
+<li>direito a voto será do tomador do aluguel, ao contrário dos proventos</li>
+</ul>
+</section>
+<section id="regulamento-operacional-do-segmento-bovespa" class="level2">
+<h2 class="anchored" data-anchor-id="regulamento-operacional-do-segmento-bovespa">Regulamento operacional do segmento bovespa</h2>
+<p>Rebalanceamento da sua carteira teórica a cada 4 meses. Mercaado a vista 10h 16h55.</p>
+<ul>
+<li>Cancelamento de ofertas: 9h30 9h45 (15min)</li>
+<li>Pré abertura: 9h45 10h (15min)</li>
+<li>Negociação: 10h 16h55</li>
+<li>Call de fechamento: 16h55 17h (5min)</li>
+<li>Aftermarket
+<ul>
+<li>Cancelamento de ofertas 17h25 17h30 (5min)</li>
+<li>Negociação 17h30 18h (30min)</li>
+</ul></li>
+</ul>
+<p>Aftermarket não negocia derivativos (só a vista e fracionário)</p>
+<ul>
+<li><p>Ordem a mercado: especifica somente quantidade e ativo, execução no momento</p></li>
+<li><p>Ordem limitada: executada somente a preço igual ou melhor do que o esepecificado</p></li>
+<li><p>Ordem administrada: especifica somente quantidade e ativo, execução pela corretora</p></li>
+<li><p>Ordem discricionária: realizada por um admiinstrador de carteiras</p></li>
+<li><p>Ordem de financiamento: compra ou venda junto com outra compra ou venda de um derivativo</p></li>
+<li><p>Ordem stop: especifica o preço do ativo a partir do qual a ordem deve ser executada</p></li>
+<li><p>Ordem casada: vinculada à execução de outra ordem</p></li>
+<li><p>Apregoação direta: comprar e vender um mesmo ativo para diversos clientes</p></li>
+<li><p>Apregoação por Leilão: destaque das demais ativo lote e preço</p></li>
+<li><p>Apregoação por Leilão comum: permitida a interferência do vendedor e comprador a melhor preço</p></li>
+<li><p>Apregoação por Leilão especial: destaque das demais, somente permitida interferência pra compra</p></li>
+<li><p>Apregoação por oferta: demostraçaõ de interesse em comprar/vender ativos inserindo a oferta no sistema</p></li>
+<li><p>Oferta limitada: somente a preço igual ou melhor que o especificado pelo cliente</p></li>
+<li><p>Oferta ao preço de abertura: preço de abertura</p></li>
+<li><p>Oferta a mercado: melhor lmiite proposto pelo mercado</p></li>
+<li><p>Oferta stop: gatilho</p></li>
+<li><p>Oferta a qualquer preço: totalmente executada independente do preço</p></li>
+<li><p>Oferta de direto: duas ofertas simultâneas que se cruzam e são de uma mesma corretora</p></li>
+</ul>
+</section>
+</section>
+<section id="outros-fundos-de-investimento" class="level1">
+<h1>Outros fundos de investimento</h1>
+<section id="fundo-de-índice" class="level2">
+<h2 class="anchored" data-anchor-id="fundo-de-índice">Fundo de índice</h2>
+<p>ETF: Fundos negociados na B3. Segue um índice e.g.&nbsp;IBOVESPA.</p>
+<ul>
+<li>Cotas negociadas em bolsa</li>
+<li>Objetvio de refletir</li>
+<li>-Mínimo 95% do PL alocado em ativos do indice</li>
+<li>Lote padrão 1 cota</li>
+</ul>
+</section>
+<section id="fii" class="level2">
+<h2 class="anchored" data-anchor-id="fii">FII</h2>
+<p>Fundos imobiliários que adquirem ativos do setor imobiliário</p>
+<ul>
+<li>Fundo fechado</li>
+<li>Dividendos isentos de IR</li>
+<li>Cotas negociadas em bolsa ou balcão</li>
+<li>Mínimo 100 cotistas</li>
+<li>Cotista com no máximo 10% das cotas</li>
+<li>Ganho de capital = IR 20%</li>
+<li>Distribuição de 95% de seu lucro</li>
+<li>Acessibilidade, gestão profissional, fácil negociação</li>
+</ul>
+</section>
+<section id="fiee" class="level2">
+<h2 class="anchored" data-anchor-id="fiee">FIEE</h2>
+<p>Empresa emergente - Fundo fechado - Deve participar do processo decisório - devem manter 90% do patrimonio</p>
+</section>
+<section id="fip" class="level2">
+<h2 class="anchored" data-anchor-id="fip">FIP</h2>
+<p>Ativos: cias abertas, cias fechadas, sociedades ltda. Compra ativos para participar do processo decisório</p>
+<ul>
+<li>Fundo fechado</li>
+<li>90% em ações D simples e títulos conversíveis em ações ordinárias</li>
+</ul>
+</section>
+<section id="fidc" class="level2">
+<h2 class="anchored" data-anchor-id="fidc">FIDC</h2>
+<p>Direito creditório (Cheques, duplicatas, cc, outros)</p>
+<ul>
+<li><p>Mínimo 50% em DC</p></li>
+<li><p>Não tem valor mínimo de aplicação inicial</p></li>
+<li><p>Cota: senior ou subordinada</p></li>
+<li><p>fundo aberto ou fechado</p></li>
+<li><p>Fomento mercantil</p></li>
+<li><p>Financeiro</p></li>
+<li><p>Agro industria comercio</p></li>
+<li><p>Outros</p></li>
+</ul>
+</section>
+</section>
+<section id="securitização-de-recebíveis" class="level1">
+<h1>Securitização de recebíveis</h1>
+<section id="conceito" class="level2">
+<h2 class="anchored" data-anchor-id="conceito">Conceito</h2>
+<p>Direito de crédito</p>
+<p>Vender os direitos de crédito para uma companhia securitização (SPE)</p>
+</section>
+<section id="cri-e-cra" class="level2">
+<h2 class="anchored" data-anchor-id="cri-e-cra">CRI e CRA</h2>
+<p>Igual a um FIDC, mas ao invés de um fundo, é um ativo próprio</p>
+<p>Certificado de recebíveis de imóveis ou do agro</p>
+</section>
+</section>
+<section id="clubes-de-investimentos-em-ações" class="level1">
+<h1>Clubes de investimentos em ações</h1>
+<p>Mínimo de 67% de ações</p>
+<p>Limite mínimo de 3 e máximo de 50 pessoas</p>
+<p>Máximo de 40% para cada cotista</p>
+<p>Gestão: próprios cotistas ou gestão profisional</p>
+<p>Multa por dia</p>
+</section>
+<section id="mercado-financeiro" class="level1">
+<h1>Mercado Financeiro</h1>
+<section id="títulos-públicos-federais" class="level2">
+<h2 class="anchored" data-anchor-id="títulos-públicos-federais">Títulos públicos federais</h2>
+<ul>
+<li>Títulos sem cupom: aplicação (PU) resgate (VF)</li>
+<li>Títulos com cupom: aplicação (PU) resgate (VF) + juros</li>
+</ul>
+<p>Rentabilidade</p>
+<ul>
+<li>Sem cupom
+<ul>
+<li>LFT Pós fixado selic over</li>
+<li>LTN Pré fixado</li>
+<li>NTN-B Principal Juros + IPCA</li>
+</ul></li>
+<li>Com cupom (risco de reinvestimento)
+<ul>
+<li>NTN-B Juros + IPCA</li>
+<li>NTN-F Pré-fixado</li>
+</ul></li>
+<li>Alta da taxa de juros, compra pós. Baixa da taxa de juros, compra pré</li>
+<li>SM &lt;= 8,5%, 70% CDI</li>
+<li>SM &gt; 8,5%, 0,5% a.m ou 6,16% a.a</li>
+</ul>
+</section>
+<section id="cdb" class="level2">
+<h2 class="anchored" data-anchor-id="cdb">CDB</h2>
+<p>Certificado de depósito bancário. Depósito a prazo, remunerado por juros.</p>
+<ul>
+<li>Rentabilidade pré, pós ou mista</li>
+<li>Riscos de mercado, liquidez ou crédito</li>
+<li>Tributação iof e ir, recolhida na fonte</li>
+<li>Tem FGC</li>
+</ul>
+</section>
+<section id="rdb" class="level2">
+<h2 class="anchored" data-anchor-id="rdb">RDB</h2>
+<p>Mesma coisa do CDB, mas não tem risco de liquidez. Pode ser emitido por financeiras e cooperativas. Não permite resgate antecipado ou troca de titularidade (não endossável)</p>
+</section>
+<section id="letra-de-câmbio" class="level2">
+<h2 class="anchored" data-anchor-id="letra-de-câmbio">Letra de câmbio</h2>
+<p>CDB das financeiras</p>
+<ul>
+<li>Risco de mercado, crédito e liquidez</li>
+<li>Pré (queda) e pós (alta)</li>
+<li>IOF IR</li>
+<li>Não possuem liquidez diária e só pode ser resgatado no vencimento</li>
+</ul>
+</section>
+<section id="letra-de-crédito-imobiliário" class="level2">
+<h2 class="anchored" data-anchor-id="letra-de-crédito-imobiliário">Letra de crédito imobiliário</h2>
+<p>Só pode emitir quem faz financiamento imobiliário (bancos, CEF, APE, SCI e companhias hipotecárias)</p>
+<p>Lastreada</p>
+<p>PF isenda de imposto de renda</p>
+<p>Prazo e valor máximo vinculado a carteira de financiamento</p>
+<p>Garantia real e FGC</p>
+</section>
+<section id="letra-hipotecária" class="level2">
+<h2 class="anchored" data-anchor-id="letra-hipotecária">Letra hipotecária</h2>
+<p><strong>hipoteca</strong> (casa e posse) vs <strong>alienação fiduciária</strong> (somente a posse)</p>
+<p>Muda o tipo de garantia real</p>
+</section>
+<section id="letra-financeira" class="level2">
+<h2 class="anchored" data-anchor-id="letra-financeira">Letra financeira</h2>
+<p>Letra financeira quer prevenir liquidez demais</p>
+<p>Prazo mínimo de 2 anos e não tem resgate antecipado</p>
+<p>Não possui FGC</p>
+<p>IR 15%</p>
+<p>Aplicação mínima 50 mil (senior), 300 mil (subordinada)</p>
+</section>
+</section>
+<section id="derivativos" class="level1">
+<h1>Derivativos</h1>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Contratos que se referem a um ativo principal</p>
+<ol type="1">
+<li>Mercado a termo</li>
+<li>SWAP</li>
+<li>Opções</li>
+<li>Mercado a futuro</li>
+</ol>
+<p>Hedger - Especulador - Arbitrador</p>
+</section>
+<section id="mercado-a-termo" class="level2">
+<h2 class="anchored" data-anchor-id="mercado-a-termo">Mercado a termo</h2>
+<p>Vai pagar só no futuro por um preço pré-definido</p>
+<p>Cheque pre-datado</p>
+<ul>
+<li>Compra ou venda de algo em data futura com preço previamente definido</li>
+<li>16 a 999 dias corridos</li>
+<li>Sem padrão e sem prêmio</li>
+<li>Sem ajuste diário</li>
+<li>Apenas compradores precisam dar margem de garantia</li>
+</ul>
+</section>
+<section id="swap" class="level2">
+<h2 class="anchored" data-anchor-id="swap">Swap</h2>
+<p>Taxa pré-fixada (e.g.&nbsp;câmbio)</p>
+<ul>
+<li>Sem padrão</li>
+<li>Renda fixa (tabela regressiva ir)</li>
+<li>Mais comuns: índices, taxas de juros, e moedas</li>
+<li>ferramenta de troca</li>
+</ul>
+</section>
+<section id="mercado-de-opções" class="level2">
+<h2 class="anchored" data-anchor-id="mercado-de-opções">Mercado de opções</h2>
+<p>Tem prêmio</p>
+<p>Comprar Call: direito de comprar</p>
+<p>Comprar Put: direito de vender</p>
+<section id="call" class="level3">
+<h3 class="anchored" data-anchor-id="call">Call</h3>
+<p>Opção de compra.</p>
+<p>Titular (aposta na alta) e lançador: Pode ou não exercer</p>
+</section>
+<section id="put" class="level3">
+<h3 class="anchored" data-anchor-id="put">Put</h3>
+<p>Opção de venda.</p>
+<p>Titular (aposta na queda) e lançador: Pode ou não exercer também</p>
+<p>Opções européias: somente na data do vencimento. Opções americanas: a qualquer momento até a data do exercício</p>
+</section>
+</section>
+<section id="mercado-futuro" class="level2">
+<h2 class="anchored" data-anchor-id="mercado-futuro">Mercado futuro</h2>
+<ul>
+<li>Comprado: aposta na alta</li>
+<li>Vendido:aposta na baixa</li>
+<li>Ajuste diário em d+1</li>
+<li>Não tem risco de crédito</li>
+</ul>
+<p>Hedge:opera vendido</p>
+<p>Padronizados</p>
+<p>Preços futuros podem inclusive ser inferiores aos preços a vista</p>
+<p>Garantias devem ser depositadas antes do início das operações no mercado futuro</p>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2025,
+  author = {Batista, Victor},
+  title = {Notas de Estudo Para Certificação {ANCORD}},
+  date = {2025-07-23},
+  url = {https://jvbatista1.github.io/posts/20250618_apisguru/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2025" class="csl-entry quarto-appendix-citeas">
+Batista, Victor. 2025. <span>“Notas de Estudo Para Certificação
+ANCORD.”</span> July 23, 2025. <a href="https://jvbatista1.github.io/posts/20250618_apisguru/">https://jvbatista1.github.io/posts/20250618_apisguru/</a>.
+</div></div></section></div> ]]></description>
+  <category>Notas</category>
+  <category>ANCORD</category>
+  <guid>https://www.jvbatista1.github.io/materiais/notas_ancord/</guid>
+  <pubDate>Wed, 23 Jul 2025 03:00:00 GMT</pubDate>
+  <media:content url="https://www.jvbatista1.github.io/materiais/notas_ancord/study_icon.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>
