@@ -1,0 +1,567 @@
+---
+title: "Notas de estudo para concurso Docas do Ceará"
+description: "Minhas anotações durante o período de estudo, transformadas em uma página de consulta rápida"
+author:
+  - name: Victor Batista
+    url: https://jvbatista1.github.io/
+    langid: pt
+date: 09/30/2025
+categories: [Notas, Concurso] # self-defined categories
+image: study_icon.png
+citation: 
+  url: https://jvbatista1.github.io/posts/20250618_apisguru/
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+---
+
+# Legislação específica
+## Lei n.º 13.303, de 30 de junho de 2016
+
+Poder Executivo, legislativo e judiciário e a administração pública. Diferença entre função administrativa (adm pública) e função política (governo). Os entes federados podem exercer as duas funções. 
+
+Administração pública direta e indireta: Direta é centralizada, composta pelos entes federativos exercendo funções administrativas. Indireta é descentralizada, pois cada um dos entes pode criar novas pessoas jurídicas, que são os entes da indireta. Por exemplo, temos as autarquias (INSS, IBAMA), fundações públicas (FUNASA, FUNAI), empresas públicas (Caixa, Ebserh), sociedades de economia mista (SEM) (BB, Petrobras, Cagece, Metrofor). Existe a necessidade de criar novas entidades para dar conta de todas as obrigações de cada um dos entes federados. Eficiência pressupõe especialização.
+
+DesCEntralização é a criação de entes. DecCOntentração é a criação de órgãos dentro da mesma pessoa jurídica
+
+Os entes são pessoas jurídicas. Quando eu falo dos entes da adm direta são pessoas júridicas de direito público. Não posso dizer o mesmo de todos os da adm indireta.
+
+- Autarquia: sempre direito público
+- Empresas públicas e SEM: sempre direito privado
+- Fundação pública: pode ser criada como os dois.
+
+Direito público manifesta diversas prerrogativas que não existe no privado. No direito privado, existe emprego publico (CLT). No público, existe cargo (regime estatutário)
+
+A constituição federal exige LEI para criação para todo e qualquer ente da adm pública indireta. O código civil brasileiro diz que para criar uma pessoa jurídica de direito privado fala que é necessário registro do seu ato constitutivo. Criação de autarquia não precisa de registro, só lei.
+
+A lei não cria uma empresa pública ou uma sem: ela somente autoriza, pois por serem de direito privado, serão criadas a partir do registro. A esse tipo de lei, chama-se lei autorizativa.
+
+Empresas estatais: expressão que englobam tanto empresas públicas quanto SEM. Suas semelhanças são:
+
+- pessoas jurídicas de direito privado, a princípio não terão as prerrogativas do público.
+- apenas autorizadas por lei
+- atividade econômica ou serviços públicos
+    - Esse é um caso atípico. Explorar atividade econômica a princípio não é tarefa do estado, mas se houver justificativa, a constituição permite.
+- regime jurídico híbrido/misto (sem as vantagens do regime público, mas com todas as restrições)
+
+Artigo 173 paragrafo primeiro. A lei estabelecerá o estatuto jurídico das estatais. Determinam a função social, regime jurídico, licitaçaõ e contratação, conselhos de adm e fiscal, administradores
+
+As diferenças são:
+
+|  | EP | SEM |
+|---------|:-----|------:|
+|Capital Social|Integralmente público|Majoritariamente publico|
+|Forma Societaria| Qualquer forma|SA |
+|Competencia Jurisdicional| Se for federal, litiga na federal|Ainda que federal, não litiga na federal|
+
+ 
+
+## Lei n.º 12.815, de 5 de junho de 2013
+
+## Decreto n.º 8.033, de 27 de junho de 2013 
+
+##  Portaria SEP Nº 111 DE 07 de agosto de 2013
+
+## Regimento interno, manual de fiscalização e regulamento de credenciamento
+
+# Administração Pública
+
+Existem três modelos importantes da administração pública: **patrimonial**, **burocrático** e **gerencial**.
+
+---
+
+## Modelo Patrimonial
+
+* Preocupação central: dinheiro e poder.
+* Mistura entre recursos públicos e privados.
+* Modelo marcado pela **ineficiência**, **corrupção** e **nepotismo**.
+* Características: **prebendas** e **sinecuras** (cargos ou benefícios concedidos sem função efetiva).
+
+---
+
+## Modelo Burocrático
+
+* Surge para superar o patrimonialismo e buscar maior eficiência no uso dos recursos públicos.
+* **Eficiência** entendida como melhor utilização dos meios.
+* **Max Weber** estudou os tipos de dominação:
+
+  * **Tradicional** (ex.: relação entre pai e filho)
+  * **Carismática** (baseada no carisma do líder)
+  * **Racional-legal** (ideal para a administração pública)
+
+### Características da burocracia
+
+* Estrutura organizacional formalizada
+* Rigor hierárquico
+* **FIP**: formalidade, impessoalidade e profissionalização
+
+### Disfunções da burocracia
+
+* Excesso de normas
+* Excesso de rigidez
+* Lentidão nos processos
+* Redução do foco no atendimento ao cidadão
+* Clientelismo e fisiologismo
+
+---
+
+## Modelo Gerencial
+
+* Inspira-se em práticas da administração privada.
+* Objetivo: atender às necessidades sociais com mais eficiência.
+* Referências: **Thatcher** e **Reagan**.
+
+### Etapas do gerencialismo
+
+1. **Gerencialismo puro**
+
+   * Ajuste das contas públicas
+   * Foco no contribuinte (*taxpayer*)
+
+2. **Consumerismo**
+
+   * Busca por qualidade nos serviços públicos
+   * Foco no cliente (*consumer*)
+
+3. **Public Service Orientation (PSO)**
+
+   * Ênfase no cidadão como centro da administração
+
+---
+
+## Modelos de Administração Pública no Brasil
+
+* **Modelo patrimonial**: inicia-se com a chegada da família real (1808).
+
+  * Permanece até a República Velha, marcada pela influência dos coronéis.
+
+* **1938 – Criação do DASP (Departamento Administrativo do Setor Público)**
+
+  * Marco do modelo burocrático no Brasil.
+  * Institui formalização, impessoalidade e profissionalização.
+  * Primeiras seleções públicas.
+
+* **1967 – Decreto-Lei 200**
+
+  * Criação de autarquias, fundações, empresas públicas e sociedades de economia mista.
+  * Problemas: descentralização administrativa x centralização política.
+
+* **1988 – Constituição Federal**
+
+  * Reverte a lógica: descentralização política e centralização administrativa.
+
+* **1995 – PDRAE (Plano Diretor de Reforma do Aparelho do Estado)**
+
+  * Marco do modelo gerencial no Brasil.
+  * **Gerencialismo puro**: ajuste fiscal.
+  * **Publicização** e criação do terceiro setor: busca pela qualidade do serviço público.
+  * Avanços recentes: **LRF (Lei de Responsabilidade Fiscal)**, **LGPD (Lei Geral de Proteção de Dados)** e **LAI (Lei de Acesso à Informação)**, alinhados à perspectiva do PSO.
+
+# 📚 Português
+
+## 🧠 Compreensão e Interpretação de Texto
+
+A palavra **texto** vem do latim *textum* — “tecer” ou “construir”.
+Um texto é um **conjunto de códigos e sentidos compartilhados socialmente**, podendo ser:
+
+* **Verbal:** falado ou escrito.
+* **Não verbal:** imagens, gestos, expressões, símbolos.
+* **Misto ou multimodal:** combinação de diferentes linguagens.
+
+É por meio dos textos que ocorre a **interação social**.
+
+---
+
+### 🗣️ Elementos da Comunicação no Texto
+
+* **Enunciador (emissor):** comunica algo, define o conteúdo, a forma e a intenção.
+* **Receptor (destinatário):** recebe, decodifica, compreende e interpreta a mensagem.
+
+---
+
+### 💡 Ideia Central x Ideias Secundárias
+
+* **Ideia central:** mensagem principal do texto.
+* **Ideias secundárias:** informações que reforçam, exemplificam ou explicam a ideia central.
+
+---
+
+### 🔍 Compreensão x Interpretação
+
+* **Compreensão literal:**
+
+  * Habilidade de **parafrasear** o texto.
+  * Baseia-se apenas no que está **explicitamente** escrito.
+  * Não envolve julgamento de valor.
+
+* **Interpretação (compreensão inferencial):**
+
+  * Envolve **leitura nas entrelinhas**.
+  * Considera os **implícitos** e o **contexto**.
+  * Mobiliza **conhecimentos de mundo**, experiências e valores do leitor.
+
+---
+
+### 🧩 Pressuposto x Subentendido
+
+* **Pressuposto:**
+
+  * Inferência baseada em **pistas linguísticas** do próprio texto (advérbios, adjetivos, numerais, verbos, etc.).
+  * Exemplo: *“Maria voltou a estudar.”* → Pressuposto: Maria estudava antes.
+
+* **Subentendido:**
+
+  * Inferência dependente do **contexto e da subjetividade**.
+  * Nem sempre é uma verdade absoluta.
+  * Exemplo: *“Hoje você chegou cedo!”* → Pode subentender crítica ou elogio, conforme o tom e a situação.
+
+---
+
+## 🧾 Tipologias Textuais
+
+As **tipologias** (ou tipos textuais) dizem respeito à **organização interna do texto**, isto é, à sequência de ideias, estrutura e escolhas linguísticas.
+
+| Tipo              | Características Principais                                                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Narrativo**     | Sequência de acontecimentos (reais ou fictícios); narrador, personagens, tempo, espaço, enredo, conflito, clímax e desfecho. Uso do **pretérito perfeito**.         |
+| **Expositivo**    | Apresentação de informações ou explicações; linguagem objetiva e impessoal; uso da **3ª pessoa** e **verbos no presente**.                                          |
+| **Argumentativo** | Expressa **opiniões e pontos de vista**; estrutura em **tese + argumentos + conclusão**; uso de exemplos, citações e dados. Linguagem **subjetiva**.                |
+| **Descritivo**    | “Fotografia verbal” de pessoas, lugares ou objetos; uso de **adjetivos**, **substantivos** e **verbos de ligação**. Tempos: **presente** ou **pretérito perfeito**. |
+| **Injuntivo**     | Dá instruções, orientações ou ordens; uso de **verbos no imperativo**, **vocativos** e **2ª pessoa**. Expressa comandos, conselhos ou regras de conduta.            |
+
+---
+
+## ✉️ Gêneros Textuais
+
+Os **gêneros textuais** são formas concretas de uso da linguagem em diferentes contextos sociais.
+Eles refletem a **intenção comunicativa** do autor e as **necessidades do interlocutor**.
+
+### Características dos Gêneros
+
+* Estrutura **fixa ou flexível**.
+* Linguagem **formal ou informal**, conforme a situação.
+* Grau de **interatividade** entre autor e leitor.
+* Podem ser **multimodais** (unem texto, imagem, som, vídeo etc.).
+
+📌 Exemplos: notícia, crônica, receita, carta, propaganda, artigo de opinião, manual, bilhete, postagem em rede social.
+
+## Semântica
+
+A semântica é o ramo da linguística que estuda a significação das palavras, frase e sentenças de uma língua, isoladas ou contexxtualizadas
+
+Denotação versus conotação
+
+Denotação: literal, objetivo, referencial, significado
+
+Conotação: figurado, estético, expressivo, poético.
+
+Sinonímia, anotonímia, homonímia
+
+# 🧮 Raciocínio Lógico e Matemática
+
+## 🔗 Proposição Composta e Conectivos Lógicos
+
+As **proposições compostas** resultam da combinação de duas ou mais proposições simples, unidas por **conectivos lógicos**.
+
+| Conectivo           | Nome                    | Representação | Leitura               | Verdadeiro quando...                         |
+| ------------------- | ----------------------- | ------------- | --------------------- | -------------------------------------------- |
+| **e**               | **Conjunção**           | p ∧ q         | “p e q”               | ambas são verdadeiras                        |
+| **ou**              | **Disjunção inclusiva** | p ∨ q         | “p ou q”              | pelo menos uma é verdadeira                  |
+| **ou ... ou**       | **Disjunção exclusiva** | p ⊕ q         | “ou p ou q”           | exatamente uma é verdadeira                  |
+| **se ... então**    | **Condicional**         | p → q         | “se p, então q”       | é falsa apenas se p é verdadeira e q é falsa |
+| **se e somente se** | **Bicondicional**       | p ↔ q         | “p se e somente se q” | ambas têm o mesmo valor lógico               |
+
+---
+
+## 📊 Tabela-Verdade
+
+### 1️⃣ Conjunção – **“p e q”**
+
+**Símbolo:** p ∧ q
+✅ Só é **verdadeira** quando **ambas** as proposições são verdadeiras.
+
+| p | q | p ∧ q |
+| - | - | ----- |
+| V | V | **V** |
+| V | F | F     |
+| F | V | F     |
+| F | F | F     |
+
+---
+
+### 2️⃣ Disjunção Inclusiva – **“p ou q”**
+
+**Símbolo:** p ∨ q
+✅ É **verdadeira** quando **p**, **q** ou **ambas** são verdadeiras.
+❌ Só é **falsa** se **ambas** forem falsas.
+
+| p | q | p ∨ q |
+| - | - | ----- |
+| V | V | **V** |
+| V | F | **V** |
+| F | V | **V** |
+| F | F | F     |
+
+---
+
+### 3️⃣ Disjunção Exclusiva – **“ou p ou q”**
+
+**Símbolo:** ccccc
+✅ É **verdadeira** quando **somente uma** das proposições é verdadeira.
+❌ É **falsa** quando ambas têm o mesmo valor lógico.
+
+| p | q | p ⊕ q |
+| - | - | ----- |
+| V | V | F     |
+| V | F | **V** |
+| F | V | **V** |
+| F | F | F     |
+
+---
+
+### 4️⃣ Condicional – **“se p então q”**
+
+**Símbolo:** p → q
+✅ É **falsa apenas** quando o **antecedente (p)** é verdadeiro e o **consequente (q)** é falso.
+Em todos os outros casos, é **verdadeira**.
+
+| p | q | p → q |
+| - | - | ----- |
+| V | V | **V** |
+| V | F | **F** |
+| F | V | **V** |
+| F | F | **V** |
+
+---
+
+### 5️⃣ Bicondicional – **“p se e somente se q”**
+
+**Símbolo:** p ↔ q
+✅ É **verdadeira** quando **p e q têm o mesmo valor lógico** (ambas verdadeiras ou ambas falsas).
+
+| p | q | p ↔ q |
+| - | - | ----- |
+| V | V | **V** |
+| V | F | F     |
+| F | V | F     |
+| F | F | **V** |
+
+
+## ⚖️ Equivalência Lógica
+
+A **equivalência lógica** ocorre quando **duas proposições têm o mesmo valor lógico** em todas as situações possíveis.
+
+> Exemplo:
+> “Todas as lâmpadas estão acesas” ⟺ “Nenhuma lâmpada está apagada”.
+
+Essas duas frases dizem o **mesmo conteúdo lógico** de formas diferentes.
+
+---
+
+### 🔹 Propriedades de Comutatividade
+
+Alguns conectivos **podem trocar de posição** sem alterar o resultado lógico:
+
+| Conectivo | Nome                            | Comutativo? | Exemplo       |
+| --------- | ------------------------------- | ----------- | ------------- |
+| ∧         | Conjunção (“e”)                 | ✅ Sim       | A ∧ B = B ∧ A |
+| ∨         | Disjunção inclusiva (“ou”)      | ✅ Sim       | A ∨ B = B ∨ A |
+| ⊕         | Disjunção exclusiva (“ou...ou”) | ✅ Sim       | A ⊕ B = B ⊕ A |
+| ↔         | Bicondicional                   | ✅ Sim       | A ↔ B = B ↔ A |
+| →         | Condicional                     | ❌ Não       | A → B ≠ B → A |
+
+---
+
+### 🔸 Bicondicional (↔)
+
+A proposição **A ↔ B** é verdadeira quando **A e B têm o mesmo valor lógico**.
+Ela pode ser expressa de várias formas equivalentes:
+
+| Forma                              | Representação       |
+| ---------------------------------- | ------------------- |
+| Definição padrão                   | (A → B) ∧ (B → A)   |
+| Forma alternativa                  | (A → B) ∧ (¬A → ¬B) |
+| Equivalência em termos de exclusão | (A ∧ B) ⊕ (¬A ∧ ¬B) |
+
+---
+
+### 🔸 Condicional e Contrapositiva
+
+A proposição **A → B** é **logicamente equivalente** à sua **contrapositiva** **¬B → ¬A**.
+
+> Exemplo:
+> “Se chove, então a rua fica molhada”
+> ≡
+> “Se a rua não está molhada, então não choveu”.
+
+---
+
+### 🔸 Condições Lógicas
+
+| Tipo de Condição | Definição                            | Representação           | Exemplo               |
+| ---------------- | ------------------------------------ | ----------------------- | --------------------- |
+| **Suficiente**   | Garante que algo ocorra              | “Se A, então B” → A → B | A é suficiente para B |
+| **Necessária**   | É indispensável para que algo ocorra | “B só se A” → B → A     | A é necessária para B |
+
+📌 **Condição suficiente → máxima**
+📌 **Condição necessária → mínima**
+
+---
+
+## 🚫 Negações Lógicas
+
+A **negação** (¬) inverte o valor lógico de uma proposição.
+👉 Se a afirmação é **verdadeira**, sua negação é **falsa**, e vice-versa.
+👉 **Negação dupla** retorna à afirmação original: ¬(¬A) = A.
+
+---
+
+### 🔹 Leis de De Morgan
+
+As **Leis de De Morgan** descrevem como negar conjunções e disjunções:
+
+| Proposição Original | Negação Equivalente |
+| ------------------- | ------------------- |
+| ¬(A ∧ B)            | ¬A ∨ ¬B             |
+| ¬(A ∨ B)            | ¬A ∧ ¬B             |
+
+---
+
+### 🔹 Outras Equivalências de Negação
+
+| Proposição | Negação Equivalente |
+| ---------- | ------------------- |
+| ¬(A ⊕ B)   | (A ∧ B) ⊕ (¬A ∧ ¬B) |
+| ¬(A ⊕ B)   | (A ↔ B)             |
+| ¬(A ↔ B)   | (A ⊕ B)             |
+| ¬(A → B)   | A ∧ ¬B              |
+
+---
+
+### 🧠 Observação Importante
+
+As negações seguem o princípio da **inversão lógica**:
+
+> “Não é verdade que A e B são verdadeiros”
+> equivale a
+> “Pelo menos um deles é falso”.
+
+## Argumentação
+
+Se a partir de uma série de proposições tomadas como verdadeiras chegamos a uma conclusão que também é tomada como verdadeira, então teremos um argumento considerado válido.
+
+Um argumento é considerado válido se, a partir das premissas A e B assumidas como verdadeiras, obtém-se uma conclusão C, também considerada como verdadeira por consequência lógica das premissas.
+
+# Direito Tributário
+
+## O que são os tributos?
+
+A **atividade financeira do Estado** consiste na busca de **receitas para cobrir suas despesas**, sendo os **tributos** uma fonte essencial dessas receitas.
+
+As receitas públicas — tudo o que entra nos cofres do Estado — podem ser divididas em **originárias** e **derivadas**:
+
+### Receitas Originárias
+
+São aquelas que **têm origem no próprio patrimônio estatal**.
+Exemplos:
+
+* Terrenos de marinha;
+* Aluguel de imóveis pertencentes ao Estado;
+* Art. 173 da Constituição Federal;
+* Empresas públicas e sociedades de economia mista (EP e SEM);
+* Divisão de lucros de empresas como Banco do Brasil e Petrobras;
+* Privatização de serviços públicos;
+* Venda de bens do Estado.
+
+As receitas originárias são objeto de estudo do **Direito Administrativo**.
+
+### Receitas Derivadas
+
+São aquelas que **decorrem do patrimônio dos particulares**, ou seja, dos **tributos**.
+Mesmo quando não somos contribuintes diretos, pagamos tributos **embutidos nos preços** dos bens e serviços que consumimos.
+As receitas derivadas são o **objeto de estudo do Direito Tributário**.
+
+Nos últimos anos, as **receitas derivadas têm aumentado**, o que explica por que o tema dos tributos tem ganhado destaque no cotidiano, e não apenas no meio acadêmico.
+
+Antigamente, o Estado possuía outras fontes relevantes de renda — com as privatizações, houve **redução das receitas originárias** e **aumento da dependência de tributos**.
+
+> Historicamente, os tributos estiveram na base de diversas revoluções ao redor do mundo.
+
+---
+
+## Objeto do Direito Tributário
+
+O **Direito Tributário** estuda os **tributos** e as **relações entre o Estado e os contribuintes**.
+No passado, essa relação era puramente **de poder**; hoje, embora continue sendo uma relação de poder, ela é **normatizada por regras jurídicas** e **limitada por princípios constitucionais**.
+
+A **Constituição** tem dupla função:
+
+1. **Constituir e organizar** o Estado;
+2. **Limitar o poder estatal**.
+
+> A expressão “**Fazenda Pública**” é usada como sinônimo de Estado em matéria tributária.
+
+---
+
+## Direito Tributário x Direito Financeiro
+
+É importante não confundir os dois ramos:
+
+* **Direito Tributário:** preocupa-se com o **dia a dia do tributo** — como ele é criado, arrecadado e fiscalizado.
+* **Direito Financeiro:** preocupa-se com o **planejamento e execução do orçamento**, ou seja, com **quanto será arrecadado** e **como serão realizadas as despesas**.
+
+A **Lei Orçamentária** é, portanto, uma preocupação do **Direito Financeiro**.
+
+---
+
+## Definição de Tributo (Art. 3º do CTN)
+
+> “Tributo é uma **prestação pecuniária compulsória**, instituída por lei, em moeda ou cujo valor nela possa exprimir, que **não constitua sanção de ato ilícito**, e cobrada mediante atividade administrativa plenamente vinculada.”
+
+### Elementos principais:
+
+1. **Prestação pecuniária:** não há tributo *in natura* nem *in labore*;
+2. **Instituído por lei:** aplicação clara do **princípio da legalidade** — apenas o ente federativo competente pode criar tributos;
+3. **Atualização monetária:** uso de indexadores para evitar a perda do valor de referência da unidade monetária;
+4. **Pagamento em moeda:** não é possível o pagamento em bens;
+5. **Não é punição:** o tributo não pode ser sanção por ato ilícito;
+6. **Atividade vinculada:** o administrador não tem discricionariedade para decidir sobre a cobrança.
+
+---
+
+## Princípio Federativo e Competência Tributária
+
+A **federação** implica **divisão do poder estatal** entre União, Estados, Distrito Federal e Municípios.
+Cada esfera possui **administração tributária própria**, o que garante a **descentralização** — cláusula pétrea da Constituição.
+
+### Características de uma Federação:
+
+1. Eleições próprias;
+2. Autonomia administrativa;
+3. Prestação de serviços públicos próprios;
+4. Competência tributária própria.
+
+### Reformas recentes
+
+* **Art. 156-A:** criação da **CBS**, que substitui o **PIS** e a **Cofins** (tributos federais);
+* **IBS:** substitui o **ICMS** (estadual) e o **ISS** (municipal);
+* Adoção de **competência compartilhada**;
+* Objetivo: **simplificação do sistema tributário**.
+
+> Importante: **Federação ≠ Governo Federal**.
+
+---
+
+## Poder Legislativo e Competência Tributária
+
+O **Poder Legislativo Federal** pode atuar de três formas:
+
+1. **Constituinte derivado:** pode modificar a Constituição (Congresso Nacional);
+2. **Legislador da União:** cria leis **federais**, válidas apenas para a União;
+3. **Legislador da Federação:** cria leis **nacionais**, aplicáveis a todos os entes (União, Estados e Municípios).
+
+No campo tributário, esse fenômeno também ocorre, como se observa na criação da **CBS** e do **IBS**.
+
+### Exemplo:
+
+O **Código Tributário Nacional (CTN)**, embora seja uma **lei federal**, tem **aplicação nacional**, funcionando como um instrumento de **uniformização das normas tributárias**, evitando que cada ente federativo crie regras próprias e divergentes.
+
