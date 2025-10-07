@@ -565,3 +565,104 @@ No campo tributário, esse fenômeno também ocorre, como se observa na criaçã
 
 O **Código Tributário Nacional (CTN)**, embora seja uma **lei federal**, tem **aplicação nacional**, funcionando como um instrumento de **uniformização das normas tributárias**, evitando que cada ente federativo crie regras próprias e divergentes.
 
+## Artigo 147 da Constituição Federal
+
+> “Compete à União, nos territórios federais, os impostos estaduais e, se o território não for dividido em municípios, cumulativamente, os impostos municipais.
+> Ao Distrito Federal cabem os impostos municipais.”
+
+### Interpretação
+
+* A **União** pode instituir **impostos que normalmente caberiam aos Estados e Municípios**, nos **territórios federais**.
+* Embora **a categoria de território** não exista atualmente, o texto permanece na Constituição.
+* O **território não é ente federativo**, razão pela qual a **União o administra diretamente**.
+* O **Distrito Federal** não possui subdivisão em municípios.
+
+  * O **art. 155** da Constituição já garante ao DF os **impostos estaduais**;
+  * O **art. 147** garante também os **impostos municipais**.
+
+---
+
+## Competência Tributária
+
+A **competência tributária** é o **poder de instituir tributos**, **juridicamente limitado pela Constituição**.
+Sua função é **regular e impedir a invasão de competência** entre os entes federativos (União, Estados, Distrito Federal e Municípios).
+
+> Ou seja, a competência tributária é uma **forma de limitação recíproca** do poder de tributar.
+
+### Exercício da Competência
+
+Além de a Constituição definir a competência, **é necessário que o ente a exerça** efetivamente por meio de lei.
+
+**Exemplos:**
+
+* O **Imposto sobre Grandes Fortunas (IGF)** é previsto na Constituição, mas **nunca foi instituído** pela União.
+* Muitos municípios **não instituíram o ISS** por falta de lei específica.
+
+---
+
+## Espécies de Competência Tributária
+
+| Tipo de Competência | Descrição                                                                 | Exemplo                                     |
+| ------------------- | ------------------------------------------------------------------------- | ------------------------------------------- |
+| **Exclusiva**       | Exercida apenas por um ente federativo.                                   | Impostos federais, estaduais e municipais.  |
+| **Comum**           | Compartilhada entre diferentes entes.                                     | Taxas e contribuições de melhoria.          |
+| **Residual**        | Permite à União criar novos impostos, além dos previstos na Constituição. | Não há exemplo concreto.                    |
+| **Extraordinária**  | Utilizada em situações excepcionais, como guerra externa.                 | “Imposto da guerra”.                        |
+| **Compartilhada**   | Competência conjunta entre entes federativos.                             | CBS (federal) e IBS (estadual e municipal). |
+
+---
+
+## Tributos Vinculados e Não Vinculados
+
+A distinção entre **tributos vinculados** e **não vinculados** está relacionada à **atuação estatal** que lhes dá origem.
+
+* **Tributo vinculado:** depende de uma **contraprestação estatal direta**.
+  Exemplo: taxas e contribuições.
+* **Tributo não vinculado:** **não está associado** a uma atuação estatal específica em favor do contribuinte.
+  Exemplo: **impostos**.
+
+O **imposto**, portanto, é um **tributo não vinculado**, baseado no **princípio da capacidade contributiva** — “**cobrar mais de quem pode pagar mais**”.
+
+> Como o imposto não é vinculado, a **única forma de identificar a competência de cada imposto** é pela **previsão constitucional**.
+
+---
+
+## Competência Comum
+
+A **competência comum** ocorre **quando a Constituição não atribui previamente** a competência a um ente específico.
+Ela se aplica a **taxas** e **contribuições de melhoria**, que são **tributos vinculados**.
+
+### Exemplos:
+
+* **Taxas de poder de polícia:** decorrem da atividade estatal de fiscalização, como alvarás e licenças de obras.
+* **Taxas de serviços públicos específicos e divisíveis:** coleta de lixo, esgoto etc.
+
+---
+
+## Contribuição de Melhoria
+
+Embora **raramente cobrada na prática**, é **muito recorrente em provas**.
+
+Pode ser instituída quando ocorre **valorização imobiliária** decorrente de **obra pública**, desde que exista **nexo causal** entre a obra e o aumento do valor do imóvel.
+
+---
+
+## Competência Residual
+
+A **competência residual** é **exclusiva da União** e permite a **criação de novos impostos** além dos expressamente previstos na Constituição.
+
+### Requisitos:
+
+1. Deve ser exercida **por meio de lei complementar**;
+2. O novo imposto **não pode ter fato gerador ou base de cálculo já previstos** para outros tributos;
+3. Deve observar o **princípio da não cumulatividade**.
+
+> Até o momento, **não existe exemplo concreto** de imposto criado com base na competência residual.
+
+---
+
+## Competência Extraordinária
+
+A **competência extraordinária** permite a **criação de tributos em situações excepcionais**, como **guerra externa**.
+
+Ela **facilita a implementação de tributos temporários** para garantir recursos à defesa nacional.
