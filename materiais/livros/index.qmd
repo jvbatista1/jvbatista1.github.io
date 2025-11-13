@@ -1,0 +1,41 @@
+---
+title: "Livros úteis"
+description: "Tomando nota sobre livros que encontro e que podem ser úteis (ou só agradáveis)"
+author:
+  - name: Victor Batista
+    url: https://jvbatista1.github.io/
+    langid: pt
+date: 09/30/2025
+categories: [Notas] # self-defined categories
+image: study_icon.png
+draft: false
+---
+
+# Metodologia
+- [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net)
+- [Causal Inference: The Mixtape](https://mixtape.scunning.com)
+
+# Linguagem R
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+- [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org)
+- [R for Data Science (2e)](https://r4ds.hadley.nz)
+- [Advanced R](https://adv-r.hadley.nz/)
+
+# Outras linguagens
+- [Python for Data Analysis, 3E](https://wesmckinney.com/book)
+- [SQL for Data Scientists](https://sqlfordatascientists.com/)
+- [Practical SQL: A Beginner's Guide to Storytelling with Data](https://www.practicalsql.com/)
+
+# Visualização de dados
+- [Information Dashboard Design: The Effective Visual Communication of Data](https://www.amazon.com/Information-Dashboard-Design-Effective-Communication/dp/0596100167)
+- [The Non-Designer's Design Book](https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151)
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+- [R Graphics Cookbook, 2nd edition](https://r-graphics.org/)
+
+# Escrita
+- [Style: Lessons in Clarity and Grace](https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416)
+- [Sense of Structure, The: Writing from the Reader's Perspective](https://www.amazon.com/Sense-Structure-Writing-Readers-Perspective/dp/0205296327)
+- [The Litigation Articles](https://www.georgegopen.com/litigation-articles.html)
+- [The Leek group guide to giving talks](https://github.com/jtleek/talkguide)
+- [Organizing Your Social Sciences Research Paper](https://libguides.usc.edu/writingguide/researchdesigns)
+- [Acadmic Writing](https://wilson.fas.harvard.edu/sites/g/files/omnuum9406/files/jeffreywilson/files/jeffrey_r._wilson_academic_writing.pdf)

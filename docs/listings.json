@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/20250610_judges/index.html",
       "/posts/20250618_apisguru/index.html",
       "/posts/20250528_ddmonsters/index.html",
       "/posts/20250526_lehnerrdd/index.html",
@@ -11,6 +12,7 @@
   {
     "listing": "/materiais.html",
     "items": [
+      "/materiais/livros/index.html",
       "/materiais/notas_docas/index.html",
       "/materiais/notas_ancord/index.html"
     ]

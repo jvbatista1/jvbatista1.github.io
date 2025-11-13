@@ -8,14 +8,79 @@
 <title>Victor Batista</title>
 <link>https://www.jvbatista1.github.io/materiais.html</link>
 <atom:link href="https://www.jvbatista1.github.io/materiais.xml" rel="self" type="application/rss+xml"/>
-<description>Um blog pessoal</description>
-<generator>quarto-1.6.32</generator>
+<description>Um blog</description>
+<generator>quarto-1.7.31</generator>
 <lastBuildDate>Tue, 30 Sep 2025 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Livros úteis</title>
+  <dc:creator>Victor Batista</dc:creator>
+  <link>https://www.jvbatista1.github.io/materiais/livros/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="metodologia" class="level1">
+
+<ul>
+<li><a href="https://theeffectbook.net">The Effect: An Introduction to Research Design and Causality</a></li>
+<li><a href="https://mixtape.scunning.com">Causal Inference: The Mixtape</a></li>
+</ul>
+</section>
+<section id="linguagem-r" class="level1">
+<h1>Linguagem R</h1>
+<ul>
+<li><a href="https://rstudio-education.github.io/hopr/">Hands-On Programming with R</a></li>
+<li><a href="https://ggplot2-book.org">ggplot2: Elegant Graphics for Data Analysis (3e)</a></li>
+<li><a href="https://r4ds.hadley.nz">R for Data Science (2e)</a></li>
+<li><a href="https://adv-r.hadley.nz/">Advanced R</a></li>
+</ul>
+</section>
+<section id="outras-linguagens" class="level1">
+<h1>Outras linguagens</h1>
+<ul>
+<li><a href="https://wesmckinney.com/book">Python for Data Analysis, 3E</a></li>
+<li><a href="https://sqlfordatascientists.com/">SQL for Data Scientists</a></li>
+<li><a href="https://www.practicalsql.com/">Practical SQL: A Beginner’s Guide to Storytelling with Data</a></li>
+</ul>
+</section>
+<section id="visualização-de-dados" class="level1">
+<h1>Visualização de dados</h1>
+<ul>
+<li><a href="https://www.amazon.com/Information-Dashboard-Design-Effective-Communication/dp/0596100167">Information Dashboard Design: The Effective Visual Communication of Data</a></li>
+<li><a href="https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151">The Non-Designer’s Design Book</a></li>
+<li><a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a></li>
+<li><a href="https://r-graphics.org/">R Graphics Cookbook, 2nd edition</a></li>
+</ul>
+</section>
+<section id="escrita" class="level1">
+<h1>Escrita</h1>
+<ul>
+<li><a href="https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416">Style: Lessons in Clarity and Grace</a></li>
+<li><a href="https://www.amazon.com/Sense-Structure-Writing-Readers-Perspective/dp/0205296327">Sense of Structure, The: Writing from the Reader’s Perspective</a></li>
+<li><a href="https://www.georgegopen.com/litigation-articles.html">The Litigation Articles</a></li>
+<li><a href="https://github.com/jtleek/talkguide">The Leek group guide to giving talks</a></li>
+<li><a href="https://libguides.usc.edu/writingguide/researchdesigns">Organizing Your Social Sciences Research Paper</a></li>
+<li><a href="https://wilson.fas.harvard.edu/sites/g/files/omnuum9406/files/jeffreywilson/files/jeffrey_r._wilson_academic_writing.pdf">Acadmic Writing</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Notas</category>
+  <guid>https://www.jvbatista1.github.io/materiais/livros/</guid>
+  <pubDate>Tue, 30 Sep 2025 03:00:00 GMT</pubDate>
+  <media:content url="https://www.jvbatista1.github.io/materiais/livros/study_icon.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Notas de estudo para concurso Docas do Ceará</title>
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/materiais/notas_docas/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1045,6 +1110,7 @@ Ceará.”</span> September 30, 2025. <a href="https://jvbatista1.github.io/post
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/materiais/notas_ancord/</link>
   <description><![CDATA[ 
+
 
 
 
