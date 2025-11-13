@@ -1,7 +1,0 @@
----
-title: "Materiais"
----
-
-Teste
-
--   [Presentation](https://jvbatista1.github.io/paneldata_exercises)
