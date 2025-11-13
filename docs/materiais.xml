@@ -12,7 +12,7 @@
 <generator>quarto-1.7.31</generator>
 <lastBuildDate>Tue, 30 Sep 2025 03:00:00 GMT</lastBuildDate>
 <item>
-  <title>Livros úteis</title>
+  <title>Recursos úteis</title>
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/materiais/livros/</link>
   <description><![CDATA[ 
@@ -36,6 +36,9 @@
 <li><a href="https://ggplot2-book.org">ggplot2: Elegant Graphics for Data Analysis (3e)</a></li>
 <li><a href="https://r4ds.hadley.nz">R for Data Science (2e)</a></li>
 <li><a href="https://adv-r.hadley.nz/">Advanced R</a></li>
+<li><a href="https://r-pkgs.org">R Packages (2e)</a></li>
+<li><a href="https://csgillespie.github.io/efficientR">Efficient R programming</a></li>
+<li><a href="https://edomt.github.io/Intermediate-Advanced-R">Digging deeper: online resources for intermediate to advanced R users</a></li>
 </ul>
 </section>
 <section id="outras-linguagens" class="level1">
@@ -53,6 +56,7 @@
 <li><a href="https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151">The Non-Designer’s Design Book</a></li>
 <li><a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a></li>
 <li><a href="https://r-graphics.org/">R Graphics Cookbook, 2nd edition</a></li>
+<li><a href="https://socviz.co">Data Visualization: A practical introduction</a></li>
 </ul>
 </section>
 <section id="escrita" class="level1">

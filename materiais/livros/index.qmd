@@ -1,6 +1,6 @@
 ---
-title: "Livros úteis"
-description: "Tomando nota sobre livros que encontro e que podem ser úteis (ou só agradáveis)"
+title: "Recursos úteis"
+description: "Tomando nota sobre livros e outras coisas que encontro e que podem ser úteis (ou só agradáveis)"
 author:
   - name: Victor Batista
     url: https://jvbatista1.github.io/
@@ -20,6 +20,9 @@ draft: false
 - [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org)
 - [R for Data Science (2e)](https://r4ds.hadley.nz)
 - [Advanced R](https://adv-r.hadley.nz/)
+- [R Packages (2e)](https://r-pkgs.org)
+- [Efficient R programming](https://csgillespie.github.io/efficientR)
+- [Digging deeper: online resources for intermediate to advanced R users](https://edomt.github.io/Intermediate-Advanced-R)
 
 # Outras linguagens
 - [Python for Data Analysis, 3E](https://wesmckinney.com/book)
@@ -31,6 +34,7 @@ draft: false
 - [The Non-Designer's Design Book](https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151)
 - [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 - [R Graphics Cookbook, 2nd edition](https://r-graphics.org/)
+- [Data Visualization: A practical introduction](https://socviz.co)
 
 # Escrita
 - [Style: Lessons in Clarity and Grace](https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416)
