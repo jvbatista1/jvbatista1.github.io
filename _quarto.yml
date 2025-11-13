@@ -5,7 +5,7 @@ project:
 website:
   title: "Victor Batista"
   site-url: https://www.jvbatista1.github.io
-  description: "Um blog pessoal"
+  description: "Um blog"
   navbar:
     left:
       #- href: index.qmd
