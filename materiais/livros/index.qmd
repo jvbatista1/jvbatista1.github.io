@@ -11,35 +11,50 @@ image: study_icon.png
 draft: false
 ---
 
+![](pencil-lapiz-1562150.jpg){width="50%"}
+
 # Metodologia
-- [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net)
-- [Causal Inference: The Mixtape](https://mixtape.scunning.com)
+
+-   [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net)
+-   [Causal Inference: The Mixtape](https://mixtape.scunning.com)
 
 # Linguagem R
-- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
-- [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org)
-- [R for Data Science (2e)](https://r4ds.hadley.nz)
-- [Advanced R](https://adv-r.hadley.nz/)
-- [R Packages (2e)](https://r-pkgs.org)
-- [Efficient R programming](https://csgillespie.github.io/efficientR)
-- [Digging deeper: online resources for intermediate to advanced R users](https://edomt.github.io/Intermediate-Advanced-R)
+
+-   [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+-   [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org)
+-   [R for Data Science (2e)](https://r4ds.hadley.nz)
+-   [Advanced R](https://adv-r.hadley.nz/)
+-   [R Packages (2e)](https://r-pkgs.org)
+-   [Efficient R programming](https://csgillespie.github.io/efficientR)
+-   [Digging deeper: online resources for intermediate to advanced R users](https://edomt.github.io/Intermediate-Advanced-R)
+-   [Packaging data analytical work reproducibly using R (and friends)](https://peerj.com/preprints/3192v2.pdf)
+
+# Análise espacial
+- [Spatial Statistics for Data Science: Theory and Practice with R](https://www.paulamoraga.com/book-spatial)
+- [Geocomputation with R](https://r.geocompx.org)
+- [Applied Spatial Data Analysis with R](https://asdar-book.org)
+- [Spatial Data Science](https://r-spatial.org/book)
+
 
 # Outras linguagens
-- [Python for Data Analysis, 3E](https://wesmckinney.com/book)
-- [SQL for Data Scientists](https://sqlfordatascientists.com/)
-- [Practical SQL: A Beginner's Guide to Storytelling with Data](https://www.practicalsql.com/)
+
+-   [Python for Data Analysis, 3E](https://wesmckinney.com/book)
+-   [SQL for Data Scientists](https://sqlfordatascientists.com/)
+-   [Practical SQL: A Beginner's Guide to Storytelling with Data](https://www.practicalsql.com/)
 
 # Visualização de dados
-- [Information Dashboard Design: The Effective Visual Communication of Data](https://www.amazon.com/Information-Dashboard-Design-Effective-Communication/dp/0596100167)
-- [The Non-Designer's Design Book](https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151)
-- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
-- [R Graphics Cookbook, 2nd edition](https://r-graphics.org/)
-- [Data Visualization: A practical introduction](https://socviz.co)
+
+-   [Information Dashboard Design: The Effective Visual Communication of Data](https://www.amazon.com/Information-Dashboard-Design-Effective-Communication/dp/0596100167)
+-   [The Non-Designer's Design Book](https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151)
+-   [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+-   [R Graphics Cookbook, 2nd edition](https://r-graphics.org/)
+-   [Data Visualization: A practical introduction](https://socviz.co)
 
 # Escrita
-- [Style: Lessons in Clarity and Grace](https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416)
-- [Sense of Structure, The: Writing from the Reader's Perspective](https://www.amazon.com/Sense-Structure-Writing-Readers-Perspective/dp/0205296327)
-- [The Litigation Articles](https://www.georgegopen.com/litigation-articles.html)
-- [The Leek group guide to giving talks](https://github.com/jtleek/talkguide)
-- [Organizing Your Social Sciences Research Paper](https://libguides.usc.edu/writingguide/researchdesigns)
-- [Acadmic Writing](https://wilson.fas.harvard.edu/sites/g/files/omnuum9406/files/jeffreywilson/files/jeffrey_r._wilson_academic_writing.pdf)
+
+-   [Style: Lessons in Clarity and Grace](https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416)
+-   [Sense of Structure, The: Writing from the Reader's Perspective](https://www.amazon.com/Sense-Structure-Writing-Readers-Perspective/dp/0205296327)
+-   [The Litigation Articles](https://www.georgegopen.com/litigation-articles.html)
+-   [The Leek group guide to giving talks](https://github.com/jtleek/talkguide)
+-   [Organizing Your Social Sciences Research Paper](https://libguides.usc.edu/writingguide/researchdesigns)
+-   [Acadmic Writing](https://wilson.fas.harvard.edu/sites/g/files/omnuum9406/files/jeffreywilson/files/jeffrey_r._wilson_academic_writing.pdf)
