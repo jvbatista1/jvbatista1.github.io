@@ -9,8 +9,8 @@ date: 13/01/2026
 categories: [Tidytuesday] # self-defined categories
 citation: 
   url: https://jvbatista1.github.io/posts/20261301_africanlanguages/ 
-image: apis_guru.svg
-draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+image: africa.svg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 
 ---
 
