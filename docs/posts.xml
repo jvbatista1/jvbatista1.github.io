@@ -10,7 +10,435 @@
 <atom:link href="https://www.jvbatista1.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Um blog</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Wed, 18 Jun 2025 03:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 01 Jan 2027 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Diversidade linguística na África</title>
+  <dc:creator>Victor Batista</dc:creator>
+  <link>https://www.jvbatista1.github.io/posts/20260113_africanlanguages/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>Linguística é um assunto que me interessa desde a escola. É fascinante saber que cada cultura se expressa em uma linguagem diferente, além do que uma pessoa que fala vários idiomas tem um charme encantador. Ao olhar para o continente africano, sua quantidade incrível de idiomas aumenta ainda mais esse interesse: a diversidade linguística é tão grande que é quase impossível de encontrar um consenso na sua classificação.</p>
+<p>No <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-01-13/readme.md">Tidytuesday</a> dessa semana, primeiro de 2026, analisei um scrapping da página <a href="https://en.wikipedia.org/wiki/Languages_of_Africa">Languages of Africa</a> da Wikipedia, com o objetivo de analisar a distribuição das línguas africanas por famílias linguísticas e refletir sobre os limites desse tipo de base de dados.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">africa</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 796 × 4
+   language   family      native_speakers country    
+   &lt;chr&gt;      &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;      
+ 1 ǂKxʼaoǁʼae Kxʼa                   5000 Namibia    
+ 2 ǂKxʼaoǁʼae Kxʼa                   5000 Botswana   
+ 3 Abon       Niger–Congo             800 Cameroon   
+ 4 Abron      Niger–Congo         1393000 Ghana      
+ 5 Abron      Niger–Congo         1393000 Ivory Coast
+ 6 Acheron    Niger–Congo           20000 Sudan      
+ 7 Adara      Niger–Congo          300000 Nigeria    
+ 8 Afar       Afroasiatic         2500000 Ethiopia   
+ 9 Afar       Afroasiatic         2500000 Djibouti   
+10 Afar       Afroasiatic         2500000 Eritrea    
+# ℹ 786 more rows</code></pre>
+</div>
+</div>
+<section id="o-desafio-de-classifcar-línguas" class="level2">
+<h2 class="anchored" data-anchor-id="o-desafio-de-classifcar-línguas">O desafio de classifcar línguas</h2>
+<p>Antes de entrar nos resultados, é importante destacar que classificar línguas está longe de ser uma tarefa trivial. A evolução linguística é um processo lento, contínuo e profundamente influenciado por fatores históricos, culturais e geográficos. Criadores de conteúdo como o <a href="https://www.youtube.com/@Alomorfe">Alomorfe</a> mostram com frequência como diferentes correntes teóricas podem divergir sobre a origem e o parentesco entre línguas, tornando qualquer classificação, em certa medida, uma simplificação da realidade.</p>
+<p>Esse ponto é especialmente relevante quando lidamos com dados obtidos via scraping. Na base utilizada, por exemplo, aparecem “famílias” chamadas “Portuguese” ou “English”, que na verdade se referem a línguas crioulas. Essas línguas não se encaixam diretamente nem na família indo-europeia tradicional, nem exclusivamente nas famílias linguísticas africanas originárias, evidenciando ambiguidades e limitações da fonte de dados.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">africa <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">count</span>(family, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sort =</span> T) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">n=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">17</span>)</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 17 × 2
+   family            n
+   &lt;chr&gt;         &lt;int&gt;
+ 1 Niger–Congo     583
+ 2 Nilo-Saharan    108
+ 3 Afroasiatic      46
+ 4 Ubangian         11
+ 5 Indo-European    10
+ 6 Khoe–Kwadi        9
+ 7 Kxʼa              9
+ 8 Afro-Asiatic      5
+ 9 Arabic-based      3
+10 English           2
+11 French            2
+12 Kongo-based       2
+13 Tuu               2
+14 Austronesian      1
+15 Language          1
+16 Mande             1
+17 Portuguese        1</code></pre>
+</div>
+</div>
+<p>Respeitando o trabalho da limpeza original da base, vamos proceder com as análises iniciais: Camarões aparece como o país com o maior número de idiomas, enquanto Soninke aparece como a língua falada em mais países simultâneamente, colada ao Árabe.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">africa <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb5-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">count</span>(country, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sort =</span> T)</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 51 × 2
+   country          n
+   &lt;chr&gt;        &lt;int&gt;
+ 1 Cameroon        96
+ 2 Congo           85
+ 3 Nigeria         73
+ 4 Sudan           40
+ 5 Burkina Faso    37
+ 6 Ghana           34
+ 7 South Africa    25
+ 8 Chad            24
+ 9 Namibia         24
+10 Mali            23
+# ℹ 41 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">africa <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb7-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">count</span>(language, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sort =</span> T)</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 502 × 2
+   language               n
+   &lt;chr&gt;              &lt;int&gt;
+ 1 Soninke               13
+ 2 Arabic                12
+ 3 Fulani                11
+ 4 Mooré                  9
+ 5 Fang                   7
+ 6 Tsonga or Xitsonga     7
+ 7 Afar                   6
+ 8 Bariba                 6
+ 9 Gourmanché             6
+10 Lozi                   6
+# ℹ 492 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="densidade-linguística" class="level2">
+<h2 class="anchored" data-anchor-id="densidade-linguística">Densidade linguística</h2>
+<p>Uma análise muito interessante que podemos fazer é o quanto algumas famílias podem ser “densas”, ou seja, comparar o número de falantes e o número de idiomas dentro de cada família linguística.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">family_speakers <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> africa <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb9-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">distinct</span>(language, family, native_speakers) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb9-3">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(family) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb9-4">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(</span>
+<span id="cb9-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">speakers=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sum</span>(native_speakers)</span>
+<span id="cb9-6">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb9-7">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">desc</span>(speakers))</span>
+<span id="cb9-8"></span>
+<span id="cb9-9">family_speakers</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 17 × 2
+   family         speakers
+   &lt;chr&gt;             &lt;dbl&gt;
+ 1 Niger–Congo   457401662
+ 2 Afroasiatic   332500440
+ 3 Nilo-Saharan   44817300
+ 4 Indo-European  25365300
+ 5 Austronesian   18000000
+ 6 Kongo-based    13000000
+ 7 French          1173000
+ 8 Portuguese       871000
+ 9 English          866000
+10 Ubangian         636500
+11 Afro-Asiatic     374300
+12 Arabic-based     300000
+13 Mande            230000
+14 Khoe–Kwadi       218500
+15 Kxʼa              45500
+16 Tuu                2500
+17 Language            400</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">africa_families <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> africa <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb11-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(family) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb11-3">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(</span>
+<span id="cb11-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">languages=</span>dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">n</span>()</span>
+<span id="cb11-5">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb11-6">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">left_join</span>(family_speakers, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by=</span>dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_by</span>(family)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb11-7">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">density=</span>speakers<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>languages) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb11-8">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">desc</span>(density))</span>
+<span id="cb11-9"></span>
+<span id="cb11-10">africa_families</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 17 × 4
+   family        languages  speakers   density
+   &lt;chr&gt;             &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Austronesian          1  18000000 18000000 
+ 2 Afroasiatic          46 332500440  7228270.
+ 3 Kongo-based           2  13000000  6500000 
+ 4 Indo-European        10  25365300  2536530 
+ 5 Portuguese            1    871000   871000 
+ 6 Niger–Congo         583 457401662   784565.
+ 7 French                2   1173000   586500 
+ 8 English               2    866000   433000 
+ 9 Nilo-Saharan        108  44817300   414975 
+10 Mande                 1    230000   230000 
+11 Arabic-based          3    300000   100000 
+12 Afro-Asiatic          5    374300    74860 
+13 Ubangian             11    636500    57864.
+14 Khoe–Kwadi            9    218500    24278.
+15 Kxʼa                  9     45500     5056.
+16 Tuu                   2      2500     1250 
+17 Language              1       400      400 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(africa_families,</span>
+<span id="cb13-2">       ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> languages, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> speakers)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-3">  ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alpha =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.7</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-4">  ggrepel<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_text_repel</span>(</span>
+<span id="cb13-5">    ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> family),</span>
+<span id="cb13-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>,</span>
+<span id="cb13-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">max.overlaps =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">Inf</span></span>
+<span id="cb13-8">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-9">  ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_x_log10</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-10">  ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_y_log10</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-11">  ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb13-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Número de línguas na família (escala log)"</span>,</span>
+<span id="cb13-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Número de falantes (escala log)"</span>,</span>
+<span id="cb13-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Famílias linguísticas na África: falantes vs. diversidade"</span>,</span>
+<span id="cb13-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Cada ponto representa uma família linguística"</span></span>
+<span id="cb13-16">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb13-17">  ggplot2<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://www.jvbatista1.github.io/posts/20260113_africanlanguages/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Três coisas me chamam a atenção nessa análise de densidade: Primeiramente, a família Austronésia é a mais densa possível porque possui apenas um idioma (Malgaxe, da ilha de Madagascar), mas uma quantidade muito grande de falantes. Em seguida, a grande variedade da família Niger-Congo, com uma quantidade imensa de falantes de idiomas. Por fim, no canto inferior esquerdo vemos famílias como Tuu, Kx’a e Khoe-Kwadi, com poucos falantes e poucos idiomas, indicando perigo de extinção.</p>
+<p>Essa análise possui limitações importantes de serem notadas:</p>
+<ol type="1">
+<li><p>“Número de falantes” é um dado muito complicado de obter por várias razões. Especialmente para línguas minoritárias, é necessário cautela com esse número.</p></li>
+<li><p>O colonialismo na África é causa de características estruturais na situação linguística atual do continente, não somente através da comunicação em línguas Indo-Europeias ou crioulos, mas também através da ameaça de extinção de idiomas originários.</p></li>
+</ol>
+<p>De toda forma, esse exercício não pretende ser metodologicamente rigoroso do ponto de vista linguístico, mas procura contribuir através da análise de dados e da cultura da colaboração na web na disseminação da informação.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2027,
+  author = {Batista, Victor},
+  title = {Diversidade Linguística Na {África}},
+  date = {2027-01-01},
+  url = {https://jvbatista1.github.io/posts/20261301_africanlanguages/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2027" class="csl-entry quarto-appendix-citeas">
+Batista, Victor. 2027. <span>“Diversidade Linguística Na África.”</span>
+January 1, 2027. <a href="https://jvbatista1.github.io/posts/20261301_africanlanguages/">https://jvbatista1.github.io/posts/20261301_africanlanguages/</a>.
+</div></div></section></div> ]]></description>
+  <category>Tidytuesday</category>
+  <guid>https://www.jvbatista1.github.io/posts/20260113_africanlanguages/</guid>
+  <pubDate>Fri, 01 Jan 2027 03:00:00 GMT</pubDate>
+  <media:content url="https://www.jvbatista1.github.io/posts/20260113_africanlanguages/africa.svg" medium="image" type="image/svg+xml"/>
+</item>
 <item>
   <title>APIs Guru</title>
   <dc:creator>Victor Batista</dc:creator>
