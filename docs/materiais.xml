@@ -9,7 +9,7 @@
 <link>https://www.jvbatista1.github.io/materiais.html</link>
 <atom:link href="https://www.jvbatista1.github.io/materiais.xml" rel="self" type="application/rss+xml"/>
 <description>Um blog</description>
-<generator>quarto-1.7.31</generator>
+<generator>quarto-1.8.26</generator>
 <lastBuildDate>Tue, 30 Sep 2025 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Recursos úteis</title>
@@ -41,6 +41,7 @@
 <li><a href="https://csgillespie.github.io/efficientR">Efficient R programming</a></li>
 <li><a href="https://edomt.github.io/Intermediate-Advanced-R">Digging deeper: online resources for intermediate to advanced R users</a></li>
 <li><a href="https://peerj.com/preprints/3192v2.pdf">Packaging data analytical work reproducibly using R (and friends)</a></li>
+<li><a href="https://rstudio4edu.github.io/rstudio4edu-book">rstudio4edu: A Handbook for Teaching and Learning with R and RStudio</a></li>
 </ul>
 </section>
 <section id="análise-espacial" class="level1">
@@ -79,6 +80,12 @@
 <li><a href="https://github.com/jtleek/talkguide">The Leek group guide to giving talks</a></li>
 <li><a href="https://libguides.usc.edu/writingguide/researchdesigns">Organizing Your Social Sciences Research Paper</a></li>
 <li><a href="https://wilson.fas.harvard.edu/sites/g/files/omnuum9406/files/jeffreywilson/files/jeffrey_r._wilson_academic_writing.pdf">Acadmic Writing</a></li>
+</ul>
+</section>
+<section id="políticas-públicas" class="level1">
+<h1>Políticas públicas</h1>
+<ul>
+<li><a href="https://github.com/segpr-ndgr/time_cafe_stack?tab=readme-ov-file">Time Café GOVPE</a></li>
 </ul>
 
 

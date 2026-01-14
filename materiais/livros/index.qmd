@@ -27,6 +27,7 @@ draft: false
 -   [Efficient R programming](https://csgillespie.github.io/efficientR)
 -   [Digging deeper: online resources for intermediate to advanced R users](https://edomt.github.io/Intermediate-Advanced-R)
 -   [Packaging data analytical work reproducibly using R (and friends)](https://peerj.com/preprints/3192v2.pdf)
+- [rstudio4edu: A Handbook for Teaching and Learning with R and RStudio](https://rstudio4edu.github.io/rstudio4edu-book)
 
 # Análise espacial
 - [Spatial Statistics for Data Science: Theory and Practice with R](https://www.paulamoraga.com/book-spatial)
@@ -57,3 +58,6 @@ draft: false
 -   [The Leek group guide to giving talks](https://github.com/jtleek/talkguide)
 -   [Organizing Your Social Sciences Research Paper](https://libguides.usc.edu/writingguide/researchdesigns)
 -   [Acadmic Writing](https://wilson.fas.harvard.edu/sites/g/files/omnuum9406/files/jeffreywilson/files/jeffrey_r._wilson_academic_writing.pdf)
+
+# Políticas públicas
+- [Time Café GOVPE](https://github.com/segpr-ndgr/time_cafe_stack?tab=readme-ov-file)

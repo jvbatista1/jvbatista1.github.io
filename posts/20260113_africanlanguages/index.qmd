@@ -1,0 +1,118 @@
+---
+title: "Diversidade linguística na África"
+description: "E sobre o porquê de web scrapping ser bom e ruim ao mesmo tempo"
+author:
+  - name: Victor Batista
+    url: https://jvbatista1.github.io/
+    langid: pt
+date: 13/01/2026
+categories: [Tidytuesday] # self-defined categories
+citation: 
+  url: https://jvbatista1.github.io/posts/20261301_africanlanguages/ 
+image: apis_guru.svg
+draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+---
+
+```{r}
+#| include: false
+tuesdata <- tidytuesdayR::tt_load('2026-01-13')
+
+africa <- tuesdata$africa
+```
+
+Linguística é um assunto que me interessa desde a escola. É fascinante saber que cada cultura se expressa em uma linguagem diferente, além do que uma pessoa que fala vários idiomas tem um charme encantador. Ao olhar para o continente africano, sua quantidade incrível de idiomas aumenta ainda mais esse interesse: a diversidade linguística é tão grande que é quase impossível de encontrar um consenso na sua classificação.
+
+No [Tidytuesday](https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-01-13/readme.md) dessa semana, primeiro de 2026, analisei um scrapping da página [Languages of Africa](https://en.wikipedia.org/wiki/Languages_of_Africa) da Wikipedia, com o objetivo de analisar a distribuição das línguas africanas por famílias linguísticas e refletir sobre os limites desse tipo de base de dados.
+
+```{r}
+africa
+```
+
+## O desafio de classifcar línguas
+
+Antes de entrar nos resultados, é importante destacar que classificar línguas está longe de ser uma tarefa trivial. A evolução linguística é um processo lento, contínuo e profundamente influenciado por fatores históricos, culturais e geográficos. Criadores de conteúdo como o [Alomorfe](https://www.youtube.com/@Alomorfe) mostram com frequência como diferentes correntes teóricas podem divergir sobre a origem e o parentesco entre línguas, tornando qualquer classificação, em certa medida, uma simplificação da realidade.
+
+Esse ponto é especialmente relevante quando lidamos com dados obtidos via scraping. Na base utilizada, por exemplo, aparecem “famílias” chamadas “Portuguese” ou “English”, que na verdade se referem a línguas crioulas. Essas línguas não se encaixam diretamente nem na família indo-europeia tradicional, nem exclusivamente nas famílias linguísticas africanas originárias, evidenciando ambiguidades e limitações da fonte de dados.
+
+```{r}
+africa |> 
+  dplyr::count(family, sort = T) |> 
+  print(n=17)
+
+```
+
+Respeitando o trabalho da limpeza original da base, vamos proceder com as análises iniciais: Camarões aparece como o país com o maior número de idiomas, enquanto Soninke aparece como a língua falada em mais países simultâneamente, colada ao Árabe. 
+
+
+```{r}
+africa |> 
+  dplyr::count(country, sort = T)
+```
+
+```{r}
+africa |> 
+  dplyr::count(language, sort = T)
+```
+
+
+## Densidade linguística 
+
+Uma análise muito interessante que podemos fazer é o quanto algumas famílias podem ser "densas", ou seja, comparar o número de falantes e o número de idiomas dentro de cada família linguística.
+
+```{r}
+family_speakers <- africa |> 
+  dplyr::distinct(language, family, native_speakers) |> 
+  dplyr::group_by(family) |> 
+  dplyr::summarise(
+    speakers=sum(native_speakers)
+  ) |> 
+  dplyr::arrange(desc(speakers))
+
+family_speakers
+```
+
+
+```{r}
+africa_families <- africa |> 
+  dplyr::group_by(family) |> 
+  dplyr::summarise(
+    languages=dplyr::n()
+  ) |> 
+  dplyr::left_join(family_speakers, by=dplyr::join_by(family)) |> 
+  dplyr::mutate(density=speakers/languages) |> 
+  dplyr::arrange(desc(density))
+
+africa_families
+```
+
+
+```{r}
+ggplot2::ggplot(africa_families,
+       ggplot2::aes(x = languages, y = speakers)) +
+  ggplot2::geom_point(size = 3, alpha = 0.7) +
+  ggrepel::geom_text_repel(
+    ggplot2::aes(label = family),
+    size = 3,
+    max.overlaps = Inf
+  ) +
+  ggplot2::scale_x_log10() +
+  ggplot2::scale_y_log10() +
+  ggplot2::labs(
+    x = "Número de línguas na família (escala log)",
+    y = "Número de falantes (escala log)",
+    title = "Famílias linguísticas na África: falantes vs. diversidade",
+    subtitle = "Cada ponto representa uma família linguística"
+  ) +
+  ggplot2::theme_minimal()
+```
+
+Três coisas me chamam a atenção nessa análise de densidade: Primeiramente, a família Austronésia é a mais densa possível porque possui apenas um idioma (Malgaxe, da ilha de Madagascar), mas uma quantidade muito grande de falantes. Em seguida, a grande variedade da família Niger-Congo, com uma quantidade imensa de falantes de idiomas. Por fim, no canto inferior esquerdo vemos famílias como Tuu, Kx'a e Khoe-Kwadi, com poucos falantes e poucos idiomas, indicando perigo de extinção.
+
+Essa análise possui limitações importantes de serem notadas:
+
+1. "Número de falantes" é um dado muito complicado de obter por várias razões. Especialmente para línguas minoritárias, é necessário cautela com esse número.
+
+2. O colonialismo na África é causa de características estruturais na situação linguística atual do continente, não somente através da comunicação em línguas Indo-Europeias ou crioulos, mas também através da ameaça de extinção de idiomas originários.
+
+De toda forma, esse exercício não pretende ser metodologicamente rigoroso do ponto de vista linguístico, mas procura contribuir através da análise de dados e da cultura da colaboração na web na disseminação da informação.

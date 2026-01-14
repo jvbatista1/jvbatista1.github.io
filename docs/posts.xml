@@ -9,7 +9,7 @@
 <link>https://www.jvbatista1.github.io/posts.html</link>
 <atom:link href="https://www.jvbatista1.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Um blog</description>
-<generator>quarto-1.7.31</generator>
+<generator>quarto-1.8.26</generator>
 <lastBuildDate>Wed, 18 Jun 2025 03:00:00 GMT</lastBuildDate>
 <item>
   <title>APIs Guru</title>
@@ -21,12 +21,13 @@
 
 
 
+
 <p>No <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-06-17/readme.md" target="_blank">Tidytuesday</a> dessa semana investigamos algumas tabelas da <a href="https://apis.guru/about/" target="_blank">APIs Guru</a>, que é uma iniciativa OpenSource de criar uma Wikipedia machine-readable de API disponíveis publicamente, gratuitamente ou não. O resposável pela organização dessa semana <a href="https://github.com/jonthegeek">Jon Harmon</a> tem criado um <a href="https://dslc-io.github.io/club-wapir/">livro</a> sobre APIs no R e uma <a href="https://beekeeper.api2r.org">série de pacotes</a> para trabalhar com essas ferramentas.</p>
 <p>Hoje farei a análise em Python.</p>
 <section id="baixando-os-dados-e-exploração-inicial" class="level2">
 <h2 class="anchored" data-anchor-id="baixando-os-dados-e-exploração-inicial">Baixando os dados e exploração inicial</h2>
 <div id="9cee0c8b" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
 background-color: null;
@@ -66,20 +67,20 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 background-color: null;
 font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-17/apisguru_apis.csv'</span>)</span></code></pre></div>
+font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-06-17/apisguru_apis.csv'</span>)</span></code></pre></div></div>
 </div>
 <p>Dando uma olhada nas tabelas disponibililzadas, quero me concentrar em especial na tabela <code>api_info</code>, pois ela tem a variável <code>provider_name</code>, o que me permite checar quais são os principais fornecedores de APIs.</p>
 <div id="0428ee7a" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">api_logos</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">api_logos</span>
 <span id="cb2-2">api_categories</span>
 <span id="cb2-3">api_origins</span>
 <span id="cb2-4">apisguru_apis</span>
-<span id="cb2-5">api_info</span></code></pre></div>
+<span id="cb2-5">api_info</span></code></pre></div></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -97,7 +98,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>1forge.com</td>
 <td>1Forge</td>
 <td>http://1forge.com</td>
@@ -110,7 +111,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>NaN</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>1password.com:events</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -123,7 +124,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>NaN</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>1password.local:connect</td>
 <td>1Password Integrations</td>
 <td>https://support.1password.com/</td>
@@ -136,7 +137,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>NaN</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>6-dot-authentiqio.appspot.com</td>
 <td>Authentiq team</td>
 <td>http://authentiq.io/support</td>
@@ -149,7 +150,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>http://authentiq.com/terms/</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>ably.io:platform</td>
 <td>Ably Support</td>
 <td>https://www.ably.io/contact</td>
@@ -162,7 +163,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>NaN</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -175,7 +176,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2524</td>
+<th data-quarto-table-cell-role="th">2524</th>
 <td>zeno.fm</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -188,7 +189,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>NaN</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2525</td>
+<th data-quarto-table-cell-role="th">2525</th>
 <td>zenoti.com</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -201,7 +202,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>NaN</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2526</td>
+<th data-quarto-table-cell-role="th">2526</th>
 <td>zoom.us</td>
 <td>Zoom Developers</td>
 <td>https://developer.zoom.us/</td>
@@ -214,7 +215,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>https://zoom.us/docs/en-us/zoom_api_license_an...</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2527</td>
+<th data-quarto-table-cell-role="th">2527</th>
 <td>zoomconnect.com</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -227,7 +228,7 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <td>NaN</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2528</td>
+<th data-quarto-table-cell-role="th">2528</th>
 <td>zuora.com</td>
 <td>NaN</td>
 <td>NaN</td>
@@ -250,18 +251,18 @@ font-style: inherit;">'https://raw.githubusercontent.com/rfordatascience/tidytue
 <section id="quantos-apis-os-provedores-fornecem" class="level2">
 <h2 class="anchored" data-anchor-id="quantos-apis-os-provedores-fornecem">Quantos APIs os provedores fornecem?</h2>
 <div id="cfd21d20" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">api_info[<span class="st" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">api_info[<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'provider_name'</span>].value_counts().reset_index().head(n<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">50</span>)</span></code></pre></div>
+font-style: inherit;">50</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -271,252 +272,252 @@ font-style: inherit;">50</span>)</span></code></pre></div>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>azure.com</td>
 <td>653</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>googleapis.com</td>
 <td>281</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>amazonaws.com</td>
 <td>271</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>apisetu.gov.in</td>
 <td>181</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>twilio.com</td>
 <td>44</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
+<th data-quarto-table-cell-role="th">5</th>
 <td>sportsdata.io</td>
 <td>35</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
+<th data-quarto-table-cell-role="th">6</th>
 <td>vtex.local</td>
 <td>34</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
+<th data-quarto-table-cell-role="th">7</th>
 <td>amadeus.com</td>
 <td>32</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
+<th data-quarto-table-cell-role="th">8</th>
 <td>adyen.com</td>
 <td>25</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
+<th data-quarto-table-cell-role="th">9</th>
 <td>ebay.com</td>
 <td>23</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
+<th data-quarto-table-cell-role="th">10</th>
 <td>nexmo.com</td>
 <td>20</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">11</td>
+<th data-quarto-table-cell-role="th">11</th>
 <td>interzoid.com</td>
 <td>20</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">12</td>
+<th data-quarto-table-cell-role="th">12</th>
 <td>github.com</td>
 <td>20</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">13</td>
+<th data-quarto-table-cell-role="th">13</th>
 <td>microsoft.com</td>
 <td>17</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">14</td>
+<th data-quarto-table-cell-role="th">14</th>
 <td>apideck.com</td>
 <td>16</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">15</td>
+<th data-quarto-table-cell-role="th">15</th>
 <td>mastercard.com</td>
 <td>14</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">16</td>
+<th data-quarto-table-cell-role="th">16</th>
 <td>hubapi.com</td>
 <td>12</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">17</td>
+<th data-quarto-table-cell-role="th">17</th>
 <td>fungenerators.com</td>
 <td>12</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">18</td>
+<th data-quarto-table-cell-role="th">18</th>
 <td>parliament.uk</td>
 <td>11</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">19</td>
+<th data-quarto-table-cell-role="th">19</th>
 <td>nytimes.com</td>
 <td>11</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">20</td>
+<th data-quarto-table-cell-role="th">20</th>
 <td>gov.bc.ca</td>
 <td>9</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">21</td>
+<th data-quarto-table-cell-role="th">21</th>
 <td>ote-godaddy.com</td>
 <td>9</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">22</td>
+<th data-quarto-table-cell-role="th">22</th>
 <td>epa.gov</td>
 <td>8</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">23</td>
+<th data-quarto-table-cell-role="th">23</th>
 <td>codat.io</td>
 <td>7</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">24</td>
+<th data-quarto-table-cell-role="th">24</th>
 <td>xero.com</td>
 <td>6</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">25</td>
+<th data-quarto-table-cell-role="th">25</th>
 <td>deutschebahn.com</td>
 <td>6</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">26</td>
+<th data-quarto-table-cell-role="th">26</th>
 <td>letmc.com</td>
 <td>6</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">27</td>
+<th data-quarto-table-cell-role="th">27</th>
 <td>rapidapi.com</td>
 <td>6</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">28</td>
+<th data-quarto-table-cell-role="th">28</th>
 <td>whapi.com</td>
 <td>6</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">29</td>
+<th data-quarto-table-cell-role="th">29</th>
 <td>amentum.space</td>
 <td>5</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">30</td>
+<th data-quarto-table-cell-role="th">30</th>
 <td>ndhm.gov.in</td>
 <td>5</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">31</td>
+<th data-quarto-table-cell-role="th">31</th>
 <td>npr.org</td>
 <td>5</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">32</td>
+<th data-quarto-table-cell-role="th">32</th>
 <td>import.io</td>
 <td>5</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">33</td>
+<th data-quarto-table-cell-role="th">33</th>
 <td>openbanking.org.uk</td>
 <td>5</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">34</td>
+<th data-quarto-table-cell-role="th">34</th>
 <td>vonage.com</td>
 <td>5</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">35</td>
+<th data-quarto-table-cell-role="th">35</th>
 <td>wmata.com</td>
 <td>5</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">36</td>
+<th data-quarto-table-cell-role="th">36</th>
 <td>haloapi.com</td>
 <td>4</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">37</td>
+<th data-quarto-table-cell-role="th">37</th>
 <td>mercedes-benz.com</td>
 <td>4</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">38</td>
+<th data-quarto-table-cell-role="th">38</th>
 <td>va.gov</td>
 <td>4</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">39</td>
+<th data-quarto-table-cell-role="th">39</th>
 <td>walmart.com</td>
 <td>4</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">40</td>
+<th data-quarto-table-cell-role="th">40</th>
 <td>docker.com</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">41</td>
+<th data-quarto-table-cell-role="th">41</th>
 <td>funtranslations.com</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">42</td>
+<th data-quarto-table-cell-role="th">42</th>
 <td>onsched.com</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">43</td>
+<th data-quarto-table-cell-role="th">43</th>
 <td>tomtom.com</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">44</td>
+<th data-quarto-table-cell-role="th">44</th>
 <td>presalytics.io</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">45</td>
+<th data-quarto-table-cell-role="th">45</th>
 <td>mailboxvalidator.com</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">46</td>
+<th data-quarto-table-cell-role="th">46</th>
 <td>seldon.local</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">47</td>
+<th data-quarto-table-cell-role="th">47</th>
 <td>hsbc.com</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">48</td>
+<th data-quarto-table-cell-role="th">48</th>
 <td>ticketmaster.com</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">49</td>
+<th data-quarto-table-cell-role="th">49</th>
 <td>apache.org</td>
 <td>3</td>
 </tr>
@@ -528,7 +529,7 @@ font-style: inherit;">50</span>)</span></code></pre></div>
 </div>
 <p>Em outra oportunidade, como parte do meu interesse por OpenSource, quero verificar como o tipo de licença interagem com o perifl da API disponibilizada.</p>
 <div id="b81c327a" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">contagem <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">contagem <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> api_info[[<span class="st" style="color: #20794D;
 background-color: null;
@@ -536,12 +537,12 @@ font-style: inherit;">'provider_name'</span>, <span class="st" style="color: #20
 background-color: null;
 font-style: inherit;">'license_name'</span>]].value_counts().reset_index()</span>
 <span id="cb4-2"></span>
-<span id="cb4-3">contagem</span></code></pre></div>
+<span id="cb4-3">contagem</span></code></pre></div></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -552,67 +553,67 @@ font-style: inherit;">'license_name'</span>]].value_counts().reset_index()</span
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>googleapis.com</td>
 <td>Creative Commons Attribution 3.0</td>
 <td>281</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>amazonaws.com</td>
 <td>Apache 2.0 License</td>
 <td>271</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>twilio.com</td>
 <td>Apache 2.0</td>
 <td>44</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>ebay.com</td>
 <td>eBay API License Agreement</td>
 <td>23</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>interzoid.com</td>
 <td>Interzoid license</td>
 <td>20</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">178</td>
+<th data-quarto-table-cell-role="th">178</th>
 <td>whapi.com</td>
 <td>William Hill Online</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">179</td>
+<th data-quarto-table-cell-role="th">179</th>
 <td>wowza.com</td>
 <td>Terms of Use</td>
 <td>1</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">180</td>
+<th data-quarto-table-cell-role="th">180</th>
 <td>xtrf.eu</td>
 <td>Apache 2.0</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">181</td>
+<th data-quarto-table-cell-role="th">181</th>
 <td>yodlee.com</td>
 <td>Yodlee Developer License</td>
 <td>1</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">182</td>
+<th data-quarto-table-cell-role="th">182</th>
 <td>zoom.us</td>
 <td>MIT for OAS 2.0</td>
 <td>1</td>
@@ -626,7 +627,7 @@ font-style: inherit;">'license_name'</span>]].value_counts().reset_index()</span
 </div>
 <p>E aqui termino com uma visualização simples dos 10 principais provedores de API</p>
 <div id="4cf742b2" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">top_providers <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">top_providers <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> api_info[<span class="st" style="color: #20794D;
 background-color: null;
@@ -736,7 +737,7 @@ font-style: inherit;">'y'</span>, alpha<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0.3</span>)</span></code></pre></div>
+font-style: inherit;">0.3</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>C:\Users\Victor\AppData\Local\Temp\ipykernel_2992\3101477823.py:4: FutureWarning: 
 
@@ -783,10 +784,11 @@ Batista, Victor. 2025. <span>“APIs Guru.”</span> June 18, 2025. <a href="htt
 
 
 
+
 <p>No desafio do <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-05-27/readme.md" target="_blank">Tidytuesday</a> foi apresentada uma base com os monstros de Dungeons and Dragons e seus atributos (stats). Uma das questões propostas é verificar quais tipos de monstros possuem os melhores scores.</p>
 <p>A solução que achei adequada para verificar rapidamente tanto os scores quanto o tipo de monstro foi criar um mapa de calor. Utilizando Seaborn e Matplotlib, cheguei ao resultado abaixo. O primeiro passo foi baixar a base e selecionar as variáveis de interesse:</p>
 <div id="b05f33ed" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
 background-color: null;
@@ -854,7 +856,7 @@ font-style: inherit;">'type'</span>].value_counts().sort_index()</span>
 <span id="cb1-16"></span>
 <span id="cb1-17"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">print</span>(summary)</span></code></pre></div>
+font-style: inherit;">print</span>(summary)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>type    0
 str     0
@@ -903,7 +905,7 @@ dtype: int64
 </div>
 <p>Minhas escolhas de customização do gráfico (com ajuda do chat GPT, claro) foram: - Utilizar o <code>rcParams</code> pra configurar as fontes utilizadas - Dividir o gráfico em duas partes <code>(ax1, ax2)</code> para inserir um gráfico auxiliar, mostrando a frequencia dos monstros em cada tipo - Para um gráfico isolado, acho interessante utilizar uma outra cor de fundo que não seja branca</p>
 <div id="4978c94c" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">sns.set_theme(style<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">sns.set_theme(style<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -1065,7 +1067,7 @@ background-color: null;
 font-style: inherit;">12</span>)</span>
 <span id="cb3-27"></span>
 <span id="cb3-28">plt.tight_layout()</span>
-<span id="cb3-29">plt.show()</span></code></pre></div>
+<span id="cb3-29">plt.show()</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1101,6 +1103,7 @@ Batista, Victor. 2025. <span>“Dungeons &amp; Dragons.”</span> May 28,
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/posts/20250526_lehnerrdd/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1148,7 +1151,7 @@ Figure&nbsp;2: Exemplo de descontinuidade. Fonte: <span class="citation" data-ci
 <p>Para exemplificar o procedimento anterior, vou utilizar o tutorial disponibilizado na <a href="https://cran.r-project.org/web/packages/SpatialRDD/vignettes/spatialrdd_vignette.html" target="_blank">vignette</a> do pacote e replicar nos dados que trabalhei de segurança pública na fronteira brasileira.</p>
 <p>Primeiro vamos importar os dados geográficos das sedes dos municípios em torno da faixa de fronteira e classificá-los em tratamento e controle. Como eu já tinha feito o preprocessamento das bases no meu trabalho, vou só importar os arquivos.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">espaciais <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">espaciais <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1291,7 +1294,7 @@ font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">id_municipio =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">as.character</span>(id_municipio))</span></code></pre></div>
+font-style: inherit;">as.character</span>(id_municipio))</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Downloading: 1.2 kB     
@@ -1339,7 +1342,7 @@ Downloading: 310 kB
 Downloading: 310 kB     
 Downloading: 310 kB     </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">t <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">t <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1367,11 +1370,11 @@ font-style: inherit;">"id_municipio"</span>)</span>
 <span id="cb3-6"></span>
 <span id="cb3-7"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">rm</span>(t)</span></code></pre></div>
+font-style: inherit;">rm</span>(t)</span></code></pre></div></div>
 </div>
 <p>Utilizando o <code>geom_sf()</code> pra construir a visualização. E sim, sou um grande partidário de utilizar paletas de cores de Pokémon com o <a href="https://github.com/timcdlucas/palettetown" target="_blank">Palettetown</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>()<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1453,7 +1456,7 @@ background-color: null;
 font-style: inherit;">+</span></span>
 <span id="cb4-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
+font-style: inherit;">theme_minimal</span>()</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1464,7 +1467,7 @@ font-style: inherit;">theme_minimal</span>()</span></code></pre></div>
 </div>
 <p>Aqui eu adiciono minha variável de interesse, que é a taxa municipal de homicídios em 2019. Além disso, crio uma variável da distância eucilidiana para o cutoff, conforme descrito na seção anterior.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">violencia <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">violencia <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1542,11 +1545,11 @@ font-style: inherit;">$</span>groups <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"control"</span>]</span></code></pre></div>
+font-style: inherit;">"control"</span>]</span></code></pre></div></div>
 </div>
 <p>Aqui é o resultado dos estimadores OLS utilizando somente a variável dummy do tratamento e utilizando um RDD simples utilizando somente a <em>distância unidimensional</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1565,7 +1568,7 @@ font-style: inherit;">stargazer</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"text"</span>)</span></code></pre></div>
+font-style: inherit;">"text"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 ===============================================
@@ -1588,7 +1591,7 @@ F Statistic            0.385 (df = 1; 1126)
 ===============================================
 Note:               *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">summary</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1600,7 +1603,7 @@ font-style: inherit;">$</span>distrunning, <span class="at" style="color: #65742
 background-color: null;
 font-style: inherit;">c =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span>))</span></code></pre></div>
+font-style: inherit;">0</span>))</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Sharp RD estimates using local polynomial regression.
 
@@ -1628,7 +1631,7 @@ Unique Obs.                     540          588
 </div>
 <p>Agora, criamos a segmentação para adicionar efeitos fixos na análise. É comum escolher diversas segmentações para testar o ajuste da regressão, caso alguma das categorias fique subrepresentada, com poucas (ou nenhuma) observação em um dos lados do cutoff.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">cut_off_test <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">cut_off_test <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> sf<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1687,7 +1690,7 @@ font-style: inherit;">tm_shape</span>(cut_off) <span class="sc" style="color: #5
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">tm_lines</span>()</span></code></pre></div>
+font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: The shape points contains empty units.</code></pre>
 </div>
@@ -1698,7 +1701,7 @@ font-style: inherit;">tm_lines</span>()</span></code></pre></div>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_shape</span>(points) <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1718,7 +1721,7 @@ font-style: inherit;">tm_shape</span>(cut_off) <span class="sc" style="color: #5
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">tm_lines</span>()</span></code></pre></div>
+font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: The shape points contains empty units.</code></pre>
 </div>
@@ -1729,7 +1732,7 @@ font-style: inherit;">tm_lines</span>()</span></code></pre></div>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_shape</span>(points) <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1749,7 +1752,7 @@ font-style: inherit;">tm_shape</span>(cut_off) <span class="sc" style="color: #5
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">tm_lines</span>()</span></code></pre></div>
+font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: The shape points contains empty units.</code></pre>
 </div>
@@ -1763,7 +1766,7 @@ font-style: inherit;">tm_lines</span>()</span></code></pre></div>
 </div>
 <p>Essees são os resultados da estimação com efeitos fixos utilizando as segmentações.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(lfe)</span>
 <span id="cb16-2"><span class="co" style="color: #5E5E5E;
@@ -1864,7 +1867,7 @@ font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"text"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">stars =</span> T)</span></code></pre></div>
+font-style: inherit;">stars =</span> T)</span></code></pre></div></div>
 <div class="cell-output-display">
  
 
@@ -2112,6 +2115,7 @@ Batista, Victor. 2025. <span>“Notas Sobre RDD.”</span> May 26, 2025. <a href
 
 
 
+
 <p>Percebi que nos últimos tempos tenho acessado uma parte interessante da internet: muitos membros da comunidade de analistas e engenheiros de dados não somente produzem muito conteúdo interessante mas também fazem de tudo para registrar e compartilhar a informação sobre suas áreas de atuação. É verdade que desde a graduação tenho consumido muito desses conteúdos como forma de resolver demandas, mas na nova fase da vida, com o fim do mestrado, meu interesse tem mudado um pouco.</p>
 <p>Agora, eu sinto que posso dar um passo e participar da comunidade também compartilhando coisas que eu sei. De fato, tenho muito que aprender, principalmente quando me comparo com profissionais tão legais e experientes, mas esse blog também vai ajudar nesse ponto. Expondo minhas ideias e meus trabalhos até aqui posso ir superando dois desafios:</p>
 <ul>
@@ -2120,7 +2124,7 @@ Batista, Victor. 2025. <span>“Notas Sobre RDD.”</span> May 26, 2025. <a href
 </ul>
 <p>Uma das atividades que mais admiro é o <a href="https://github.com/rfordatascience/tidytuesday" target="_blank">Tidytuesday</a>, composto por desafios semanais onde é fornecida uma base e quem participa deve elaborar uma visualização e postar nas redes. Essa semana, os dados fornecidos são sobre as erupções do Monte Vesúvio na década passada. Vamos ver o que consegui fazer.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(dplyr)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -2131,11 +2135,11 @@ background-color: null;
 font-style: inherit;">library</span>(plotly)</span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(ggmap)</span></code></pre></div>
+font-style: inherit;">library</span>(ggmap)</span></code></pre></div></div>
 </div>
 <p>É possível baixar diretamente os dados pelo pacote do desafio</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">data <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">data <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span>  tidytuesdayR<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2143,7 +2147,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tt_load</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"2025-05-13"</span>)</span></code></pre></div>
+font-style: inherit;">"2025-05-13"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>---- Compiling #TidyTuesday Information for 2025-05-13 ----
 --- There is 1 file available ---
@@ -2153,19 +2157,19 @@ font-style: inherit;">"2025-05-13"</span>)</span></code></pre></div>
 
   1 of 1: "vesuvius.csv"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">vesuvius <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">vesuvius <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> data<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">$</span>vesuvius</span></code></pre></div>
+font-style: inherit;">$</span>vesuvius</span></code></pre></div></div>
 </div>
 <p>É possível fazer uma exploração básica com o pacote <a href="https://modelsummary.com" target="_blank">modelsummary</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">modelsummary<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">modelsummary<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">datasummary_skim</span>(vesuvius)</span></code></pre></div>
+font-style: inherit;">datasummary_skim</span>(vesuvius)</span></code></pre></div></div>
 <div class="cell-output-display">
  
 
@@ -2415,12 +2419,12 @@ window.addEventListener('load', function () { styleCell_tinytable_ulp9c3vct4tl3x
 </div>
 <p>A proposta não é necessariamente criar modelos causais ou preditivos, mas escolhi retirar as observações de 2011 e 2012 para melhorar a visualização dos mapas.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">vesuvius <span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">vesuvius <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span> </span>
 <span id="cb6-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">count</span>(year)</span></code></pre></div>
+font-style: inherit;">count</span>(year)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 14 × 2
     year     n
@@ -2440,7 +2444,7 @@ font-style: inherit;">count</span>(year)</span></code></pre></div>
 13  2023   865
 14  2024  1315</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">vesuvius <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">vesuvius <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> vesuvius <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2451,11 +2455,11 @@ font-style: inherit;">filter</span>(year<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2012</span>)</span></code></pre></div>
+font-style: inherit;">2012</span>)</span></code></pre></div></div>
 </div>
 <p>Queria testar uma visualização 3d para verificar a profundidade do epicentro das erupções. O pacote que eu gosto para esse tipo de visualização é o <a href="https://plotly.com/r/" target="_blank">plotly</a>. Infelizmente não tenho muita intimidade com ele, o que fez esse gráfico ser bonito, mas não muito informativo.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">fig <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">fig <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2538,7 +2542,7 @@ font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'Depth (km)'</span>)))</span>
 <span id="cb9-7"></span>
-<span id="cb9-8">fig</span></code></pre></div>
+<span id="cb9-8">fig</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Ignoring 3433 observations</code></pre>
 </div>
@@ -2549,7 +2553,7 @@ font-style: inherit;">'Depth (km)'</span>)))</span>
 </div>
 <p>A versão final e, portanto, a escolhida para representar minha primeira participação no Tidytuesday é o gráfico abaixo, que usei o ggmap para mesclar um mapa real junto com o scatterplot da latitude e longitude, mostrando a variação da profundidade dos impactos por ano.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">vesuvius_map <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">vesuvius_map <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2634,7 +2638,7 @@ font-style: inherit;">"latitude"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Depth of eruptions by Vesuvius"</span>)</span></code></pre></div>
+font-style: inherit;">"Depth of eruptions by Vesuvius"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>ℹ © Stadia Maps © Stamen Design © OpenMapTiles © OpenStreetMap contributors.</code></pre>
 </div>
