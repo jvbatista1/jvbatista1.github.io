@@ -5,30 +5,35 @@ project:
 website:
   title: "Victor Batista"
   site-url: https://www.jvbatista1.github.io
-  description: "Um blog"
   navbar:
+    title: false
     left:
-      #- href: index.qmd
-      #  text: Home
-      - materiais.qmd
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - href: materiais.qmd
+      - text: Projetos
       - posts.qmd
-      - icon: github 
+      - text: Entre em contato!
+        menu: 
+          - icon: linkedin
+            text: Linkedin
+            href: https://www.linkedin.com/in/joaovictorbatista/
+          - icon: rss
+            href: index.xml
+      - icon: github
         href: https://github.com/jvbatista1
         target: _blank
-      - icon: rss
-        href: index.xml
   page-footer:
     left: Copyright 2025, Victor Batista
-    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/jvbatista1.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/jvbatista1/jvbatista1.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
-    theme: 
-      light:
-        - sandstone
-        - styles.scss
-      dark: solar
-    toc: false
     page-layout: full
+    theme:
+      - styles.scss
+    mainfont: Cabin
+    toc: false
 
 

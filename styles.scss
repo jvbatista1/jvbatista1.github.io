@@ -1,4 +1,12 @@
 /*-- scss:defaults --*/
+
+// Import fonts (define mainfont in _quarto.yml)
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+// fonts
+$cabin: 'Cabin', sans-serif; 
+$jetbrains-mono: "Jet Brains Mono", monospace;
+
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #f8f5f0 !default;
@@ -24,6 +32,6 @@ $cyan:    #29abe0 !default;
 
 // Base document colors
 // Base document colors
-$body-bg: $gray-200; // page background
+//$body-bg: $gray-200; // page background
 
 // Inline code
