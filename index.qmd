@@ -3,8 +3,8 @@ title: "Victor Batista"
 image: media\headshot.jfif
 about: 
   template: trestles
-  image-shape: round
-  image-width: 15em
+  image-shape: rounded
+  #image-width: 15em
   links:
     - icon: linkedin
       text: LinkedIn

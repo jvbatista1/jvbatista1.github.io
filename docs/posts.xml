@@ -1210,7 +1210,6 @@ Batista, Victor. 2025. <span>“APIs Guru.”</span> June 18, 2025. <a href="htt
 
 
 
-
 <p>No desafio do <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-05-27/readme.md" target="_blank">Tidytuesday</a> foi apresentada uma base com os monstros de Dungeons and Dragons e seus atributos (stats). Uma das questões propostas é verificar quais tipos de monstros possuem os melhores scores.</p>
 <p>A solução que achei adequada para verificar rapidamente tanto os scores quanto o tipo de monstro foi criar um mapa de calor. Utilizando Seaborn e Matplotlib, cheguei ao resultado abaixo. O primeiro passo foi baixar a base e selecionar as variáveis de interesse:</p>
 <div id="b05f33ed" class="cell" data-execution_count="1">
@@ -1529,7 +1528,6 @@ Batista, Victor. 2025. <span>“Dungeons &amp; Dragons.”</span> May 28,
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/posts/20250526_lehnerrdd/</link>
   <description><![CDATA[ 
-
 
 
 
