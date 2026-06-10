@@ -302,7 +302,7 @@ Figure&nbsp;2: Exemplo de descontinuidade. Fonte: <span class="citation" data-ci
 </figcaption>
 </figure>
 </div>
-<p><span class="citation" data-cites="lehner">(<a href="#ref-lehner" role="doc-biblioref"><strong>lehner?</strong></a>)</span> argumenta que, apesar de essa ser a forma mais intiuitiva e largamente adotada de conduzir um RDD, a aplicação nas fronteiras do mundo real requer atenção. Por exemplo, cidades podem estar muito próximas da fronteira (low score), mas muito distantes entre si, o que prejudica a comparabilidade. Para assegurar o ajuste da comparação, é proposto primeiro dividir a fronteira em vários segmentos menores, <span class="math inline">\(\mathcal B = \cup\{\mathcal B_s \}^{S}_{s=1}\)</span>. Assim, para cada ponto <span class="math inline">\(\mathbf{x}_i\)</span> é computada a distância euclidiana para o segmento mais próximo <span class="math inline">\(\text{argmin } d(\mathbf{x}_i, \mathcal{B}_s)\)</span>, resultando numa variável categórica que permite calcular efeitos fixos.</p>
+<p><span class="citation" data-cites="lehner_note_2024">Lehner (<a href="#ref-lehner_note_2024" role="doc-biblioref">2024</a>)</span> argumenta que, apesar de essa ser a forma mais intiuitiva e largamente adotada de conduzir um RDD, a aplicação nas fronteiras do mundo real requer atenção. Por exemplo, cidades podem estar muito próximas da fronteira (low score), mas muito distantes entre si, o que prejudica a comparabilidade. Para assegurar o ajuste da comparação, é proposto primeiro dividir a fronteira em vários segmentos menores, <span class="math inline">\(\mathcal B = \cup\{\mathcal B_s \}^{S}_{s=1}\)</span>. Assim, para cada ponto <span class="math inline">\(\mathbf{x}_i\)</span> é computada a distância euclidiana para o segmento mais próximo <span class="math inline">\(\text{argmin } d(\mathbf{x}_i, \mathcal{B}_s)\)</span>, resultando numa variável categórica que permite calcular efeitos fixos.</p>
 </section>
 <section id="lehner-e-o-pacote-spatialrdd" class="level1">
 <h1>Lehner e o pacote <code>spatialRDD</code></h1>
@@ -332,71 +332,25 @@ Figure&nbsp;2: Exemplo de descontinuidade. Fonte: <span class="citation" data-ci
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>         <span class="st">"nome_regiao"</span> <span class="ot">=</span> <span class="st">"name_region"</span>,</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>         <span class="st">"id_regiao"</span> <span class="ot">=</span> <span class="st">"code_region"</span>,</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>         <span class="st">"ano"</span> <span class="ot">=</span> <span class="st">"year"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id_municipio =</span> <span class="fu">as.character</span>(id_municipio))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Downloading: 1.2 kB     
-Downloading: 1.2 kB     
-Downloading: 2 kB     
-Downloading: 2 kB     
-Downloading: 2.1 kB     
-Downloading: 2.1 kB     
-Downloading: 3.9 kB     
-Downloading: 3.9 kB     
-Downloading: 6.6 kB     
-Downloading: 6.6 kB     
-Downloading: 6.6 kB     
-Downloading: 6.6 kB     
-Downloading: 47 kB     
-Downloading: 47 kB     
-Downloading: 47 kB     
-Downloading: 47 kB     
-Downloading: 88 kB     
-Downloading: 88 kB     
-Downloading: 88 kB     
-Downloading: 88 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 170 kB     
-Downloading: 170 kB     
-Downloading: 170 kB     
-Downloading: 170 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 310 kB     
-Downloading: 310 kB     
-Downloading: 310 kB     
-Downloading: 310 kB     </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">select</span>(espaciais, id_municipio, groups)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(t) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> points <span class="sc">|&gt;</span> </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(t, <span class="at">by=</span><span class="st">"id_municipio"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(t)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id_municipio =</span> <span class="fu">as.character</span>(id_municipio))</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">select</span>(espaciais, id_municipio, groups)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(t) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> points <span class="sc">|&gt;</span> </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(t, <span class="at">by=</span><span class="st">"id_municipio"</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(t)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Utilizando o <code>geom_sf()</code> pra construir a visualização. E sim, sou um grande partidário de utilizar paletas de cores de Pokémon com o <a href="https://github.com/timcdlucas/palettetown" target="_blank">Palettetown</a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> full, <span class="at">fill =</span> <span class="st">"lightgray"</span>)<span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span>  treated, , <span class="at">fill =</span> <span class="st">"gray"</span>)<span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> cut_off, <span class="at">color =</span> <span class="st">"red"</span>)<span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> points, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">colour =</span> groups), <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_poke</span>(<span class="at">pokemon =</span> <span class="st">'charizard'</span>, <span class="at">spread =</span> <span class="dv">2</span>, <span class="at">name =</span> <span class="st">"Grupo"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Controle"</span>, <span class="st">"Tratamento"</span>))<span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> full, <span class="at">fill =</span> <span class="st">"lightgray"</span>)<span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span>  treated, , <span class="at">fill =</span> <span class="st">"gray"</span>)<span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> cut_off, <span class="at">color =</span> <span class="st">"red"</span>)<span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> points, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">colour =</span> groups), <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_poke</span>(<span class="at">pokemon =</span> <span class="st">'charizard'</span>, <span class="at">spread =</span> <span class="dv">2</span>, <span class="at">name =</span> <span class="st">"Grupo"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Controle"</span>, <span class="st">"Tratamento"</span>))<span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -407,22 +361,22 @@ Downloading: 310 kB     </code></pre>
 </div>
 <p>Aqui eu adiciono minha variável de interesse, que é a taxa municipal de homicídios em 2019. Além disso, crio uma variável da distância eucilidiana para o cutoff, conforme descrito na seção anterior.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>violencia <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">file.path</span>(dropbox, <span class="st">"municipal.rds"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(id_municipio)) <span class="sc">|&gt;</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id_municipio, valor_2019)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> points <span class="sc">|&gt;</span> </span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(violencia)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>dist2cutoff <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(sf<span class="sc">::</span><span class="fu">st_distance</span>(points, cut_off))</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>distrunning <span class="ot">&lt;-</span> points<span class="sc">$</span>dist2cutoff</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># give the non-treated one's a negative score</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>distrunning[points<span class="sc">$</span>groups <span class="sc">==</span> <span class="st">"control"</span>] <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">*</span> points<span class="sc">$</span>distrunning[points<span class="sc">$</span>groups <span class="sc">==</span> <span class="st">"control"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>violencia <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">file.path</span>(dropbox, <span class="st">"municipal.rds"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(id_municipio)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id_municipio, valor_2019)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> points <span class="sc">|&gt;</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(violencia)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>dist2cutoff <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(sf<span class="sc">::</span><span class="fu">st_distance</span>(points, cut_off))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>distrunning <span class="ot">&lt;-</span> points<span class="sc">$</span>dist2cutoff</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># give the non-treated one's a negative score</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>distrunning[points<span class="sc">$</span>groups <span class="sc">==</span> <span class="st">"control"</span>] <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">*</span> points<span class="sc">$</span>distrunning[points<span class="sc">$</span>groups <span class="sc">==</span> <span class="st">"control"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Aqui é o resultado dos estimadores OLS utilizando somente a variável dummy do tratamento e utilizando um RDD simples utilizando somente a <em>distância unidimensional</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="fu">lm</span>(valor_2019 <span class="sc">~</span> groups, <span class="at">data =</span> points)) <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  stargazer<span class="sc">::</span><span class="fu">stargazer</span>(<span class="at">type =</span> <span class="st">"text"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="fu">lm</span>(valor_2019 <span class="sc">~</span> groups, <span class="at">data =</span> points)) <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  stargazer<span class="sc">::</span><span class="fu">stargazer</span>(<span class="at">type =</span> <span class="st">"text"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 ===============================================
@@ -445,43 +399,43 @@ F Statistic            0.385 (df = 1; 1126)
 ===============================================
 Note:               *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">rdrobust</span>(points<span class="sc">$</span>valor_2019, points<span class="sc">$</span>distrunning, <span class="at">c =</span> <span class="dv">0</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">rdrobust</span>(points<span class="sc">$</span>valor_2019, points<span class="sc">$</span>distrunning, <span class="at">c =</span> <span class="dv">0</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Sharp RD estimates using local polynomial regression.
+<pre><code>Call: rdrobust
+
+Sharp RD estimates using local polynomial regression.
 
 Number of Obs.                 1128
 BW type                       mserd
 Kernel                   Triangular
 VCE method                       NN
 
+                               Left        Right
 Number of Obs.                  540          588
 Eff. Number of Obs.             196          116
 Order est. (p)                    1            1
-Order bias  (q)                   2            2
+Order bias (q)                    2            2
 BW est. (h)               31802.103    31802.103
 BW bias (b)               63208.136    63208.136
 rho (h/b)                     0.503        0.503
 Unique Obs.                     540          588
 
-=============================================================================
-        Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
-=============================================================================
-  Conventional    -7.845     4.007    -1.958     0.050   [-15.700 , 0.009]     
-        Robust         -         -    -2.132     0.033   [-18.828 , -0.791]    
-=============================================================================</code></pre>
+=====================================================================
+                   Point    Robust Inference
+                Estimate         z     P&gt;|z|      [ 95% C.I. ]       
+---------------------------------------------------------------------
+     RD Effect    -7.845    -2.132     0.033   [-18.828 , -0.791]    
+=====================================================================</code></pre>
 </div>
 </div>
 <p>Agora, criamos a segmentação para adicionar efeitos fixos na análise. É comum escolher diversas segmentações para testar o ajuste da regressão, caso alguma das categorias fique subrepresentada, com poucas (ou nenhuma) observação em um dos lados do cutoff.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>cut_off_test <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_cast</span>(<span class="fu">st_as_sf</span>(cut_off), <span class="st">"MULTIPOINT"</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>segment5 <span class="ot">&lt;-</span> <span class="fu">border_segment</span>(points, cut_off_test, <span class="dv">5</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>segment10 <span class="ot">&lt;-</span> <span class="fu">border_segment</span>(points, cut_off_test, <span class="dv">10</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>segment15 <span class="ot">&lt;-</span> <span class="fu">border_segment</span>(points, cut_off_test, <span class="dv">15</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(points) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="st">"segment5"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">tm_shape</span>(cut_off) <span class="sc">+</span> <span class="fu">tm_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The shape points contains empty units.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>cut_off_test <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_cast</span>(<span class="fu">st_as_sf</span>(cut_off), <span class="st">"MULTIPOINT"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>segment5 <span class="ot">&lt;-</span> <span class="fu">border_segment</span>(points, cut_off_test, <span class="dv">5</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>segment10 <span class="ot">&lt;-</span> <span class="fu">border_segment</span>(points, cut_off_test, <span class="dv">10</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>points<span class="sc">$</span>segment15 <span class="ot">&lt;-</span> <span class="fu">border_segment</span>(points, cut_off_test, <span class="dv">15</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(points) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="st">"segment5"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">tm_shape</span>(cut_off) <span class="sc">+</span> <span class="fu">tm_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -489,10 +443,7 @@ Unique Obs.                     540          588
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(points) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="st">"segment10"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">tm_shape</span>(cut_off) <span class="sc">+</span> <span class="fu">tm_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The shape points contains empty units.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(points) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="st">"segment10"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">tm_shape</span>(cut_off) <span class="sc">+</span> <span class="fu">tm_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -500,10 +451,7 @@ Unique Obs.                     540          588
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(points) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="st">"segment15"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">tm_shape</span>(cut_off) <span class="sc">+</span> <span class="fu">tm_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The shape points contains empty units.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tm_shape</span>(points) <span class="sc">+</span> <span class="fu">tm_dots</span>(<span class="st">"segment15"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">tm_shape</span>(cut_off) <span class="sc">+</span> <span class="fu">tm_lines</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -514,198 +462,123 @@ Unique Obs.                     540          588
 </div>
 <p>Essees são os resultados da estimação com efeitos fixos utilizando as segmentações.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lfe)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Loading required package: Matrix</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(lfe<span class="sc">::</span><span class="fu">felm</span>(valor_2019 <span class="sc">~</span> groups <span class="sc">|</span> <span class="fu">factor</span>(segment5) <span class="sc">|</span> <span class="dv">0</span> <span class="sc">|</span> <span class="dv">0</span>, <span class="at">data =</span> points[points<span class="sc">$</span>dist2cutoff <span class="sc">&lt;</span> <span class="dv">3000</span>, ]),</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  lfe<span class="sc">::</span><span class="fu">felm</span>(valor_2019 <span class="sc">~</span> groups <span class="sc">|</span> <span class="fu">factor</span>(segment10) <span class="sc">|</span> <span class="dv">0</span> <span class="sc">|</span> <span class="dv">0</span>, <span class="at">data =</span> points[points<span class="sc">$</span>dist2cutoff <span class="sc">&lt;</span> <span class="dv">3000</span>, ]),</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  lfe<span class="sc">::</span><span class="fu">felm</span>(valor_2019 <span class="sc">~</span> groups <span class="sc">|</span> <span class="fu">factor</span>(segment15) <span class="sc">|</span> <span class="dv">0</span> <span class="sc">|</span> <span class="dv">0</span>, <span class="at">data =</span> points[points<span class="sc">$</span>dist2cutoff <span class="sc">&lt;</span> <span class="dv">3000</span>, ])) <span class="sc">%&gt;%</span> </span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  modelsummary<span class="sc">::</span><span class="fu">modelsummary</span>(<span class="at">type =</span> <span class="st">"text"</span>, <span class="at">stars =</span> T)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lfe)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pacote 'lfe' foi compilado no R versão 4.5.3</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Loading required package: Matrix</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(lfe<span class="sc">::</span><span class="fu">felm</span>(valor_2019 <span class="sc">~</span> groups <span class="sc">|</span> <span class="fu">factor</span>(segment5) <span class="sc">|</span> <span class="dv">0</span> <span class="sc">|</span> <span class="dv">0</span>, <span class="at">data =</span> points[points<span class="sc">$</span>dist2cutoff <span class="sc">&lt;</span> <span class="dv">3000</span>, ]),</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  lfe<span class="sc">::</span><span class="fu">felm</span>(valor_2019 <span class="sc">~</span> groups <span class="sc">|</span> <span class="fu">factor</span>(segment10) <span class="sc">|</span> <span class="dv">0</span> <span class="sc">|</span> <span class="dv">0</span>, <span class="at">data =</span> points[points<span class="sc">$</span>dist2cutoff <span class="sc">&lt;</span> <span class="dv">3000</span>, ]),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  lfe<span class="sc">::</span><span class="fu">felm</span>(valor_2019 <span class="sc">~</span> groups <span class="sc">|</span> <span class="fu">factor</span>(segment15) <span class="sc">|</span> <span class="dv">0</span> <span class="sc">|</span> <span class="dv">0</span>, <span class="at">data =</span> points[points<span class="sc">$</span>dist2cutoff <span class="sc">&lt;</span> <span class="dv">3000</span>, ])) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  modelsummary<span class="sc">::</span><span class="fu">modelsummary</span>(<span class="at">type =</span> <span class="st">"text"</span>, <span class="at">stars =</span> T)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
- 
+<!-- preamble start -->
 
-  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_gy8h5je6kw263ho1yifg</title>
-    <style>
-.table td.tinytable_css_b8frbpcb0lft9ty1t8v7, .table th.tinytable_css_b8frbpcb0lft9ty1t8v7 {    border-bottom: solid 0.1em #d3d8dc; }
-.table td.tinytable_css_oiia5rx4ds7qr0zsjk86, .table th.tinytable_css_oiia5rx4ds7qr0zsjk86 {    text-align: left; }
-.table td.tinytable_css_ypfkymo1fm3bs733p7vq, .table th.tinytable_css_ypfkymo1fm3bs733p7vq {    text-align: center; }
-.table td.tinytable_css_3411q1xlp3qv8p6kzr0j, .table th.tinytable_css_3411q1xlp3qv8p6kzr0j {    text-align: center; }
-.table td.tinytable_css_m3aimpeiwarxd7q14oat, .table th.tinytable_css_m3aimpeiwarxd7q14oat {    text-align: center; }
-.table td.tinytable_css_lye2uj6arti336s7kd0n, .table th.tinytable_css_lye2uj6arti336s7kd0n {    border-bottom: solid 0.05em black; }
-    </style>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
     <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-    </script>
-  
+      // Create table-specific functions using external factory
+      const tableFns_g33qv6tz9ppkqaodt45w = TinyTable.createTableFunctions("tinytable_g33qv6tz9ppkqaodt45w");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '8', j: 2 }, { i: '8', j: 3 }, { i: '8', j: 4 } ], css_id: 'tinytable_css_hwccq42bwa3l66ws3xi6',}, 
+          { positions: [ { i: '2', j: 2 }, { i: '2', j: 3 }, { i: '2', j: 4 } ], css_id: 'tinytable_css_ujua6s3ecmztyh7o4dpq',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '1', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '1', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 } ], css_id: 'tinytable_css_249hx04iel6ym21muo6h',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 } ], css_id: 'tinytable_css_hpbknfb36gt21p155zwi',}, 
+          { positions: [ { i: '8', j: 1 } ], css_id: 'tinytable_css_jrx15e96emev7xrqgvdl',}, 
+          { positions: [ { i: '2', j: 1 } ], css_id: 'tinytable_css_fs2xcvj1k07ik3iti9g3',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 } ], css_id: 'tinytable_css_8f2kpd6rt46f3apabs09',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_6m1aa6p6hf4t47lcfc91',}, 
+          ];
 
-  
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_g33qv6tz9ppkqaodt45w.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_hwccq42bwa3l66ws3xi6, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_hwccq42bwa3l66ws3xi6 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_ujua6s3ecmztyh7o4dpq, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_ujua6s3ecmztyh7o4dpq {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_249hx04iel6ym21muo6h, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_249hx04iel6ym21muo6h { text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_hpbknfb36gt21p155zwi, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_hpbknfb36gt21p155zwi {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_jrx15e96emev7xrqgvdl, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_jrx15e96emev7xrqgvdl {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_fs2xcvj1k07ik3iti9g3, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_fs2xcvj1k07ik3iti9g3 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_8f2kpd6rt46f3apabs09, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_8f2kpd6rt46f3apabs09 { text-align: left }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_6m1aa6p6hf4t47lcfc91, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_6m1aa6p6hf4t47lcfc91 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_gy8h5je6kw263ho1yifg" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
-        <thead>
+      <table class="tinytable" id="tinytable_g33qv6tz9ppkqaodt45w" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         
+        <thead>
               <tr>
-                <th scope="col"> </th>
-                <th scope="col">(1)</th>
-                <th scope="col">(2)</th>
-                <th scope="col">(3)</th>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">(1)</th>
+                <th scope="col" data-row="0" data-col="3">(2)</th>
+                <th scope="col" data-row="0" data-col="4">(3)</th>
               </tr>
         </thead>
         <tfoot><tr><td colspan="4">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
         <tbody>
                 <tr>
-                  <td>groupstreatment</td>
-                  <td>-15.762 </td>
-                  <td>-23.028+</td>
-                  <td>-25.107+</td>
+                  <td data-row="1" data-col="1">groupstreatment</td>
+                  <td data-row="1" data-col="2">-15.762</td>
+                  <td data-row="1" data-col="3">-23.028+</td>
+                  <td data-row="1" data-col="4">-25.107+</td>
                 </tr>
                 <tr>
-                  <td>               </td>
-                  <td>(13.070)</td>
-                  <td>(11.860)</td>
-                  <td>(13.821)</td>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(13.070)</td>
+                  <td data-row="2" data-col="3">(11.860)</td>
+                  <td data-row="2" data-col="4">(13.821)</td>
                 </tr>
                 <tr>
-                  <td>Num.Obs.       </td>
-                  <td>23      </td>
-                  <td>23      </td>
-                  <td>23      </td>
+                  <td data-row="3" data-col="1">Num.Obs.</td>
+                  <td data-row="3" data-col="2">23</td>
+                  <td data-row="3" data-col="3">23</td>
+                  <td data-row="3" data-col="4">23</td>
                 </tr>
                 <tr>
-                  <td>R2             </td>
-                  <td>0.240   </td>
-                  <td>0.430   </td>
-                  <td>0.446   </td>
+                  <td data-row="4" data-col="1">R2</td>
+                  <td data-row="4" data-col="2">0.240</td>
+                  <td data-row="4" data-col="3">0.430</td>
+                  <td data-row="4" data-col="4">0.446</td>
                 </tr>
                 <tr>
-                  <td>R2 Adj.        </td>
-                  <td>0.017   </td>
-                  <td>0.163   </td>
-                  <td>0.062   </td>
+                  <td data-row="5" data-col="1">R2 Adj.</td>
+                  <td data-row="5" data-col="2">0.017</td>
+                  <td data-row="5" data-col="3">0.163</td>
+                  <td data-row="5" data-col="4">0.062</td>
                 </tr>
                 <tr>
-                  <td>AIC            </td>
-                  <td>221.0   </td>
-                  <td>218.4   </td>
-                  <td>221.7   </td>
+                  <td data-row="6" data-col="1">AIC</td>
+                  <td data-row="6" data-col="2">221.0</td>
+                  <td data-row="6" data-col="3">218.4</td>
+                  <td data-row="6" data-col="4">221.7</td>
                 </tr>
                 <tr>
-                  <td>BIC            </td>
-                  <td>228.9   </td>
-                  <td>228.6   </td>
-                  <td>234.2   </td>
+                  <td data-row="7" data-col="1">BIC</td>
+                  <td data-row="7" data-col="2">228.9</td>
+                  <td data-row="7" data-col="3">228.6</td>
+                  <td data-row="7" data-col="4">234.2</td>
                 </tr>
                 <tr>
-                  <td>RMSE           </td>
-                  <td>21.76   </td>
-                  <td>18.85   </td>
-                  <td>18.59   </td>
+                  <td data-row="8" data-col="1">RMSE</td>
+                  <td data-row="8" data-col="2">21.76</td>
+                  <td data-row="8" data-col="3">18.85</td>
+                  <td data-row="8" data-col="4">18.59</td>
                 </tr>
         </tbody>
       </table>
     </div>
-
-    <script>
-      function styleCell_tinytable_paqcouactnyymzrccrf9(i, j, css_id) {
-        var table = document.getElementById("tinytable_gy8h5je6kw263ho1yifg");
-        table.rows[i].cells[j].classList.add(css_id);
-      }
-      function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_gy8h5je6kw263ho1yifg');
-        var newRow = table.insertRow(i);
-        var newCell = newRow.insertCell(0);
-        newCell.setAttribute("colspan", colspan);
-        // newCell.innerText = content;
-        // this may be unsafe, but innerText does not interpret <br>
-        newCell.innerHTML = content;
-      }
-      function spanCell_tinytable_paqcouactnyymzrccrf9(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_gy8h5je6kw263ho1yifg");
-        const targetRow = table.rows[i];
-        const targetCell = targetRow.cells[j];
-        for (let r = 0; r < rowspan; r++) {
-          // Only start deleting cells to the right for the first row (r == 0)
-          if (r === 0) {
-            // Delete cells to the right of the target cell in the first row
-            for (let c = colspan - 1; c > 0; c--) {
-              if (table.rows[i + r].cells[j + c]) {
-                table.rows[i + r].deleteCell(j + c);
-              }
-            }
-          }
-          // For rows below the first, delete starting from the target column
-          if (r > 0) {
-            for (let c = colspan - 1; c >= 0; c--) {
-              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
-                table.rows[i + r].deleteCell(j);
-              }
-            }
-          }
-        }
-        // Set rowspan and colspan of the target cell
-        targetCell.rowSpan = rowspan;
-        targetCell.colSpan = colspan;
-      }
-
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 0, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 1, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 2, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 3, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 0, 'tinytable_css_lye2uj6arti336s7kd0n') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 1, 'tinytable_css_lye2uj6arti336s7kd0n') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 2, 'tinytable_css_lye2uj6arti336s7kd0n') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 3, 'tinytable_css_lye2uj6arti336s7kd0n') })
-    </script>
-
-  
-
-
+<!-- hack to avoid NA insertion in last line -->
 </div>
 </div>
 </section>

@@ -5,7 +5,7 @@ author:
   - name: Victor Batista
     url: https://jvbatista1.github.io/
     langid: pt
-date: 29/04/2026
+date: 04/29/2026
 categories: [eventos, pessoal] # self-defined categories
 citation: 
   url: https://jvbatista1.github.io/posts/20260429_lancamentolivro/ 

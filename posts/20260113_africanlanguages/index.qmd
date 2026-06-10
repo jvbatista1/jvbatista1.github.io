@@ -5,7 +5,7 @@ author:
   - name: Victor Batista
     url: https://jvbatista1.github.io/
     langid: pt
-date: 13/01/2026
+date: 01/13/2026
 categories: [Tidytuesday] # self-defined categories
 citation: 
   url: https://jvbatista1.github.io/posts/20261301_africanlanguages/ 

@@ -44,7 +44,7 @@ Neste trabalho, pode ser verificado a abordagem tradicional para RD espaciais, q
 
 ![Exemplo de descontinuidade. Fonte: @zimmert_direct_2023](zimmert.png){#fig-zimmert fig-align="center"}
 
-@lehner argumenta que, apesar de essa ser a forma mais intiuitiva e largamente adotada de conduzir um RDD, a aplicação nas fronteiras do mundo real requer atenção. Por exemplo, cidades podem estar muito próximas da fronteira (low score), mas muito distantes entre si, o que prejudica a comparabilidade. Para assegurar o ajuste da comparação, é proposto primeiro dividir a fronteira em vários segmentos menores, $\mathcal B = \cup\{\mathcal B_s \}^{S}_{s=1}$. Assim, para cada ponto $\mathbf{x}_i$ é computada a distância euclidiana para o segmento mais próximo $\text{argmin } d(\mathbf{x}_i, \mathcal{B}_s)$, resultando numa variável categórica que permite calcular efeitos fixos.
+@lehner_note_2024 argumenta que, apesar de essa ser a forma mais intiuitiva e largamente adotada de conduzir um RDD, a aplicação nas fronteiras do mundo real requer atenção. Por exemplo, cidades podem estar muito próximas da fronteira (low score), mas muito distantes entre si, o que prejudica a comparabilidade. Para assegurar o ajuste da comparação, é proposto primeiro dividir a fronteira em vários segmentos menores, $\mathcal B = \cup\{\mathcal B_s \}^{S}_{s=1}$. Assim, para cada ponto $\mathbf{x}_i$ é computada a distância euclidiana para o segmento mais próximo $\text{argmin } d(\mathbf{x}_i, \mathcal{B}_s)$, resultando numa variável categórica que permite calcular efeitos fixos.
 
 # Lehner e o pacote `spatialRDD`
 
@@ -52,7 +52,7 @@ Para exemplificar o procedimento anterior, vou utilizar o tutorial disponibiliza
 
 ```{r}
 #| include: false
-dropbox <- "c:/Users/victor/dropbox/DISSERTACAO"
+dropbox <- "c:/Users/victo/dropbox/DISSERTACAO"
 library(SpatialRDD)
 library(tidyverse)
 library(sf)

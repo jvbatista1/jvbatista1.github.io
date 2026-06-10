@@ -10,7 +10,61 @@
 <atom:link href="https://www.jvbatista1.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Thu, 04 May 2028 03:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 10 Jun 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Homogeneização da escrita com LLMs</title>
+  <dc:creator>Victor Batista</dc:creator>
+  <link>https://www.jvbatista1.github.io/posts/20260610-escrita-ia/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A principio, este blog tinha como objetivo servir de exercício para a programação em ciência de dados,mas hoje sinto uma necessidade adicional no cotidiano: de exercitar também a escrita criativa. No meio do trabalho técnico em manipular dados e apresentar indicadores, é importantíssimo saber comunicar corretamente as ideias por detrás dos números, e acho que não sou tão bom nisso.</p>
+<p>Portanto, a habilidade de saber escrever claramente um e-mail, um relatório, pontuar bem os textos em um slide, tudo contribui para que eu seja bem entendido.</p>
+<p>E claro, como todo mundo hoje, utilizo bastante as LLMs para ajudar. Pra mim, elas funcionam como editores que eu mando meus textos ruins, crus, mas com minhas ideias principais já presentes e elas me devolvem sugestões de escrita, correções de gramática e ortografia, etc.</p>
+<p>Tem funcionado bem, principalmente quando meu principal objetivo é evitar que o texto fique “sem alma”. Essa falta de alma eu tenho percebido principalmente quando bato o olho em um texto que segue um “padrão” que apesar de ser difícil de descrever, é fácil de reconhecer.</p>
+<section id="tudo-tende-a-ficar-muito-parecido" class="level1">
+<h1>Tudo tende a ficar muito parecido</h1>
+<p><img src="https://www.jvbatista1.github.io/posts/20260610-escrita-ia/image.png" class="img-fluid"></p>
+<p>A origem desse padrão pôde ser descrita no paper recente de <span class="citation" data-cites="moon2025">Moon, Green, and Kushlev (2025)</span>. A questão de pesquisa é: Como LLMs como o ChatGPT se comparam com humanos enquanto entidades criativas?</p>
+<p>A hipótese levantada e suportada pela literatura é que em nível individual, os modelos de IA tendem a produzir melhores textos, mas quando consideramos o conjunto da produção, ela tende a ser menos diversa, mais semelhante na escolha de termos, estruturas e ideias. Essa questão levou os autores a desenvolver métricas de criatividade baseadas em distância semântica para comparar a produção pré e pós introdução das LLMs.</p>
+<p>Os resultados do artigo são muito interessantes. Nos estudos realizados, observa-se que a escrita humana aumentou a diversidade semântica no grupo de redações aproximadamente entre 2 e 8 vezes em relação àquela feita pelo GPT-4. Essa diferença permanece mesmo com modificações de prompts e parâmetros.</p>
+<p>Mesmo que as IAs continuem evoluindo e produzam textos individualmente mais diversos, a tendência observada pelos autores é que, em comparação com humanos, as LLMs ainda contribuam para uma homogeneização das ideias quando analisamos a produção coletiva.</p>
+<p>O texto completo pode ser acessado <a href="https://www.sciencedirect.com/science/article/pii/S294988212500091X">aqui</a></p>
+</section>
+<section id="permanecer-criativo" class="level1">
+<h1>Permanecer criativo</h1>
+<p>Nos últimos tempos tenho crido bastante que se a humanidade tem algum futuro, ele está na capacidade de construir coisas coletivamente. Ser um entusiasta de Open Source é, em certa medida, acreditar que existe uma construção coletiva do conhecimento em andamento, e mais que somente sua construção mas também seu registro e transmissão.</p>
+<p>Eu escrevo porque quero deixar algo meu para quem lê. Não quero que uma LLM seja a autora das minhas ideias, mas que seja uma potencializadora das minhas capacidades. Entender isso enquanto pesquisador, artista amador e como um amigo que quer deixar algo para os seus tem sido fundamental.</p>
+<p>Praticar escrita na minha atual situação profissional também tem outra vantagem: tokens são caros. Convenhamos que utilizar IA e agentes para construir coisas a partir de níveis muito básicos é, hoje, muito caro e facilmente se perde o controle sobre o processo. Então saber programar bem, e de acordo com o paper, escrever bem, também tem um efeito financeiro positivo.</p>
+<p>No final das contas, tenho estado satisfeito em como as coisas estão caminhando, mas cada vez mais alerta sobre as ameaças que estão escondidas por aí no futuro. Continuar a fazer o que a gente faz de melhor, e ficar cada vez melhor nisso, é a única coisa que vai nos levar pra frente.</p>
+<p>P.S. Eu revisei a gramática e a ortografia e estilo no GPT. O último parágrafo ele foi bem curioso, muito querido: <img src="https://www.jvbatista1.github.io/posts/20260610-escrita-ia/image2.png" class="img-fluid"></p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-moon2025" class="csl-entry">
+Moon, Kibum, Adam E. Green, and Kostadin Kushlev. 2025. <span>“Homogenizing Effect of Large Language Models (LLMs) on Creative Diversity: An Empirical Comparison of Human and ChatGPT Writing.”</span> <em>Computers in Human Behavior: Artificial Humans</em> 6 (December): 100207. <a href="https://doi.org/10.1016/j.chbah.2025.100207">https://doi.org/10.1016/j.chbah.2025.100207</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2026,
+  author = {Batista, Victor},
+  title = {Homogeneização Da Escrita Com {LLMs}},
+  date = {2026-06-10},
+  url = {https://jvbatista1.github.io/posts/20260610-escrita-ia/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2026" class="csl-entry quarto-appendix-citeas">
+Batista, Victor. 2026. <span>“Homogeneização Da Escrita Com
+LLMs.”</span> June 10, 2026. <a href="https://jvbatista1.github.io/posts/20260610-escrita-ia/">https://jvbatista1.github.io/posts/20260610-escrita-ia/</a>.
+</div></div></section></div> ]]></description>
+  <category>pessoal</category>
+  <guid>https://www.jvbatista1.github.io/posts/20260610-escrita-ia/</guid>
+  <pubDate>Wed, 10 Jun 2026 03:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Lançamento do livro Violência Doméstica e Familiar contra a Mulher no Brasil: Abordagens Interdisciplinares.</title>
   <dc:creator>Victor Batista</dc:creator>
@@ -33,23 +87,23 @@
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2028,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2026,
   author = {Batista, Victor},
   title = {Lançamento Do Livro {Violência} {Doméstica} e {Familiar}
     Contra a {Mulher} No {Brasil:} {Abordagens} {Interdisciplinares.}},
-  date = {2028-05-04},
+  date = {2026-04-29},
   url = {https://jvbatista1.github.io/posts/20260429_lancamentolivro/},
   langid = {en}
 }
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2028" class="csl-entry quarto-appendix-citeas">
-Batista, Victor. 2028. <span>“Lançamento Do Livro Violência Doméstica e
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2026" class="csl-entry quarto-appendix-citeas">
+Batista, Victor. 2026. <span>“Lançamento Do Livro Violência Doméstica e
 Familiar Contra a Mulher No Brasil: Abordagens
-Interdisciplinares.”</span> May 4, 2028. <a href="https://jvbatista1.github.io/posts/20260429_lancamentolivro/">https://jvbatista1.github.io/posts/20260429_lancamentolivro/</a>.
+Interdisciplinares.”</span> April 29, 2026. <a href="https://jvbatista1.github.io/posts/20260429_lancamentolivro/">https://jvbatista1.github.io/posts/20260429_lancamentolivro/</a>.
 </div></div></section></div> ]]></description>
   <category>eventos</category>
   <category>pessoal</category>
   <guid>https://www.jvbatista1.github.io/posts/20260429_lancamentolivro/</guid>
-  <pubDate>Thu, 04 May 2028 03:00:00 GMT</pubDate>
+  <pubDate>Wed, 29 Apr 2026 03:00:00 GMT</pubDate>
   <media:content url="https://www.jvbatista1.github.io/posts/20260429_lancamentolivro/capa.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -463,75 +517,21 @@ font-style: inherit;">theme_minimal</span>()</span></code></pre></div></div>
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2027,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2026,
   author = {Batista, Victor},
   title = {Diversidade Linguística Na {África}},
-  date = {2027-01-01},
+  date = {2026-01-13},
   url = {https://jvbatista1.github.io/posts/20261301_africanlanguages/},
   langid = {en}
 }
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2027" class="csl-entry quarto-appendix-citeas">
-Batista, Victor. 2027. <span>“Diversidade Linguística Na África.”</span>
-January 1, 2027. <a href="https://jvbatista1.github.io/posts/20261301_africanlanguages/">https://jvbatista1.github.io/posts/20261301_africanlanguages/</a>.
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2026" class="csl-entry quarto-appendix-citeas">
+Batista, Victor. 2026. <span>“Diversidade Linguística Na África.”</span>
+January 13, 2026. <a href="https://jvbatista1.github.io/posts/20261301_africanlanguages/">https://jvbatista1.github.io/posts/20261301_africanlanguages/</a>.
 </div></div></section></div> ]]></description>
   <category>Tidytuesday</category>
   <guid>https://www.jvbatista1.github.io/posts/20260113_africanlanguages/</guid>
-  <pubDate>Fri, 01 Jan 2027 03:00:00 GMT</pubDate>
+  <pubDate>Tue, 13 Jan 2026 03:00:00 GMT</pubDate>
   <media:content url="https://www.jvbatista1.github.io/posts/20260113_africanlanguages/africa.svg" medium="image" type="image/svg+xml"/>
-</item>
-<item>
-  <title>Homogeneização da escrita com LLMs</title>
-  <dc:creator>Victor Batista</dc:creator>
-  <link>https://www.jvbatista1.github.io/posts/20260610-escrita-ia/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>A principio, este blog tinha como objetivo servir de exercício para a programação em ciência de dados,mas hoje sinto uma necessidade adicional no cotidiano: de exercitar também a escrita criativa. No meio do trabalho técnico em manipular dados e apresentar indicadores, é importantíssimo saber comunicar corretamente as ideias por detrás dos números, e acho que não sou tão bom nisso.</p>
-<p>Portanto, a habilidade de saber escrever claramente um e-mail, um relatório, pontuar bem os textos em um slide, tudo contribui para que eu seja bem entendido.</p>
-<p>E claro, como todo mundo hoje, utilizo bastante as LLMs para ajudar. Pra mim, elas funcionam como editores que eu mando meus textos ruins, crus, mas com minhas ideias principais já presentes e elas me devolvem sugestões de escrita, correções de gramática e ortografia, etc.</p>
-<p>Tem funcionado bem, principalmente quando meu principal objetivo é evitar que o texto fique “sem alma”. Essa falta de alma eu tenho percebido principalmente quando bato o olho em um texto que segue um “padrão” que apesar de ser difícil de descrever, é fácil de reconhecer.</p>
-<section id="tudo-tende-a-ficar-muito-parecido" class="level1">
-<h1>Tudo tende a ficar muito parecido</h1>
-<p><img src="https://www.jvbatista1.github.io/posts/20260610-escrita-ia/image.png" class="img-fluid"></p>
-<p>A origem desse padrão pôde ser descrita no paper recente de <span class="citation" data-cites="moon2025">Moon, Green, and Kushlev (2025)</span>. A questão de pesquisa é: Como LLMs como o ChatGPT se comparam com humanos enquanto entidades criativas?</p>
-<p>A hipótese levantada e suportada pela literatura é que em nível individual, os modelos de IA tendem a produzir melhores textos, mas quando consideramos o conjunto da produção, ela tende a ser menos diversa, mais semelhante na escolha de termos, estruturas e ideias. Essa questão levou os autores a desenvolver métricas de criatividade baseadas em distância semântica para comparar a produção pré e pós introdução das LLMs.</p>
-<p>Os resultados do artigo são muito interessantes. Nos estudos realizados, observa-se que a escrita humana aumentou a diversidade semântica no grupo de redações aproximadamente entre 2 e 8 vezes em relação àquela feita pelo GPT-4. Essa diferença permanece mesmo com modificações de prompts e parâmetros.</p>
-<p>Mesmo que as IAs continuem evoluindo e produzam textos individualmente mais diversos, a tendência observada pelos autores é que, em comparação com humanos, as LLMs ainda contribuam para uma homogeneização das ideias quando analisamos a produção coletiva.</p>
-<p>O texto completo pode ser acessado <a href="https://www.sciencedirect.com/science/article/pii/S294988212500091X">aqui</a></p>
-</section>
-<section id="permanecer-criativo" class="level1">
-<h1>Permanecer criativo</h1>
-<p>Nos últimos tempos tenho crido bastante que se a humanidade tem algum futuro, ele está na capacidade de construir coisas coletivamente. Ser um entusiasta de Open Source é, em certa medida, acreditar que existe uma construção coletiva do conhecimento em andamento, e mais que somente sua construção mas também seu registro e transmissão.</p>
-<p>Eu escrevo porque quero deixar algo meu para quem lê. Não quero que uma LLM seja a autora das minhas ideias, mas que seja uma potencializadora das minhas capacidades. Entender isso enquanto pesquisador, artista amador e como um amigo que quer deixar algo para os seus tem sido fundamental.</p>
-<p>Praticar escrita na minha atual situação profissional também tem outra vantagem: tokens são caros. Convenhamos que utilizar IA e agentes para construir coisas a partir de níveis muito básicos é, hoje, muito caro e facilmente se perde o controle sobre o processo. Então saber programar bem, e de acordo com o paper, escrever bem, também tem um efeito financeiro positivo.</p>
-<p>No final das contas, tenho estado satisfeito em como as coisas estão caminhando, mas cada vez mais alerta sobre as ameaças que estão escondidas por aí no futuro. Continuar a fazer o que a gente faz de melhor, e ficar cada vez melhor nisso, é a única coisa que vai nos levar pra frente.</p>
-<p>P.S. Eu revisei a gramática e a ortografia e estilo no GPT. O último parágrafo ele foi bem curioso, muito querido: <img src="https://www.jvbatista1.github.io/posts/20260610-escrita-ia/image2.png" class="img-fluid"></p>
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
-<div id="ref-moon2025" class="csl-entry">
-Moon, Kibum, Adam E. Green, and Kostadin Kushlev. 2025. <span>“Homogenizing Effect of Large Language Models (LLMs) on Creative Diversity: An Empirical Comparison of Human and ChatGPT Writing.”</span> <em>Computers in Human Behavior: Artificial Humans</em> 6 (December): 100207. <a href="https://doi.org/10.1016/j.chbah.2025.100207">https://doi.org/10.1016/j.chbah.2025.100207</a>.
-</div>
-</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2026,
-  author = {Batista, Victor},
-  title = {Homogeneização Da Escrita Com {LLMs}},
-  date = {2026-10-06},
-  url = {https://jvbatista1.github.io/posts/20260610-escrita-ia/},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2026" class="csl-entry quarto-appendix-citeas">
-Batista, Victor. 2026. <span>“Homogeneização Da Escrita Com
-LLMs.”</span> October 6, 2026. <a href="https://jvbatista1.github.io/posts/20260610-escrita-ia/">https://jvbatista1.github.io/posts/20260610-escrita-ia/</a>.
-</div></div></section></div> ]]></description>
-  <category>pessoal</category>
-  <guid>https://www.jvbatista1.github.io/posts/20260610-escrita-ia/</guid>
-  <pubDate>Tue, 06 Oct 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>APIs Guru</title>
@@ -1663,7 +1663,7 @@ Figure&nbsp;2: Exemplo de descontinuidade. Fonte: <span class="citation" data-ci
 </figcaption>
 </figure>
 </div>
-<p><span class="citation" data-cites="lehner">(<strong>lehner?</strong>)</span> argumenta que, apesar de essa ser a forma mais intiuitiva e largamente adotada de conduzir um RDD, a aplicação nas fronteiras do mundo real requer atenção. Por exemplo, cidades podem estar muito próximas da fronteira (low score), mas muito distantes entre si, o que prejudica a comparabilidade. Para assegurar o ajuste da comparação, é proposto primeiro dividir a fronteira em vários segmentos menores, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20B%20=%20%5Ccup%5C%7B%5Cmathcal%20B_s%20%5C%7D%5E%7BS%7D_%7Bs=1%7D">. Assim, para cada ponto <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_i"> é computada a distância euclidiana para o segmento mais próximo <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bargmin%20%7D%20d(%5Cmathbf%7Bx%7D_i,%20%5Cmathcal%7BB%7D_s)">, resultando numa variável categórica que permite calcular efeitos fixos.</p>
+<p><span class="citation" data-cites="lehner_note_2024">Lehner (2024)</span> argumenta que, apesar de essa ser a forma mais intiuitiva e largamente adotada de conduzir um RDD, a aplicação nas fronteiras do mundo real requer atenção. Por exemplo, cidades podem estar muito próximas da fronteira (low score), mas muito distantes entre si, o que prejudica a comparabilidade. Para assegurar o ajuste da comparação, é proposto primeiro dividir a fronteira em vários segmentos menores, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20B%20=%20%5Ccup%5C%7B%5Cmathcal%20B_s%20%5C%7D%5E%7BS%7D_%7Bs=1%7D">. Assim, para cada ponto <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_i"> é computada a distância euclidiana para o segmento mais próximo <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Bargmin%20%7D%20d(%5Cmathbf%7Bx%7D_i,%20%5Cmathcal%7BB%7D_s)">, resultando numa variável categórica que permite calcular efeitos fixos.</p>
 </section>
 <section id="lehner-e-o-pacote-spatialrdd" class="level1">
 <h1>Lehner e o pacote <code>spatialRDD</code></h1>
@@ -1813,92 +1813,46 @@ font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">id_municipio =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">as.character</span>(id_municipio))</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Downloading: 1.2 kB     
-Downloading: 1.2 kB     
-Downloading: 2 kB     
-Downloading: 2 kB     
-Downloading: 2.1 kB     
-Downloading: 2.1 kB     
-Downloading: 3.9 kB     
-Downloading: 3.9 kB     
-Downloading: 6.6 kB     
-Downloading: 6.6 kB     
-Downloading: 6.6 kB     
-Downloading: 6.6 kB     
-Downloading: 47 kB     
-Downloading: 47 kB     
-Downloading: 47 kB     
-Downloading: 47 kB     
-Downloading: 88 kB     
-Downloading: 88 kB     
-Downloading: 88 kB     
-Downloading: 88 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 170 kB     
-Downloading: 170 kB     
-Downloading: 170 kB     
-Downloading: 170 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 310 kB     
-Downloading: 310 kB     
-Downloading: 310 kB     
-Downloading: 310 kB     </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">t <span class="ot" style="color: #003B4F;
+font-style: inherit;">as.character</span>(id_municipio))</span>
+<span id="cb1-25"></span>
+<span id="cb1-26">t <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select</span>(espaciais, id_municipio, groups)</span>
-<span id="cb3-2"><span class="fu" style="color: #4758AB;
+<span id="cb1-27"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">st_geometry</span>(t) <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span></span>
-<span id="cb3-3"></span>
-<span id="cb3-4">points <span class="ot" style="color: #003B4F;
+<span id="cb1-28"></span>
+<span id="cb1-29">points <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> points <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span> </span>
-<span id="cb3-5">  <span class="fu" style="color: #4758AB;
+<span id="cb1-30">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">right_join</span>(t, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">by=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"id_municipio"</span>)</span>
-<span id="cb3-6"></span>
-<span id="cb3-7"><span class="fu" style="color: #4758AB;
+<span id="cb1-31"></span>
+<span id="cb1-32"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rm</span>(t)</span></code></pre></div></div>
 </div>
 <p>Utilizando o <code>geom_sf()</code> pra construir a visualização. E sim, sou um grande partidário de utilizar paletas de cores de Pokémon com o <a href="https://github.com/timcdlucas/palettetown" target="_blank">Palettetown</a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>()<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb4-2">  <span class="fu" style="color: #4758AB;
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1909,7 +1863,7 @@ background-color: null;
 font-style: inherit;">"lightgray"</span>)<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb4-3">  <span class="fu" style="color: #4758AB;
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1920,7 +1874,7 @@ background-color: null;
 font-style: inherit;">"gray"</span>)<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb4-4">  <span class="fu" style="color: #4758AB;
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1931,7 +1885,7 @@ background-color: null;
 font-style: inherit;">"red"</span>)<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb4-5">  <span class="fu" style="color: #4758AB;
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_sf</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1948,7 +1902,7 @@ background-color: null;
 font-style: inherit;">0.1</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_color_poke</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1973,7 +1927,7 @@ background-color: null;
 font-style: inherit;">"Tratamento"</span>))<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb4-7">  <span class="fu" style="color: #4758AB;
+<span id="cb2-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_minimal</span>()</span></code></pre></div></div>
 <div class="cell-output-display">
@@ -1986,7 +1940,7 @@ font-style: inherit;">theme_minimal</span>()</span></code></pre></div></div>
 </div>
 <p>Aqui eu adiciono minha variável de interesse, que é a taxa municipal de homicídios em 2019. Além disso, crio uma variável da distância eucilidiana para o cutoff, conforme descrito na seção anterior.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">violencia <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">violencia <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1997,7 +1951,7 @@ background-color: null;
 font-style: inherit;">"municipal.rds"</span>)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span></span>
-<span id="cb5-2">  <span class="fu" style="color: #4758AB;
+<span id="cb3-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2006,20 +1960,20 @@ background-color: null;
 font-style: inherit;">is.na</span>(id_municipio)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span> </span>
-<span id="cb5-3">  <span class="fu" style="color: #4758AB;
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select</span>(id_municipio, valor_2019)</span>
-<span id="cb5-4"></span>
-<span id="cb5-5">points <span class="ot" style="color: #003B4F;
+<span id="cb3-4"></span>
+<span id="cb3-5">points <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> points <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span> </span>
-<span id="cb5-6">  <span class="fu" style="color: #4758AB;
+<span id="cb3-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">left_join</span>(violencia)</span>
-<span id="cb5-7"></span>
-<span id="cb5-8">points<span class="sc" style="color: #5E5E5E;
+<span id="cb3-7"></span>
+<span id="cb3-8">points<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>dist2cutoff <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2030,17 +1984,17 @@ background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">st_distance</span>(points, cut_off))</span>
-<span id="cb5-9">points<span class="sc" style="color: #5E5E5E;
+<span id="cb3-9">points<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>distrunning <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> points<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>dist2cutoff</span>
-<span id="cb5-10"><span class="co" style="color: #5E5E5E;
+<span id="cb3-10"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># give the non-treated one's a negative score</span></span>
-<span id="cb5-11">points<span class="sc" style="color: #5E5E5E;
+<span id="cb3-11">points<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>distrunning[points<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2068,7 +2022,7 @@ font-style: inherit;">"control"</span>]</span></code></pre></div></div>
 </div>
 <p>Aqui é o resultado dos estimadores OLS utilizando somente a variável dummy do tratamento e utilizando um RDD simples utilizando somente a <em>distância unidimensional</em></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2079,7 +2033,7 @@ background-color: null;
 font-style: inherit;">data =</span> points)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span> </span>
-<span id="cb6-2">  stargazer<span class="sc" style="color: #5E5E5E;
+<span id="cb4-2">  stargazer<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2110,7 +2064,7 @@ F Statistic            0.385 (df = 1; 1126)
 ===============================================
 Note:               *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">summary</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2124,33 +2078,36 @@ font-style: inherit;">c =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>))</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Sharp RD estimates using local polynomial regression.
+<pre><code>Call: rdrobust
+
+Sharp RD estimates using local polynomial regression.
 
 Number of Obs.                 1128
 BW type                       mserd
 Kernel                   Triangular
 VCE method                       NN
 
+                               Left        Right
 Number of Obs.                  540          588
 Eff. Number of Obs.             196          116
 Order est. (p)                    1            1
-Order bias  (q)                   2            2
+Order bias (q)                    2            2
 BW est. (h)               31802.103    31802.103
 BW bias (b)               63208.136    63208.136
 rho (h/b)                     0.503        0.503
 Unique Obs.                     540          588
 
-=============================================================================
-        Method     Coef. Std. Err.         z     P&gt;|z|      [ 95% C.I. ]       
-=============================================================================
-  Conventional    -7.845     4.007    -1.958     0.050   [-15.700 , 0.009]     
-        Robust         -         -    -2.132     0.033   [-18.828 , -0.791]    
-=============================================================================</code></pre>
+=====================================================================
+                   Point    Robust Inference
+                Estimate         z     P&gt;|z|      [ 95% C.I. ]       
+---------------------------------------------------------------------
+     RD Effect    -7.845    -2.132     0.033   [-18.828 , -0.791]    
+=====================================================================</code></pre>
 </div>
 </div>
 <p>Agora, criamos a segmentação para adicionar efeitos fixos na análise. É comum escolher diversas segmentações para testar o ajuste da regressão, caso alguma das categorias fique subrepresentada, com poucas (ou nenhuma) observação em um dos lados do cutoff.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">cut_off_test <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">cut_off_test <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> sf<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2161,8 +2118,8 @@ background-color: null;
 font-style: inherit;">st_as_sf</span>(cut_off), <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"MULTIPOINT"</span>)</span>
-<span id="cb10-2"></span>
-<span id="cb10-3">points<span class="sc" style="color: #5E5E5E;
+<span id="cb8-2"></span>
+<span id="cb8-3">points<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>segment5 <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2171,7 +2128,7 @@ background-color: null;
 font-style: inherit;">border_segment</span>(points, cut_off_test, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>)</span>
-<span id="cb10-4">points<span class="sc" style="color: #5E5E5E;
+<span id="cb8-4">points<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>segment10 <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2180,7 +2137,7 @@ background-color: null;
 font-style: inherit;">border_segment</span>(points, cut_off_test, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span>)</span>
-<span id="cb10-5">points<span class="sc" style="color: #5E5E5E;
+<span id="cb8-5">points<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>segment15 <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2189,7 +2146,7 @@ background-color: null;
 font-style: inherit;">border_segment</span>(points, cut_off_test, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15</span>)</span>
-<span id="cb10-6"><span class="fu" style="color: #4758AB;
+<span id="cb8-6"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_shape</span>(points) <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2210,9 +2167,6 @@ background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The shape points contains empty units.</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2220,7 +2174,7 @@ font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_shape</span>(points) <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2241,9 +2195,6 @@ background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The shape points contains empty units.</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2251,7 +2202,7 @@ font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_shape</span>(points) <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2272,9 +2223,6 @@ background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The shape points contains empty units.</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2285,13 +2233,16 @@ font-style: inherit;">tm_lines</span>()</span></code></pre></div></div>
 </div>
 <p>Essees são os resultados da estimação com efeitos fixos utilizando as segmentações.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(lfe)</span>
-<span id="cb16-2"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">library</span>(lfe)</span></code></pre></div></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pacote 'lfe' foi compilado no R versão 4.5.3</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#&gt; Loading required package: Matrix</span></span>
-<span id="cb16-3"><span class="fu" style="color: #4758AB;
+<span id="cb13-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">list</span>(lfe<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2320,7 +2271,7 @@ background-color: null;
 font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3000</span>, ]),</span>
-<span id="cb16-4">  lfe<span class="sc" style="color: #5E5E5E;
+<span id="cb13-3">  lfe<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2347,7 +2298,7 @@ background-color: null;
 font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3000</span>, ]),</span>
-<span id="cb16-5">  lfe<span class="sc" style="color: #5E5E5E;
+<span id="cb13-4">  lfe<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2376,7 +2327,7 @@ background-color: null;
 font-style: inherit;">3000</span>, ])) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span> </span>
-<span id="cb16-6">  modelsummary<span class="sc" style="color: #5E5E5E;
+<span id="cb13-5">  modelsummary<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2388,191 +2339,113 @@ font-style: inherit;">"text"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">stars =</span> T)</span></code></pre></div></div>
 <div class="cell-output-display">
- 
+<!-- preamble start -->
 
-  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_gy8h5je6kw263ho1yifg</title>
-    <style>
-.table td.tinytable_css_b8frbpcb0lft9ty1t8v7, .table th.tinytable_css_b8frbpcb0lft9ty1t8v7 {    border-bottom: solid 0.1em #d3d8dc; }
-.table td.tinytable_css_oiia5rx4ds7qr0zsjk86, .table th.tinytable_css_oiia5rx4ds7qr0zsjk86 {    text-align: left; }
-.table td.tinytable_css_ypfkymo1fm3bs733p7vq, .table th.tinytable_css_ypfkymo1fm3bs733p7vq {    text-align: center; }
-.table td.tinytable_css_3411q1xlp3qv8p6kzr0j, .table th.tinytable_css_3411q1xlp3qv8p6kzr0j {    text-align: center; }
-.table td.tinytable_css_m3aimpeiwarxd7q14oat, .table th.tinytable_css_m3aimpeiwarxd7q14oat {    text-align: center; }
-.table td.tinytable_css_lye2uj6arti336s7kd0n, .table th.tinytable_css_lye2uj6arti336s7kd0n {    border-bottom: solid 0.05em black; }
-    </style>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+
     <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-    </script>
-  
+      // Create table-specific functions using external factory
+      const tableFns_g33qv6tz9ppkqaodt45w = TinyTable.createTableFunctions("tinytable_g33qv6tz9ppkqaodt45w");
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '8', j: 2 }, { i: '8', j: 3 }, { i: '8', j: 4 } ], css_id: 'tinytable_css_hwccq42bwa3l66ws3xi6',}, 
+          { positions: [ { i: '2', j: 2 }, { i: '2', j: 3 }, { i: '2', j: 4 } ], css_id: 'tinytable_css_ujua6s3ecmztyh7o4dpq',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '1', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '1', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 } ], css_id: 'tinytable_css_249hx04iel6ym21muo6h',}, 
+          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 } ], css_id: 'tinytable_css_hpbknfb36gt21p155zwi',}, 
+          { positions: [ { i: '8', j: 1 } ], css_id: 'tinytable_css_jrx15e96emev7xrqgvdl',}, 
+          { positions: [ { i: '2', j: 1 } ], css_id: 'tinytable_css_fs2xcvj1k07ik3iti9g3',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 } ], css_id: 'tinytable_css_8f2kpd6rt46f3apabs09',}, 
+          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_6m1aa6p6hf4t47lcfc91',}, 
+          ];
 
-  
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  tableFns_g33qv6tz9ppkqaodt45w.styleCell(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
+    <style>
+    /* tinytable css entries after */
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_hwccq42bwa3l66ws3xi6, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_hwccq42bwa3l66ws3xi6 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_ujua6s3ecmztyh7o4dpq, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_ujua6s3ecmztyh7o4dpq {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_249hx04iel6ym21muo6h, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_249hx04iel6ym21muo6h { text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_hpbknfb36gt21p155zwi, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_hpbknfb36gt21p155zwi {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_jrx15e96emev7xrqgvdl, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_jrx15e96emev7xrqgvdl {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_fs2xcvj1k07ik3iti9g3, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_fs2xcvj1k07ik3iti9g3 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_8f2kpd6rt46f3apabs09, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_8f2kpd6rt46f3apabs09 { text-align: left }
+    #tinytable_g33qv6tz9ppkqaodt45w td.tinytable_css_6m1aa6p6hf4t47lcfc91, #tinytable_g33qv6tz9ppkqaodt45w th.tinytable_css_6m1aa6p6hf4t47lcfc91 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
+    </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_gy8h5je6kw263ho1yifg" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
-        <thead>
+      <table class="tinytable" id="tinytable_g33qv6tz9ppkqaodt45w" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         
+        <thead>
               <tr>
-                <th scope="col"> </th>
-                <th scope="col">(1)</th>
-                <th scope="col">(2)</th>
-                <th scope="col">(3)</th>
+                <th scope="col" data-row="0" data-col="1"> </th>
+                <th scope="col" data-row="0" data-col="2">(1)</th>
+                <th scope="col" data-row="0" data-col="3">(2)</th>
+                <th scope="col" data-row="0" data-col="4">(3)</th>
               </tr>
         </thead>
         <tfoot><tr><td colspan="4">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
         <tbody>
                 <tr>
-                  <td>groupstreatment</td>
-                  <td>-15.762 </td>
-                  <td>-23.028+</td>
-                  <td>-25.107+</td>
+                  <td data-row="1" data-col="1">groupstreatment</td>
+                  <td data-row="1" data-col="2">-15.762</td>
+                  <td data-row="1" data-col="3">-23.028+</td>
+                  <td data-row="1" data-col="4">-25.107+</td>
                 </tr>
                 <tr>
-                  <td>               </td>
-                  <td>(13.070)</td>
-                  <td>(11.860)</td>
-                  <td>(13.821)</td>
+                  <td data-row="2" data-col="1"></td>
+                  <td data-row="2" data-col="2">(13.070)</td>
+                  <td data-row="2" data-col="3">(11.860)</td>
+                  <td data-row="2" data-col="4">(13.821)</td>
                 </tr>
                 <tr>
-                  <td>Num.Obs.       </td>
-                  <td>23      </td>
-                  <td>23      </td>
-                  <td>23      </td>
+                  <td data-row="3" data-col="1">Num.Obs.</td>
+                  <td data-row="3" data-col="2">23</td>
+                  <td data-row="3" data-col="3">23</td>
+                  <td data-row="3" data-col="4">23</td>
                 </tr>
                 <tr>
-                  <td>R2             </td>
-                  <td>0.240   </td>
-                  <td>0.430   </td>
-                  <td>0.446   </td>
+                  <td data-row="4" data-col="1">R2</td>
+                  <td data-row="4" data-col="2">0.240</td>
+                  <td data-row="4" data-col="3">0.430</td>
+                  <td data-row="4" data-col="4">0.446</td>
                 </tr>
                 <tr>
-                  <td>R2 Adj.        </td>
-                  <td>0.017   </td>
-                  <td>0.163   </td>
-                  <td>0.062   </td>
+                  <td data-row="5" data-col="1">R2 Adj.</td>
+                  <td data-row="5" data-col="2">0.017</td>
+                  <td data-row="5" data-col="3">0.163</td>
+                  <td data-row="5" data-col="4">0.062</td>
                 </tr>
                 <tr>
-                  <td>AIC            </td>
-                  <td>221.0   </td>
-                  <td>218.4   </td>
-                  <td>221.7   </td>
+                  <td data-row="6" data-col="1">AIC</td>
+                  <td data-row="6" data-col="2">221.0</td>
+                  <td data-row="6" data-col="3">218.4</td>
+                  <td data-row="6" data-col="4">221.7</td>
                 </tr>
                 <tr>
-                  <td>BIC            </td>
-                  <td>228.9   </td>
-                  <td>228.6   </td>
-                  <td>234.2   </td>
+                  <td data-row="7" data-col="1">BIC</td>
+                  <td data-row="7" data-col="2">228.9</td>
+                  <td data-row="7" data-col="3">228.6</td>
+                  <td data-row="7" data-col="4">234.2</td>
                 </tr>
                 <tr>
-                  <td>RMSE           </td>
-                  <td>21.76   </td>
-                  <td>18.85   </td>
-                  <td>18.59   </td>
+                  <td data-row="8" data-col="1">RMSE</td>
+                  <td data-row="8" data-col="2">21.76</td>
+                  <td data-row="8" data-col="3">18.85</td>
+                  <td data-row="8" data-col="4">18.59</td>
                 </tr>
         </tbody>
       </table>
     </div>
-
-    <script>
-      function styleCell_tinytable_paqcouactnyymzrccrf9(i, j, css_id) {
-        var table = document.getElementById("tinytable_gy8h5je6kw263ho1yifg");
-        table.rows[i].cells[j].classList.add(css_id);
-      }
-      function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_gy8h5je6kw263ho1yifg');
-        var newRow = table.insertRow(i);
-        var newCell = newRow.insertCell(0);
-        newCell.setAttribute("colspan", colspan);
-        // newCell.innerText = content;
-        // this may be unsafe, but innerText does not interpret <br>
-        newCell.innerHTML = content;
-      }
-      function spanCell_tinytable_paqcouactnyymzrccrf9(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_gy8h5je6kw263ho1yifg");
-        const targetRow = table.rows[i];
-        const targetCell = targetRow.cells[j];
-        for (let r = 0; r < rowspan; r++) {
-          // Only start deleting cells to the right for the first row (r == 0)
-          if (r === 0) {
-            // Delete cells to the right of the target cell in the first row
-            for (let c = colspan - 1; c > 0; c--) {
-              if (table.rows[i + r].cells[j + c]) {
-                table.rows[i + r].deleteCell(j + c);
-              }
-            }
-          }
-          // For rows below the first, delete starting from the target column
-          if (r > 0) {
-            for (let c = colspan - 1; c >= 0; c--) {
-              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
-                table.rows[i + r].deleteCell(j);
-              }
-            }
-          }
-        }
-        // Set rowspan and colspan of the target cell
-        targetCell.rowSpan = rowspan;
-        targetCell.colSpan = colspan;
-      }
-
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 0, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 1, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 2, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 3, 'tinytable_css_b8frbpcb0lft9ty1t8v7') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 0, 'tinytable_css_oiia5rx4ds7qr0zsjk86') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 1, 'tinytable_css_ypfkymo1fm3bs733p7vq') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 2, 'tinytable_css_3411q1xlp3qv8p6kzr0j') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(0, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(1, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(3, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(4, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(5, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(6, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(7, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(8, 3, 'tinytable_css_m3aimpeiwarxd7q14oat') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 0, 'tinytable_css_lye2uj6arti336s7kd0n') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 1, 'tinytable_css_lye2uj6arti336s7kd0n') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 2, 'tinytable_css_lye2uj6arti336s7kd0n') })
-window.addEventListener('load', function () { styleCell_tinytable_paqcouactnyymzrccrf9(2, 3, 'tinytable_css_lye2uj6arti336s7kd0n') })
-    </script>
-
-  
-
-
+<!-- hack to avoid NA insertion in last line -->
 </div>
 </div>
 </section>
