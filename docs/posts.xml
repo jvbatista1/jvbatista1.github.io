@@ -480,6 +480,60 @@ January 1, 2027. <a href="https://jvbatista1.github.io/posts/20261301_africanlan
   <media:content url="https://www.jvbatista1.github.io/posts/20260113_africanlanguages/africa.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
+  <title>Homogeneização da escrita com LLMs</title>
+  <dc:creator>Victor Batista</dc:creator>
+  <link>https://www.jvbatista1.github.io/posts/20260610-escrita-ia/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A principio, este blog tinha como objetivo servir de exercício para a programação em ciência de dados,mas hoje sinto uma necessidade adicional no cotidiano: de exercitar também a escrita criativa. No meio do trabalho técnico em manipular dados e apresentar indicadores, é importantíssimo saber comunicar corretamente as ideias por detrás dos números, e acho que não sou tão bom nisso.</p>
+<p>Portanto, a habilidade de saber escrever claramente um e-mail, um relatório, pontuar bem os textos em um slide, tudo contribui para que eu seja bem entendido.</p>
+<p>E claro, como todo mundo hoje, utilizo bastante as LLMs para ajudar. Pra mim, elas funcionam como editores que eu mando meus textos ruins, crus, mas com minhas ideias principais já presentes e elas me devolvem sugestões de escrita, correções de gramática e ortografia, etc.</p>
+<p>Tem funcionado bem, principalmente quando meu principal objetivo é evitar que o texto fique “sem alma”. Essa falta de alma eu tenho percebido principalmente quando bato o olho em um texto que segue um “padrão” que apesar de ser difícil de descrever, é fácil de reconhecer.</p>
+<section id="tudo-tende-a-ficar-muito-parecido" class="level1">
+<h1>Tudo tende a ficar muito parecido</h1>
+<p><img src="https://www.jvbatista1.github.io/posts/20260610-escrita-ia/image.png" class="img-fluid"></p>
+<p>A origem desse padrão pôde ser descrita no paper recente de <span class="citation" data-cites="moon2025">Moon, Green, and Kushlev (2025)</span>. A questão de pesquisa é: Como LLMs como o ChatGPT se comparam com humanos enquanto entidades criativas?</p>
+<p>A hipótese levantada e suportada pela literatura é que em nível individual, os modelos de IA tendem a produzir melhores textos, mas quando consideramos o conjunto da produção, ela tende a ser menos diversa, mais semelhante na escolha de termos, estruturas e ideias. Essa questão levou os autores a desenvolver métricas de criatividade baseadas em distância semântica para comparar a produção pré e pós introdução das LLMs.</p>
+<p>Os resultados do artigo são muito interessantes. Nos estudos realizados, observa-se que a escrita humana aumentou a diversidade semântica no grupo de redações aproximadamente entre 2 e 8 vezes em relação àquela feita pelo GPT-4. Essa diferença permanece mesmo com modificações de prompts e parâmetros.</p>
+<p>Mesmo que as IAs continuem evoluindo e produzam textos individualmente mais diversos, a tendência observada pelos autores é que, em comparação com humanos, as LLMs ainda contribuam para uma homogeneização das ideias quando analisamos a produção coletiva.</p>
+<p>O texto completo pode ser acessado <a href="https://www.sciencedirect.com/science/article/pii/S294988212500091X">aqui</a></p>
+</section>
+<section id="permanecer-criativo" class="level1">
+<h1>Permanecer criativo</h1>
+<p>Nos últimos tempos tenho crido bastante que se a humanidade tem algum futuro, ele está na capacidade de construir coisas coletivamente. Ser um entusiasta de Open Source é, em certa medida, acreditar que existe uma construção coletiva do conhecimento em andamento, e mais que somente sua construção mas também seu registro e transmissão.</p>
+<p>Eu escrevo porque quero deixar algo meu para quem lê. Não quero que uma LLM seja a autora das minhas ideias, mas que seja uma potencializadora das minhas capacidades. Entender isso enquanto pesquisador, artista amador e como um amigo que quer deixar algo para os seus tem sido fundamental.</p>
+<p>Praticar escrita na minha atual situação profissional também tem outra vantagem: tokens são caros. Convenhamos que utilizar IA e agentes para construir coisas a partir de níveis muito básicos é, hoje, muito caro e facilmente se perde o controle sobre o processo. Então saber programar bem, e de acordo com o paper, escrever bem, também tem um efeito financeiro positivo.</p>
+<p>No final das contas, tenho estado satisfeito em como as coisas estão caminhando, mas cada vez mais alerta sobre as ameaças que estão escondidas por aí no futuro. Continuar a fazer o que a gente faz de melhor, e ficar cada vez melhor nisso, é a única coisa que vai nos levar pra frente.</p>
+<p>P.S. Eu revisei a gramática e a ortografia e estilo no GPT. O último parágrafo ele foi bem curioso, muito querido: <img src="https://www.jvbatista1.github.io/posts/20260610-escrita-ia/image2.png" class="img-fluid"></p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-moon2025" class="csl-entry">
+Moon, Kibum, Adam E. Green, and Kostadin Kushlev. 2025. <span>“Homogenizing Effect of Large Language Models (LLMs) on Creative Diversity: An Empirical Comparison of Human and ChatGPT Writing.”</span> <em>Computers in Human Behavior: Artificial Humans</em> 6 (December): 100207. <a href="https://doi.org/10.1016/j.chbah.2025.100207">https://doi.org/10.1016/j.chbah.2025.100207</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2026,
+  author = {Batista, Victor},
+  title = {Homogeneização Da Escrita Com {LLMs}},
+  date = {2026-10-06},
+  url = {https://jvbatista1.github.io/posts/20260610-escrita-ia/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2026" class="csl-entry quarto-appendix-citeas">
+Batista, Victor. 2026. <span>“Homogeneização Da Escrita Com
+LLMs.”</span> October 6, 2026. <a href="https://jvbatista1.github.io/posts/20260610-escrita-ia/">https://jvbatista1.github.io/posts/20260610-escrita-ia/</a>.
+</div></div></section></div> ]]></description>
+  <category>pessoal</category>
+  <guid>https://www.jvbatista1.github.io/posts/20260610-escrita-ia/</guid>
+  <pubDate>Tue, 06 Oct 2026 03:00:00 GMT</pubDate>
+</item>
+<item>
   <title>APIs Guru</title>
   <dc:creator>Victor Batista</dc:creator>
   <link>https://www.jvbatista1.github.io/posts/20250618_apisguru/</link>

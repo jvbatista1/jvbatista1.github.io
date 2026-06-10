@@ -61,3 +61,7 @@ draft: false
 
 # Políticas públicas
 - [Time Café GOVPE](https://github.com/segpr-ndgr/time_cafe_stack?tab=readme-ov-file)
+
+# Econometria
+- [Applied Microeconometrics](https://www.damianclarke.net/books/microeconometrics/)
+

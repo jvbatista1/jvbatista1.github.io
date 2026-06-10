@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Victor Batista">
+<meta name="dcterms.date" content="2026-10-06">
+<meta name="description" content="Artigo mostra como apesar de a LLM ajudar a escrever textos melhores, existe menos diversidade quando consideramos o conjunto da produção">
 
-<title>Materiais – Victor Batista</title>
+<title>Homogeneização da escrita com LLMs – Victor Batista</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +23,47 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cc1d64809b8ed731f92ea1275fe9f05b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cc1d64809b8ed731f92ea1275fe9f05b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,72 +91,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="Victor Batista" href="materiais.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
@@ -145,11 +108,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./materiais.html" aria-current="page"> 
+    <a class="nav-link" href="../../materiais.html"> 
 <span class="menu-text">Materiais</span></a>
   </li>  
   <li class="nav-item">
@@ -158,7 +121,7 @@ window.Quarto = {
     </span>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -172,7 +135,7 @@ window.Quarto = {
  <span class="dropdown-text">Linkedin</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./index.xml"><i class="bi bi-rss" role="img">
+    <a class="dropdown-item" href="../../index.xml"><i class="bi bi-rss" role="img">
 </i> 
  <span class="dropdown-text">RSS Feed</span></a>
   </li>  
@@ -191,131 +154,93 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Homogeneização da escrita com LLMs</h1>
+                  <div>
+        <div class="description">
+          Artigo mostra como apesar de a LLM ajudar a escrever textos melhores, existe menos diversidade quando consideramos o conjunto da produção
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">pessoal</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://jvbatista1.github.io/">Victor Batista</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 6, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QU5DT1JE">ANCORD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uY3Vyc28=">Concurso <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tm90YXM=">Notas <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Materiais</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
 
+<p>A principio, este blog tinha como objetivo servir de exercício para a programação em ciência de dados,mas hoje sinto uma necessidade adicional no cotidiano: de exercitar também a escrita criativa. No meio do trabalho técnico em manipular dados e apresentar indicadores, é importantíssimo saber comunicar corretamente as ideias por detrás dos números, e acho que não sou tão bom nisso.</p>
+<p>Portanto, a habilidade de saber escrever claramente um e-mail, um relatório, pontuar bem os textos em um slide, tudo contribui para que eu seja bem entendido.</p>
+<p>E claro, como todo mundo hoje, utilizo bastante as LLMs para ajudar. Pra mim, elas funcionam como editores que eu mando meus textos ruins, crus, mas com minhas ideias principais já presentes e elas me devolvem sugestões de escrita, correções de gramática e ortografia, etc.</p>
+<p>Tem funcionado bem, principalmente quando meu principal objetivo é evitar que o texto fique “sem alma”. Essa falta de alma eu tenho percebido principalmente quando bato o olho em um texto que segue um “padrão” que apesar de ser difícil de descrever, é fácil de reconhecer.</p>
+<section id="tudo-tende-a-ficar-muito-parecido" class="level1">
+<h1>Tudo tende a ficar muito parecido</h1>
+<p><img src="image.png" class="img-fluid"></p>
+<p>A origem desse padrão pôde ser descrita no paper recente de <span class="citation" data-cites="moon2025">Moon, Green, and Kushlev (<a href="#ref-moon2025" role="doc-biblioref">2025</a>)</span>. A questão de pesquisa é: Como LLMs como o ChatGPT se comparam com humanos enquanto entidades criativas?</p>
+<p>A hipótese levantada e suportada pela literatura é que em nível individual, os modelos de IA tendem a produzir melhores textos, mas quando consideramos o conjunto da produção, ela tende a ser menos diversa, mais semelhante na escolha de termos, estruturas e ideias. Essa questão levou os autores a desenvolver métricas de criatividade baseadas em distância semântica para comparar a produção pré e pós introdução das LLMs.</p>
+<p>Os resultados do artigo são muito interessantes. Nos estudos realizados, observa-se que a escrita humana aumentou a diversidade semântica no grupo de redações aproximadamente entre 2 e 8 vezes em relação àquela feita pelo GPT-4. Essa diferença permanece mesmo com modificações de prompts e parâmetros.</p>
+<p>Mesmo que as IAs continuem evoluindo e produzam textos individualmente mais diversos, a tendência observada pelos autores é que, em comparação com humanos, as LLMs ainda contribuam para uma homogeneização das ideias quando analisamos a produção coletiva.</p>
+<p>O texto completo pode ser acessado <a href="https://www.sciencedirect.com/science/article/pii/S294988212500091X">aqui</a></p>
+</section>
+<section id="permanecer-criativo" class="level1">
+<h1>Permanecer criativo</h1>
+<p>Nos últimos tempos tenho crido bastante que se a humanidade tem algum futuro, ele está na capacidade de construir coisas coletivamente. Ser um entusiasta de Open Source é, em certa medida, acreditar que existe uma construção coletiva do conhecimento em andamento, e mais que somente sua construção mas também seu registro e transmissão.</p>
+<p>Eu escrevo porque quero deixar algo meu para quem lê. Não quero que uma LLM seja a autora das minhas ideias, mas que seja uma potencializadora das minhas capacidades. Entender isso enquanto pesquisador, artista amador e como um amigo que quer deixar algo para os seus tem sido fundamental.</p>
+<p>Praticar escrita na minha atual situação profissional também tem outra vantagem: tokens são caros. Convenhamos que utilizar IA e agentes para construir coisas a partir de níveis muito básicos é, hoje, muito caro e facilmente se perde o controle sobre o processo. Então saber programar bem, e de acordo com o paper, escrever bem, também tem um efeito financeiro positivo.</p>
+<p>No final das contas, tenho estado satisfeito em como as coisas estão caminhando, mas cada vez mais alerta sobre as ameaças que estão escondidas por aí no futuro. Continuar a fazer o que a gente faz de melhor, e ficar cada vez melhor nisso, é a única coisa que vai nos levar pra frente.</p>
+<p>P.S. Eu revisei a gramática e a ortografia e estilo no GPT. O último parágrafo ele foi bem curioso, muito querido: <img src="image2.png" class="img-fluid"></p>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Tm90YXM=" data-listing-date-sort="1759201200000" data-listing-file-modified-sort="1781107923209" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="234">
-<a href="./materiais/livros/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="materiais\livros\pencil-lapiz-1562150.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Recursos úteis
-</h5>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('Tm90YXM='); return false;">Notas</div>
 
-</div>
-<div class="card-text listing-description delink">
-<p>Tomando nota sobre livros e outras coisas que encontro e que podem ser úteis (ou só agradáveis)</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Victor Batista
-</div>
-<div class="listing-date">
-Sep 30, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Tm90YXMlMkNDb25jdXJzbw==" data-listing-date-sort="1759201200000" data-listing-file-modified-sort="1763057425143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4781">
-<a href="./materiais/notas_docas/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./materiais/notas_docas/study_icon.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Notas de estudo para concurso Docas do Ceará
-</h5>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('Tm90YXM='); return false;">Notas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29uY3Vyc28='); return false;">Concurso</div>
-
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-moon2025" class="csl-entry" role="listitem">
+Moon, Kibum, Adam E. Green, and Kostadin Kushlev. 2025. <span>“Homogenizing Effect of Large Language Models (LLMs) on Creative Diversity: An Empirical Comparison of Human and ChatGPT Writing.”</span> <em>Computers in Human Behavior: Artificial Humans</em> 6 (December): 100207. <a href="https://doi.org/10.1016/j.chbah.2025.100207">https://doi.org/10.1016/j.chbah.2025.100207</a>.
 </div>
-<div class="card-text listing-description delink">
-<p>Minhas anotações durante o período de estudo, transformadas em uma página de consulta rápida</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Victor Batista
-</div>
-<div class="listing-date">
-Sep 30, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Tm90YXMlMkNBTkNPUkQ=" data-listing-date-sort="1753239600000" data-listing-file-modified-sort="1763057425143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3924">
-<a href="./materiais/notas_ancord/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./materiais/notas_ancord/study_icon.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Notas de estudo para certificação ANCORD
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Tm90YXM='); return false;">Notas</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QU5DT1JE'); return false;">ANCORD</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Minhas anotações durante o período de estudo, transformadas em uma página de consulta rápida</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Victor Batista
-</div>
-<div class="listing-date">
-Jul 23, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2026,
+  author = {Batista, Victor},
+  title = {Homogeneização Da Escrita Com {LLMs}},
+  date = {2026-10-06},
+  url = {https://jvbatista1.github.io/posts/20260610-escrita-ia/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2026" class="csl-entry quarto-appendix-citeas" role="listitem">
+Batista, Victor. 2026. <span>“Homogeneização Da Escrita Com
+LLMs.”</span> October 6, 2026. <a href="https://jvbatista1.github.io/posts/20260610-escrita-ia/">https://jvbatista1.github.io/posts/20260610-escrita-ia/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
