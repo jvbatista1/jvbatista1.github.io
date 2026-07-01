@@ -1,6 +1,6 @@
 ---
 title: "Victor Batista"
-image: media\headshot.jfif
+image: media\headshot.jpeg
 about: 
   template: trestles
   image-shape: rounded
