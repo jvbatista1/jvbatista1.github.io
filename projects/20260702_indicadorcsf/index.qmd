@@ -1,0 +1,16 @@
+---
+title: "Indicador de risco de Insegurança Alimentar no Ceará"
+description: ""
+author:
+  - name: Victor Batista
+    url: https://jvbatista1.github.io/
+    langid: pt
+date: 07/02/2026
+citation: 
+  url: https://jvbatista1.github.io/posts/20260702_indicadorcsf/ 
+draft: true
+bibliography: references.bib
+---
+
+# Fundamentação teórica
+

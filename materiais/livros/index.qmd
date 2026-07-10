@@ -29,6 +29,9 @@ draft: false
 -   [Packaging data analytical work reproducibly using R (and friends)](https://peerj.com/preprints/3192v2.pdf)
 - [rstudio4edu: A Handbook for Teaching and Learning with R and RStudio](https://rstudio4edu.github.io/rstudio4edu-book)
 
+# Quarto
+- [Slidecrafting: Making beautiful slides with reveal.js and Quarto](https://slidecrafting-book.com)
+
 # Análise espacial
 - [Spatial Statistics for Data Science: Theory and Practice with R](https://www.paulamoraga.com/book-spatial)
 - [Geocomputation with R](https://r.geocompx.org)
