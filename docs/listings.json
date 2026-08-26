@@ -1,7 +1,16 @@
 [
   {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/20260702_indicadorcsf/index.html"
+    ]
+  },
+  {
     "listing": "/posts.html",
     "items": [
+      "/posts/20260731-opera/index.html",
+      "/posts/20260810-tristanundisolde/index.html",
+      "/posts/20260818_salvador_visto/index.html",
       "/posts/20260610-escrita-ia/index.html",
       "/posts/20260429_lancamentolivro/index.html",
       "/posts/20260113_africanlanguages/index.html",
@@ -18,9 +27,5 @@
       "/materiais/notas_docas/index.html",
       "/materiais/notas_ancord/index.html"
     ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": []
   }
 ]

@@ -31,7 +31,7 @@ website:
 format:
   html:
     page-layout: full
-    theme: lux
+    theme: pressmark.scss
     #mainfont: Cabin
     toc: false
 
