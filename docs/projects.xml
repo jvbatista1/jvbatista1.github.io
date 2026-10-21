@@ -10,35 +10,6 @@
 <atom:link href="https://www.jvbatista1.github.io/projects.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Thu, 02 Jul 2026 03:00:00 GMT</lastBuildDate>
-<item>
-  <title>Indicador de risco de Insegurança Alimentar no Ceará</title>
-  <dc:creator>Victor Batista</dc:creator>
-  <link>https://www.jvbatista1.github.io/projects/20260702_indicadorcsf/</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="fundamentação-teórica" class="level1">
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{batista2026,
-  author = {Batista, Victor},
-  title = {Indicador de Risco de {Insegurança} {Alimentar} No {Ceará}},
-  date = {2026-07-02},
-  url = {https://jvbatista1.github.io/posts/20260702_indicadorcsf/},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-batista2026" class="csl-entry quarto-appendix-citeas">
-Batista, Victor. 2026. <span>“Indicador de Risco de Insegurança
-Alimentar No Ceará.”</span> July 2, 2026. <a href="https://jvbatista1.github.io/posts/20260702_indicadorcsf/">https://jvbatista1.github.io/posts/20260702_indicadorcsf/</a>.
-</div></div></section></div> ]]></description>
-  <guid>https://www.jvbatista1.github.io/projects/20260702_indicadorcsf/</guid>
-  <pubDate>Thu, 02 Jul 2026 03:00:00 GMT</pubDate>
-</item>
+<lastBuildDate>Wed, 21 Oct 2026 23:32:47 GMT</lastBuildDate>
 </channel>
 </rss>
